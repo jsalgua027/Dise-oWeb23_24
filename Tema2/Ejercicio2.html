@@ -1,23 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <header>
-        <nav id="menu_cabecera"></nav>
-        <h1>KENAY</h1>
-        <input type="search"/>
-        <nav id="enlace_favoritos"></nav>
-        <nav id="enlace_carrito"></nav>
+
+        <div class="header_arriba">
+            <nav id="menu_cabecera">
+                <div id="menu_block_top">
+                    <div class="button-menu toggle_hamb_menu_opened float-left">
+                        <div type="button" role="button" aria-label="Toggle Navigation" class="lines-button x">
+                            <span class="lines"></span>
+                        </div>
+                    </div>
+                </div>
+                <nav id="enlace_favoritos">
+                    <div id="lists_block_top" class="icon-heart itemiconheader position-relative">
+                        <img class="img-responsive"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAASRJREFUSEvVlIENwjAMBJ9NYBJgEmASYBJgEtgENgFdZFdpcdNECCEqoaA6/rM/bmb68jP7sr5+BlhJ2khifViXF0ln+7+VtCzEO2OiDq6WGLl3s5eAo4cCjllRbxbl4jtJCM7tt7fVhcfiB4OkfXkHVAUASxZBeYA8vi7E2Qc82ZkDTpLwtldB45TRJfmIA+kBnib2yWS5C1ibuszF7uYx9vjkNDaQzgudzubIos6/VnVJblHYgQeh015rF149dZGfRnrotx90KwRxcjmDrvoI4KPIWgvJxd9GPJqYFkhRPOrAz7UGMileAhArQarEpwBjEN77gY5dK8XbdDj+w04Q9Ws8urN6+bXXQg5BYLJyp9QC3C6s8Q+p6kNvAVQJDjf9P+AFdTlOGRCpJGQAAAAASUVORK5CYII="
+                            alt="Favoritos">
+
+                    </div>
+                </nav>
+                <nav id="enlace_carrito">
+                    <div class="itemiconheader position-relative">
+                        <img class="img-responsive" src="https://img2.kenayhome.com/themes/kenayhome/img/cart.svg"
+                            alt="Mi carrito">
+                        <div class="num_products ajax_cart_quantity">0</div>
+                    </div>
+                </nav>
+                <img class="logo img-responsive"
+                    src="https://img2.kenayhome.com/img/kenayhome-logo-15664763031.svg?ver=1.2" alt="Kenay Home">
+            </nav>
+        </div>
+        <div class="header_abajo">
+            <input type="search" />
+        </div>
     </header>
     <main>
+        <section class="izquierda">
+            <article class="Promo_izquierda">
+                <div id="lists_block_top" class="icon-heart itemiconheader position-relative">
+                    <img class="img-responsive"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAASRJREFUSEvVlIENwjAMBJ9NYBJgEmASYBJgEtgENgFdZFdpcdNECCEqoaA6/rM/bmb68jP7sr5+BlhJ2khifViXF0ln+7+VtCzEO2OiDq6WGLl3s5eAo4cCjllRbxbl4jtJCM7tt7fVhcfiB4OkfXkHVAUASxZBeYA8vi7E2Qc82ZkDTpLwtldB45TRJfmIA+kBnib2yWS5C1ibuszF7uYx9vjkNDaQzgudzubIos6/VnVJblHYgQeh015rF149dZGfRnrotx90KwRxcjmDrvoI4KPIWgvJxd9GPJqYFkhRPOrAz7UGMileAhArQarEpwBjEN77gY5dK8XbdDj+w04Q9Ws8urN6+bXXQg5BYLJyp9QC3C6s8Q+p6kNvAVQJDjf9P+AFdTlOGRCpJGQAAAAASUVORK5CYII="
+                        alt="Favoritos">
 
-        
+                </div>
+
+                <div class="ins-image-box"
+                    style="height: 240px; display: flex; background-image: url(&quot;https://img1.kenayhome.com/109129/solum-cabecero-tapizado-tela.jpg&quot;);">
+                    <div id="wrap-discount-badge-1454703450634"
+                        class="ins-element-wrap ins-selectable-element ins-discount-badge-container">
+                        <div id="lists_block_top" class="icon-heart itemiconheader position-relative">
+                            <img class="img-responsive"
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAASRJREFUSEvVlIENwjAMBJ9NYBJgEmASYBJgEtgENgFdZFdpcdNECCEqoaA6/rM/bmb68jP7sr5+BlhJ2khifViXF0ln+7+VtCzEO2OiDq6WGLl3s5eAo4cCjllRbxbl4jtJCM7tt7fVhcfiB4OkfXkHVAUASxZBeYA8vi7E2Qc82ZkDTpLwtldB45TRJfmIA+kBnib2yWS5C1ibuszF7uYx9vjkNDaQzgudzubIos6/VnVJblHYgQeh015rF149dZGfRnrotx90KwRxcjmDrvoI4KPIWgvJxd9GPJqYFkhRPOrAz7UGMileAhArQarEpwBjEN77gY5dK8XbdDj+w04Q9Ws8urN6+bXXQg5BYLJyp9QC3C6s8Q+p6kNvAVQJDjf9P+AFdTlOGRCpJGQAAAAASUVORK5CYII="
+                                alt="Favoritos">
+
+                        </div>
+
+                    </div>
+                </div>
+                </div>
+            </article>
+        </section>
+        <section class="izquierda">
+            <article class="Promo_derecha">
+                <div id="lists_block_top" class="icon-heart itemiconheader position-relative">
+                    <img class="img-responsive"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAASRJREFUSEvVlIENwjAMBJ9NYBJgEmASYBJgEtgENgFdZFdpcdNECCEqoaA6/rM/bmb68jP7sr5+BlhJ2khifViXF0ln+7+VtCzEO2OiDq6WGLl3s5eAo4cCjllRbxbl4jtJCM7tt7fVhcfiB4OkfXkHVAUASxZBeYA8vi7E2Qc82ZkDTpLwtldB45TRJfmIA+kBnib2yWS5C1ibuszF7uYx9vjkNDaQzgudzubIos6/VnVJblHYgQeh015rF149dZGfRnrotx90KwRxcjmDrvoI4KPIWgvJxd9GPJqYFkhRPOrAz7UGMileAhArQarEpwBjEN77gY5dK8XbdDj+w04Q9Ws8urN6+bXXQg5BYLJyp9QC3C6s8Q+p6kNvAVQJDjf9P+AFdTlOGRCpJGQAAAAASUVORK5CYII="
+                        alt="Favoritos">
+
+                </div>
+            </article>
+        </section>
+
 
     </main>
-    <footer></footer>
+    <footer>
+        <ul class="clearfix">
+            <li><a rel="nofollow" href="https://kenayhome.com/es/content/182-valores-marca-kenay"
+                    title="¿Quiénes somos?" alt="¿Quiénes somos?">¿Quiénes somos?</a></li>
+            <li><a rel="nofollow" href="https://kenayhome.com/content/8-condiciones-generales-de-contratacion"
+                    title="Condiciones de contratación" alt="Condiciones de contratación">Condiciones de
+                    contratación</a></li>
+            <li><a rel="nofollow" href="https://kenayhome.com/es/content/13-aviso-legal" title="Aviso legal"
+                    alt="Aviso legal">Aviso legal</a></li>
+            <li><a rel="nofollow" href="https://kenayhome.com/es/content/15-servicios-de-la-marca"
+                    title="Servicios de la marca" alt="Servicios de la marca">Servicios de la marca</a></li>
+            <li><a rel="nofollow" href="https://formaloo.net/c8y1c" title="Solicitud de mediación pedidos web"
+                    alt="Solicitud de mediación pedidos web">Solicitud de mediación pedidos web</a></li>
+            <li><a rel="nofollow" href="https://formaloo.net/lqj9e" title="Formulario de desistimiento pedidos web"
+                    alt="Formulario de desistimiento pedidos web">Formulario de desistimiento pedidos web</a></li>
+            <li><a rel="nofollow" href="https://kenayhelp.zendesk.com/hc/es" title="Preguntas frecuentes"
+                    alt="Preguntas frecuentes">Preguntas frecuentes</a></li>
+            <li><a rel="nofollow" href="https://kenayhome.com/es/content/11-politica-de-proteccion-de-datos"
+                    title="Política de protección de datos" alt="Política de protección de datos">Política de protección
+                    de datos</a></li>
+            <li><a rel="nofollow" href="https://kenayhome.com/es/content/179-financiacion-con-pepper"
+                    title="Financiación con Pepper" alt="Financiación con Pepper">Financiación con Pepper</a></li>
+            <li><a rel="nofollow" href="https://kenayhome.com/blog/" title="Blog" alt="Blog">Blog</a></li>
+            <li><a rel="nofollow" href="https://kenayhome.com/es/content/51-politica-de-cookies"
+                    title="Política de Cookies" alt="Política de Cookies">Política de Cookies</a></li>
+
+
+            <li class="wkrma_rma_links"><a href="https://kenayhome.com/es/module/wkrma/rmaguestrequest">Tramitar
+                    incidencias/devoluciones web</a></li>
+
+        </ul>
+    </footer>
 </body>
+
 </html>
