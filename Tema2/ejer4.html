@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input:invalid {
+            background-color: pink;
+        }
+        button{
+            border-radius: 20rem;
+            background-color: black;
+            padding: 15px;
+            color:burlywood;
+        }
+        a{
+
+            color: black;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1><strong>Iniciar sesión</strong> </h1>
+    </header>
+    <nav></nav>
+    <main>
+        <form action="ejer4.html" method="post">
+
+            <p><input type="email" id="email" name="email" placeholder="Email" aria-label="Email"></p>
+            <p><input type="password" id="psw" name="psw" placeholder="Contraseña"  pattern=".{8,}" aria-label="contraseña" title="La contraseña debe tener al menos 8 caracteres"></p>
+            <p><a href="#">Recuperar Contraseña</a></p>
+            <button type="submit" name="iniciar" id="iniciar">Iniciar sesión</button>
+
+        </form>
+
+
+    </main>
+    <footer></footer>
+</body>
+
+</html>
