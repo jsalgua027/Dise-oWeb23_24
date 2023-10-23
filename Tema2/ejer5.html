@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input:invalid {
+            background-color: pink;
+        }
+
+        button {
+            border-radius: 20rem;
+            background-color: black;
+            padding: 15px;
+            color: burlywood;
+        }
+
+        a {
+
+            color: black;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <nav></nav>
+    <main>
+        <form action="ejer5.html" method="post" enctype="multipart/form-data">
+            <input type="radio" id="srI" title="zona seleccion señor" autofocus>
+            <label id="srL">Sr</label>
+            <input type="radio" id="sraI" title="zona seleccion señora">
+            <label id="sraL">Sra</label>
+            <input type="text" id="nombre" placeholder="nombre" title="introduce tu nombre" required maxlength="35">
+            <input type="text" id="apellidos" placeholder="apellidos" title="introduce los apellidos" required
+                maxlength="35">
+            <input type="email" id="email" placeholder="Email" aria-label="Email" required title="Correo electronico"
+                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$ ">
+            <input type="password" id="psw" placeholder="Contraseña" pattern=".{8,}" aria-label="contraseña"
+                title="La contraseña debe tener al menos 8 caracteres">
+
+
+            <label id="fechaL" title="seleccion de fecha de nacimiento">FECHA NACIMIENTO</label>
+            <select id="diaS">
+                <Option id="diaO" title="selección días">dia</Option>
+
+            </select>
+            <select id="mesS">
+                <Option id="mesO" title="selección mes">Mes</Option>
+
+            </select>
+
+            <select id="anioS">
+                <Option id="anioO" title="selección años">Año</Option>
+
+            </select>
+            <input type="text" id="dni" placeholder="DNI/NIF/NIE*" aria-label="dni" required title="introduce DNi"
+                pattern="([0-9]{8})-[A-Z]{1}">
+            <input type="text" id="direccion" placeholder="Dirección*" aria-label="dirección" required
+                title="introduce dirección">
+            <input type="text" id="codigoPostal" placeholder="Codigo Postal*" aria-label="codigoPostal" required
+                title=" introduce código postal">
+            <input type="text" id="ciudad" placeholder="Ciudad*" aria-label="ciudad" title=" introduce ciudad">
+
+
+            <select id="paisS" title="seleccione un país">
+                <Option id="paisO">España</Option>
+
+            </select>
+            <select id="provinciaS" title="seleccione una Provincia">
+                <Option id="provinciaO">Provincia</Option>
+
+            </select>
+            <input type="text" id="info" placeholder="Información adicional" aria-label="Info adicional"
+                title="indique Información adicional">
+            <input type="text" id="telefono" placeholder="Telefono móvil*" aria-label="telefono" pattern="[0-9]{10}"
+                title="Ingrese un número de teléfono válido de 10 dígitos">
+            <input type="checkbox" id="datosPersonales" title="selección de datos personales">
+            <label id="datos">Estos datos personales se utilizarán para responder a sus búsquedas, procesar sus pedidos
+                o autorizar el acceso</label>
+            <button type="submit" name="iniciar" id="iniciar" title="botón para iniciar sesión">Iniciar sesión</button>
+        </form>
+    </main>
+
+
+
+
+    <footer></footer>
+</body>
+
+</html>
