@@ -1,0 +1,122 @@
+
+/* estilos generales*/
+/*A*/
+body{
+   font-size: 14px;
+   color: black;
+   font-family: 'Open Sans', sans-serif;
+   background-color: white;
+}
+/*B*/
+ header, footer{
+
+    background-color:#e6e7e8 ;
+    border: 2px   #3f3f3f solid;
+    border-radius: 5px;
+
+}
+/*C*/
+footer{
+    color: #3f3f3f;
+    font-size: 2rem;
+}
+
+/*  estilos usando id*/
+/*D*/
+#logo{
+ width: 5rem;
+ height: 4.35rem;
+
+}
+
+/*Etiquetas de titulos*/
+/*E*/
+h1, h2, h3, h4, h5, h6 {
+    font-family:'Bree Serif', serif ;
+    color:  #00acdd;
+}
+
+/*F*/
+header h1{
+color:  #004166;
+font-weight: bold;
+
+}
+/*G*/
+#subject{
+    color:#96bc33 ;
+}
+
+/*H*/
+
+a {
+    text-decoration: none;
+
+}
+a:link{
+
+    color: #00acdd;
+}
+a:visited{
+    color: #ea2126;
+
+}
+a:hover{
+
+    cursor: pointer;
+    color: #f58a1e ;
+}
+
+/*I*/
+nav ul li{
+   list-style-type:none;
+}
+
+/*J*/
+main{
+
+    background-color: #004166;
+    font-weight: bold;
+    border: 2px solid#e6e7e8;
+    border-radius: 5px;
+}
+
+/*K------------------------------*/
+section{
+    border: 2px solido #004166;
+    border-radius: 5px;
+
+}
+
+/*I*/
+
+main section h2{
+text-align: center;
+
+}
+
+/*M*/
+.new-art{
+    position: relative;
+    border: 5px solid #e6e7e8;
+    border-radius: 10px;
+    width: 50%;
+}
+/*N*/
+main section article img{
+    width: 30%;
+    height: auto;
+}
+/*O*/
+ main section article p{
+    width: 70%;
+    height: auto;
+    text-align: justify;
+ }
+
+ /*P*/
+
+ h2+article{
+    background-color:#e6e7e8 ;
+    border: 2px solid #f58a1e;
+ }
