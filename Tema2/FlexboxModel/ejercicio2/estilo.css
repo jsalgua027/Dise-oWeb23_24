@@ -1,54 +1,39 @@
-@import "compass/css3";
-
 .navigation {
-  list-style: none;
-  margin: 0; 
-  
-  background: deepskyblue;
-  
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  
-  flex-flow: row wrap;
-  justify-content: flex-end;
+    background-color: deepskyblue;
+    color: white;
+    list-style: none; /*listas sin los puntos*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
 }
 
-.navigation a {
-  text-decoration: none;
-  display: block;
-  padding: 1em;
-  color: white;
-}
 
-.navigation a:hover {
-  background: darken(deepskyblue, 2%);
+.navigation a{
+    text-decoration: none;/*subrayado*/
+    display: block; /*este display lo tengo que preguntar, pero me sirve para que se vean los bordes bien*/
+    color: white;
+    padding: 1em;
 }
-
+/* version tablet*/
 @media all and (max-width: 800px) {
-  .navigation {
-    justify-content: space-around;
+    .navigation {
+      justify-content: space-around;
+    }
   }
-}
+/*versión movil*/
+  @media all and (max-width: 600px) {
+    .navigation {
+      flex-flow: column wrap;/*trasformo en columnas y wrap*/
+      padding: 0;
+    }
 
-@media all and (max-width: 600px) {
-  .navigation {
-    -webkit-flex-flow: column wrap;
-    flex-flow: column wrap;
-    padding: 0;
-  }
-  
-  .navigation a { 
-    text-align: center; 
+
+.navigation a{
+
+    text-align: center;/*texto alineado al cxentro*/
     padding: 10px;
-    border-top: 1px solid rgba(255,255,255,0.3); 
-    border-bottom: 1px solid rgba(0,0,0,0.1); 
-  }
+    border-top: 1px solid  rgba(255,255,255,0.3);
+    border-bottom: 1px solidrgba(0,0,0,0.1);
 
-  
-  .navigation li:last-of-type a {
-    border-bottom: none;
-  }
+}
 }
