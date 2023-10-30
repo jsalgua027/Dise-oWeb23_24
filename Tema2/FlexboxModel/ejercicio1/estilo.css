@@ -1,0 +1,53 @@
+*{
+
+    box-sizing: border-box;
+}
+
+body{
+
+    background-color: #686868;
+    font-family: Arial, sans-serif;
+}
+
+a{
+
+text-decoration: none;
+color: #FFF;
+font-size: 1.25.rem;
+
+}
+
+ul{
+
+    padding: 0;
+    list-style-type: none;
+}
+
+ul.menu{
+    background-color: #ACACAC;
+    border: 1px solid #FFF;
+    /* hago flexibles los ul diciendo que los elemtos que 
+    contienen este contnedor OJO los elementos dentro del ul no son flexibles*/
+    display: flex;
+    /* con el wrap evito que se salgan del contenedor cuando reduzco la pantalla los mueve a otra linea abajo*/
+    /*flex-wrap: wrap;*/
+
+    /* para anidar varios valores del flex*/
+    height: 25vh;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    /*posicionamos los items */
+    align-items: center;
+    align-content: space-around;
+
+}
+
+ul.menu>li{
+
+    background-color: #C9830A;
+    margin: 0.62rem;
+    border: 1px solid #FFF;
+    padding: 0.62rem;
+
+
+}
