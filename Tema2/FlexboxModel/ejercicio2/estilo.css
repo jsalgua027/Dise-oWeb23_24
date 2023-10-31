@@ -14,19 +14,20 @@
     color: white;
     padding: 1em;
 }
+
 /* version tablet*/
 @media all and (max-width: 800px) {
     .navigation {
       justify-content: space-around;
     }
   }
-/*versión movil*/
-  @media all and (max-width: 600px) {
-    .navigation {
-      flex-flow: column wrap;/*trasformo en columnas y wrap*/
-      padding: 0;
-    }
 
+/*versión movil*/
+@media all and (max-width: 600px) {
+  .navigation {
+    flex-flow: column wrap;/*trasformo en columnas y wrap*/
+    padding: 0;
+  }
 
 .navigation a{
 
