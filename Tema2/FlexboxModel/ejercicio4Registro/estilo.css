@@ -1,0 +1,50 @@
+/*generales*/
+
+/*cabecera*/
+header{
+
+width: 50%;
+background-color: rgb(189, 191, 192);
+text-align: center;
+
+
+}
+
+
+/*main*/
+
+main{
+    background-color: rgb(187, 215, 247);
+    width: 50%;
+    padding: 2px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+
+/*formulario*/
+form{
+    display: flex;
+    flex-flow: column;
+    padding: 10px;
+
+
+}
+
+
+input:invalid {
+    background-color: pink;
+}
+
+button {
+    border-radius: 20rem;
+    background-color: black;
+    padding: 15px;
+    color: burlywood;
+}
+
+a {
+
+    color: black;
+
+}

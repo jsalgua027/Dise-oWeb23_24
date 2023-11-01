@@ -4,36 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
     <title>Document</title>
     <style>
-        input:invalid {
-            background-color: pink;
-        }
 
-        button {
-            border-radius: 20rem;
-            background-color: black;
-            padding: 15px;
-            color: burlywood;
-        }
-
-        a {
-
-            color: black;
-
-        }
     </style>
 </head>
 
 <body>
-    <header></header>
+    <header>
+
+        <h1>REGISTRO DE CLIENTE</h1>
+
+    </header>
     <nav></nav>
     <main>
         <form action="ejer5.html" method="post" enctype="multipart/form-data">
-            <input type="radio" id="srI" title="zona seleccion señor" autofocus>
-            <label id="srL">Sr</label>
-            <input type="radio" id="sraI" title="zona seleccion señora">
-            <label id="sraL">Sra</label>
+            <div> <input type="radio" id="srI" title="zona seleccion señor" autofocus>
+                <label id="srL">Sr</label>
+                <input type="radio" id="sraI" title="zona seleccion señora">
+                <label id="sraL">Sra</label>
+            </div>
+
             <input type="text" id="nombre" placeholder="nombre" title="introduce tu nombre" required maxlength="35">
             <input type="text" id="apellidos" placeholder="apellidos" title="introduce los apellidos" required
                 maxlength="35">
@@ -78,9 +70,13 @@
                 title="indique Información adicional">
             <input type="text" id="telefono" placeholder="Teléfono móvil*" aria-label="teléfono" pattern="[0-9]{10}"
                 title="Ingrese un número de teléfono válido de 10 dígitos">
-            <input type="checkbox" id="datosPersonales" title="selección de datos personales">
-            <label id="datos">Estos datos personales se utilizarán para responder a sus búsquedas, procesar sus pedidos
-                o autorizar el acceso</label>
+            <div>
+                <input type="checkbox" id="datosPersonales" title="selección de datos personales">
+                <label id="datos">Estos datos personales se utilizarán para responder a sus búsquedas, procesar sus
+                    pedidos
+                    o autorizar el acceso</label>
+            </div>
+
             <button type="submit" name="iniciar" id="iniciar" title="botón para iniciar sesión">Iniciar sesión</button>
         </form>
     </main>

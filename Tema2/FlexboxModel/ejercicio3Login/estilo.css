@@ -1,24 +1,47 @@
-input:invalid {
-    background-color: pink;
+/*header*/
+header{
+background-color: beige;
+width: 20%;
+text-align: center;
+margin: 10px;
 }
+
+
+/*general main */
+main{
+
+    background-color: rgba(105, 148, 236, 0.274);
+    width: 20%;
+    padding: 10px;
+    border: 1px solid black;
+   
+}
+/*fin general main*/
+
+/*general del formulario*/
 form {
     display: flex;
     flex-flow:column;
-    justify-content: flex-start;
-    width: 20%;
-   
+    padding: 2px;      
     }
     
-    
+
+
+/*validaro de campos*/
+input:invalid {
+    background-color: pink;
+}
+
+/*boton*/
 button{
     border-radius: 20rem;
     background-color: black;
     padding: 15px;
     color:burlywood;
 }
+/*a*/
 a{
     text-decoration: none;
     color: black;
 
 }
-
