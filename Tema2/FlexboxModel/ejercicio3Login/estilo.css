@@ -21,8 +21,9 @@ main{
 /*general del formulario*/
 form {
     display: flex;
-    flex-flow:column;
-    padding: 2px;      
+    flex-direction: column;
+    padding: 2px; 
+    row-gap: 2px;     
     }
     
 
