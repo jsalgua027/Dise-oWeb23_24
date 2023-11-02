@@ -26,8 +26,8 @@
                 <label id="sraL">Sra</label>
             </div>
 
-            <input type="text" id="nombre" placeholder="nombre" title="introduce tu nombre" required maxlength="35">
-            <input type="text" id="apellidos" placeholder="apellidos" title="introduce los apellidos" required
+            <input type="text" id="nombre" placeholder="Nombre" title="introduce tu nombre" required maxlength="35">
+            <input type="text" id="apellidos" placeholder="Apellidos" title="introduce los apellidos" required
                 maxlength="35">
             <input type="email" id="email" placeholder="Email" aria-label="Email" required title="Correo electronico"
                 pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$ ">
@@ -36,7 +36,7 @@
 
 
             <label id="fechaL" title="selección de fecha de nacimiento">FECHA NACIMIENTO</label>
-            <select id="diaS" name="diaS" title="fecha">
+            <div> <select id="diaS" name="diaS" title="fecha">
                 <Option id="diaO" title="selección días">Día</Option>
 
             </select>
@@ -48,7 +48,8 @@
             <select id="anioS" name="aniosS" title="anio">
                 <Option id="anioO" title="selección años">Año</Option>
 
-            </select>
+            </select></div>
+           
             <input type="text" id="dni" placeholder="DNI/NIF/NIE*" aria-label="dni" required title="introduce DNi"
                 pattern="([0-9]{8})-[A-Z]{1}">
             <input type="text" id="direccion" placeholder="Dirección*" aria-label="dirección" required

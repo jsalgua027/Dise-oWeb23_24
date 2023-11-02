@@ -1,5 +1,11 @@
 /*generales*/
 
+/* fuente de todo el body*/
+body{
+
+    font-family: 'Roboto','sans-serif';
+}
+
 /*cabecera*/
 header{
 
@@ -34,7 +40,7 @@ form{
 
 
 input:invalid {
-    background-color: pink;
+    background-color: rgb(247, 144, 161);
 }
 
 button {
