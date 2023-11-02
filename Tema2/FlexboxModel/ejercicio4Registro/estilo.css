@@ -3,7 +3,7 @@
 /*cabecera*/
 header{
 
-width: 50%;
+width: 40%;
 background-color: rgb(189, 191, 192);
 text-align: center;
 
@@ -15,7 +15,7 @@ text-align: center;
 
 main{
     background-color: rgb(187, 215, 247);
-    width: 50%;
+    width: 40%;
     padding: 2px;
     border: 1px solid black;
     border-radius: 5px;
