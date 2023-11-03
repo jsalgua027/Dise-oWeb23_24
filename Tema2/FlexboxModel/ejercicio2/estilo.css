@@ -1,3 +1,6 @@
+
+*{box-sizing:border-box}
+
 .navigation {
     background-color: deepskyblue;
     color: white;

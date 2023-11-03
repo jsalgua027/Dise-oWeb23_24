@@ -7,34 +7,12 @@ body{
     font-weight: bold;
 }
 
-/*cabecera*/
-header{
-
-width: 40%;
-background-color: rgb(189, 191, 192);
-text-align: center;
-
-
-}
-
-
-/*main*/
-
-main{
-    background-color: rgb(187, 215, 247);
-    width: 40%;
-    padding: 2px;
-    border: 1px solid black;
-    border-radius: 5px;
-}
-
-
 /*formulario*/
 form{
     display: flex;
     flex-direction: column;
     padding: 10px;
-    row-gap: 2px;
+    row-gap: 10px;
 
 
 }
@@ -48,16 +26,15 @@ form *::placeholder, select{
     color: black;
 
 }
+/*boton*/
 
-input:invalid {
-    background-color: rgb(247, 144, 161);
-}
 
 button {
     border-radius: 20rem;
     background-color: black;
     padding: 15px;
     color: burlywood;
+    width: 200px;
 }
 
 a {

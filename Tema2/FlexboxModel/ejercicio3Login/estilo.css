@@ -8,22 +8,13 @@ body {
 
 /*header*/
 header {
-    background-color: beige;
+   
 
-    text-align: center;
+    text-align: left;
     margin: 10px;
 }
 
 
-/*general main */
-main {
-
-    background-color: rgba(105, 148, 236, 0.274);
-
-    padding: 10px;
-    border: 1px solid black;
-
-}
 
 /*fin general main*/
 
@@ -32,7 +23,7 @@ form {
     display: flex;
     flex-direction: column;
     padding: 2px;
-    row-gap: 2px;
+    row-gap: 10px;
 
 }
 
@@ -48,10 +39,6 @@ form *::placeholder, a{
 }
 
 
-/*validaro de campos*/
-input:invalid {
-    background-color: pink;
-}
 
 /*boton*/
 button {
@@ -60,7 +47,7 @@ button {
     padding: 15px;
     color: burlywood;
 }
-
+/*miaumiaumiaumiau*/
 /*a*/
 a {
     text-decoration: none;
