@@ -1,3 +1,5 @@
+/*solución de clase*/
+
 *{box-sizing: border-box;}
 
 body{
@@ -14,6 +16,58 @@ ul.navigation{
 
   list-style: none;
   padding-left: 0;
-
+  display: flex;
+  flex-direction: column;
+  background-color: #3498db;
 
 }
+
+ul.navigation li{
+border-bottom: 1px solid white;
+  
+  background-color: #3498db;
+  text-align: center;
+  padding-right: 2em;
+}
+
+ul.navigation a{
+  color: white;
+  text-decoration: none;
+
+}
+
+/*realizamos las media queri*/
+/*version tablet*/
+@media (min-width:720px){
+
+ul.navigation{
+ 
+  flex-direction: row;
+  justify-content: space-around;/* movemos los */
+
+}
+ul.navigation li{
+  border: none;
+ 
+}
+
+}
+/*modo escritorio*/
+@media (min-width:1024px){
+
+  ul.navigation{
+    border: none;
+    justify-content: end;/* movemos los */
+  
+  }
+
+  ul.navigation li{
+    border: none;
+   padding-right: 2em;
+  
+  }
+  
+  }
+
+
+
