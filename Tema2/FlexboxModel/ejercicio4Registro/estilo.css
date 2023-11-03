@@ -4,6 +4,7 @@
 body{
 
     font-family: 'Roboto','sans-serif';
+    font-weight: bold;
 }
 
 /*cabecera*/
@@ -37,7 +38,16 @@ form{
 
 
 }
+form input {
 
+    border: none;
+    border-bottom: 1px solid grey;
+}
+form *::placeholder, select{
+    font-weight: bold;
+    color: black;
+
+}
 
 input:invalid {
     background-color: rgb(247, 144, 161);

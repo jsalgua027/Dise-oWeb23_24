@@ -1,40 +1,51 @@
-
 /* fuente de todo el body*/
-body{
+body {
 
-    font-family: 'Roboto','sans-serif';
+    font-family: 'Roboto', 'sans-serif';
 }
 
 
 
 /*header*/
-header{
-background-color: beige;
-width: 20%;
-text-align: center;
-margin: 10px;
+header {
+    background-color: beige;
+
+    text-align: center;
+    margin: 10px;
 }
 
 
 /*general main */
-main{
+main {
 
     background-color: rgba(105, 148, 236, 0.274);
-    width: 20%;
+
     padding: 10px;
     border: 1px solid black;
-   
+
 }
+
 /*fin general main*/
 
 /*general del formulario*/
 form {
     display: flex;
     flex-direction: column;
-    padding: 2px; 
-    row-gap: 2px;     
-    }
-    
+    padding: 2px;
+    row-gap: 2px;
+
+}
+
+form input {
+
+    border: none;
+    border-bottom: 1px solid grey;
+}
+form *::placeholder, a{
+    font-weight: bold;
+    color: black;
+
+}
 
 
 /*validaro de campos*/
@@ -43,14 +54,15 @@ input:invalid {
 }
 
 /*boton*/
-button{
+button {
     border-radius: 20rem;
     background-color: black;
     padding: 15px;
-    color:burlywood;
+    color: burlywood;
 }
+
 /*a*/
-a{
+a {
     text-decoration: none;
     color: black;
 
