@@ -1,5 +1,5 @@
 /*generales*/
-
+    *{box-sizing: border-box;}
 /* fuente de todo el body*/
 body{
 
@@ -12,7 +12,10 @@ form{
     display: flex;
     flex-direction: column;
     padding: 10px;
-    row-gap: 10px;
+    margin: 0 auto;
+    align-items: center;
+    border: 1px solid black;
+    width: 50%;
 
 
 }
@@ -20,12 +23,18 @@ form input {
 
     border: none;
     border-bottom: 1px solid grey;
+       margin: 5px;
 }
 form *::placeholder, select{
     font-weight: bold;
     color: black;
 
 }
+form>*{
+width: 200px;
+
+}
+
 /*boton*/
 
 

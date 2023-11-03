@@ -1,3 +1,5 @@
+*{box-sizing: border-box;}
+
 /* fuente de todo el body*/
 body {
 
@@ -19,18 +21,23 @@ header {
 /*fin general main*/
 
 /*general del formulario*/
-form {
+form#formulario {
     display: flex;
     flex-direction: column;
-    padding: 2px;
-    row-gap: 10px;
+     
+   
+    
 
 }
 
-form input {
-
+form#formulario input {
+    width: 60%;
     border: none;
     border-bottom: 1px solid grey;
+    margin: 30px;
+
+   
+    
 }
 form *::placeholder, a{
     font-weight: bold;
@@ -41,16 +48,53 @@ form *::placeholder, a{
 
 
 /*boton*/
-button {
+form button {
     border-radius: 20rem;
     background-color: black;
     padding: 15px;
     color: burlywood;
+    width: 10rem;
+    margin: 30px;
 }
-/*miaumiaumiaumiau*/
+
 /*a*/
 a {
     text-decoration: none;
     color: black;
+    width: 10rem;
+    margin: 30px;
+
+}
+h2{
+    width: 10rem;
+    margin: 30px;
+
+}
+
+/*justifac conten alineacion horizontal */
+/*aling item alinacion verticlal*/
+
+
+@media (min-width:700px){
+
+form#formulario input {
+    max-width: 200px;
+    min-width: 10em;
+    border: none;
+    border-bottom: 1px solid grey;
+    margin: 30px;
+
+   
+    
+}
+form#formulario {
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+  
+   
+    
+
+}
 
 }
