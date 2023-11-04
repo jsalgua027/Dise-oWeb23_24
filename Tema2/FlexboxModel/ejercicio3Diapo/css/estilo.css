@@ -2,6 +2,7 @@
   box-sizing: border-box;
 }
 
+/*
 #contenido {
   display: flex;
 
@@ -68,6 +69,8 @@ div footer {
   padding: 10px;
 }
 
+/*----------------INICIO MEDIA---------------*/
+/*
 @media (min-width:720px){
   #contenido{
     width: 800px;
@@ -83,18 +86,25 @@ div footer {
     flex-direction: row;
 
     }
+   
+    div main article{
+      width: 80%;
+
+    }
+
+
   div footer  {
     
     width: 100%;
   }
   
 
-
-
 }
+/*  
+/*----------------FIN MEDIA---------------*/
 
 
-/*
+/* GENERAL PARA BLOQUE CONTENEDOR PRINCIAL */
  #contenido {
   display: flex;
 
@@ -106,7 +116,7 @@ div footer {
 
 
 }
-
+/*GENERAL PARA TODAS LAS CAJAS*/
 div,
 header,
 footer,
@@ -121,7 +131,7 @@ aside {
   padding: 10px;
 
 }
-
+/*COLORES INDIVIDUALES*/
 div header {
 
   background-color: #03A6A6;
@@ -150,5 +160,34 @@ div footer {
   background-color: #36ABD9;
 
 }
+/*----------------INICIO MEDIA---------------*/
+
+@media (min-width:720px){
+  #contenido{
+    width: 800px;
+    
+    }
+  div header  {
+    
+    width: 100%;
+  }
+  div main{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    }
+   
+    div main article{
+      width: 80%;
+
+    }
+
+
+  div footer  {
+    
+    width: 100%;
+  }
   
-*/
+}
+/*----------------FIN MEDIA---------------*/
