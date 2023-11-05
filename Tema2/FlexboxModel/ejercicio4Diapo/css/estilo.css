@@ -50,6 +50,7 @@ body footer {
     body{
         display: flex;
         flex-direction: column;
+        
         width: 500px;
        
         
@@ -59,18 +60,53 @@ body footer {
         text-align: center;
         padding: 10px;
     }
+    
     main{
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
     }
-    main section{
-        width: 100%;
-
-    }
+    
     main aside{
+       width: 50%;
        
-        width:50%;
     }
 
+}
+
+/*versión escritorio*/
+@media (min-width:1024px){
+    body{
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+       
+        
+    }
+    body, header, section ,aside, footer{
+        font-weight: bolder;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    main{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    main section{
+       width: 50%;
+      
+    }
+
+    main aside{
+        
+        width: 25%;
+    }
+    main #asi1{
+        order: -1;
+
+    }
 }
