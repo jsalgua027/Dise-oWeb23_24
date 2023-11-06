@@ -37,8 +37,9 @@ ul.menu{
     flex-flow: row wrap;
     justify-content: space-evenly;
     /*posicionamos los items */
-    align-items: center;
-    align-content: space-around;
+    align-items: flex-start;
+ 
+    height: 20rem;
 
 }
 
@@ -48,6 +49,20 @@ ul.menu>li{
     margin: 0.62rem;
     border: 1px solid #FFF;
     padding: 0.62rem;
+
+
+
+
+}
+
+
+ul.menu>li:nth-child(1){
+
+    background-color:red;
+    margin: 0.62rem;
+    border: 1px solid #FFF;
+    padding: 0.62rem;
+    align-self: flex-end;
 
 
 }
