@@ -4,27 +4,28 @@
     box-sizing: border-box;
 }
 
-body{
+div#contenido{
     display: flex;
     flex-direction: column;
-    width: 300px;
+   
    
     
 }
-body, header, section ,aside, footer{
+header, article ,aside, footer{
     font-weight: bolder;
     text-align: center;
     padding: 10px;
+    flex-basis: 100%;
 }
 /*fin de estilos generales*/
 
 
-body header {
+ header {
 
     background-color: #F25244;
 }
 
-body section {
+article {
 
 
     background-color: #07C7F2;
@@ -40,73 +41,56 @@ aside#asi2 {
     background-color: #F266B3
 }
 
-body footer {
+ footer {
 
     background-color: #95F291
 }
 
 /*versión tablet*/
 @media (min-width:720px){
-    body{
-        display: flex;
-        flex-direction: column;
-        
-        width: 500px;
-       
-        
-    }
-    body, header, section ,aside, footer{
-        font-weight: bolder;
-        text-align: center;
-        padding: 10px;
-    }
     
-    main{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        
-    }
+   div#contenido{
+
+    flex-flow: row wrap;
+   
+   }
     
-    main aside{
-       width: 50%;
-       
-    }
+ aside{
+
+    flex-basis: 50%;
+ }
 
 }
 
 /*versión escritorio*/
 @media (min-width:1024px){
-    body{
-        display: flex;
-        flex-direction: column;
-        width: 500px;
-       
-        
-    }
-    body, header, section ,aside, footer{
-        font-weight: bolder;
-        text-align: center;
-        padding: 10px;
-    }
-    
-    main{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    
-    main section{
-       width: 50%;
-      
-    }
+   article{flex: 50%;}
 
-    main aside{
-        
-        width: 25%;
-    }
-    main #asi1{
-        order: -1;
+  div  aside{
+    flex: 15%;
+   }
+   
+  div header{
+    order: 1;
+   }
+    #asi1{
+        order: 2;
 
     }
+    div article{
+
+        order: 3;
+    }
+    #asi2{
+
+        order: 4;
+    }
+
+     div footer{
+
+        order: 5;
+    }
+   
+
+    
 }

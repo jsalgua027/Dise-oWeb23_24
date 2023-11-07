@@ -7,104 +7,81 @@
 
 
 /* GENERAL PARA BLOQUE CONTENEDOR PRINCIAL */
- #contenido {
+ div#contenido {
   display: flex;
-
   flex-direction: column;
-  width: 100%;
+ 
   background-color: rgb(206, 200, 200);
-  align-items: center;
+ 
   padding: 8px;
-
-
-}
-/*GENERAL PARA TODAS LAS CAJAS*/
-div,
-header,
-footer,
-nav,
-article,
-aside {
   color: white;
   text-align: center;
-  width: 100%;
-  border: 2px solid lightgray;
-  margin: 3px;
-  padding: 10px;
 
-}
 
- main {
-
-  width: 100%;
   
 }
 
+/*GENERAL PARA TODAS LAS CAJAS*/
+  div header, div footer{
+  
+  border: 2px solid lightgray;
+  
+ 
+
+}
+main *{
+
+  border: 2px solid lightgray;
+}
 
 /*COLORES INDIVIDUALES*/
+div main{
+display: flex;
+flex-direction: column;
+}
+
 div header {
-
   background-color: #03A6A6;
-
 }
 
 div main nav {
- 
+
   background-color: #F28705;
 }
 
 div main article {
   height: 200px;
   background-color: #710273;
-
 }
 
 div main aside {
-
   background-color: #a7d4d9;
-
 }
 
 div footer {
-
   background-color: #36ABD9;
-
 }
+
 /*----------------INICIO MEDIA---------------*/
 
-@media (min-width:768px){
-  #contenido{
-    width: 100%;
-    
-    }
-  div header  {
-    
-    width: 100%;
-  }
-  div main{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-
-    }
-   
-    div main article{
-    width: 60%;
-    }
-
-    div main nav{
-      width: 20%;
-      }
-
-      div main aside{
-        width: 20%;
-        }
-
-
-  div footer  {
-    
-    width: 100%;
-  }
+@media (min-width:768px) {
   
+    div main {
+      flex-direction: row;
+    }
+
+    div main article {
+      flex-grow: 4;
+    }
+
+    div main nav {
+      flex-grow: 1;
+    }
+
+    div main aside {
+      flex-grow: 1;
+    }
+
 }
+
 /*----------------FIN MEDIA---------------*/
