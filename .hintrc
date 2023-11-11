@@ -3,6 +3,6 @@
     "development"
   ],
   "hints": {
-    "compat-api/html": "off"
+    "axe/structure": "off"
   }
 }
