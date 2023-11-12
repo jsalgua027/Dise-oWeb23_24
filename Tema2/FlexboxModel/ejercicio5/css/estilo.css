@@ -1,75 +1,82 @@
-*{box-sizing: border-box;}
-body  { 
-    
-    font-size: 16px;
-  
-  }
 
+/* Estilo para todos los elementos y el body */
+* {
+  box-sizing: border-box;
+}
 
- section#news{
-    display:flex;
-    flex-direction: column;
-  
- }
-
- section#news>h2{
-    font-size: 3rem;
-    flex: 100%;
-
-
- }
- section#news{
-    font-family: 'Aton', sans-serif;
-    text-align: center;
-    font-size: 3rem;
-
-
- }
-
+body {
  
-  section#news > article{
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
- }
+  font-size: 16px;
+  color: black;
+}
 
- section#news > article > img{
-    width: 100%;
-    height: auto;
+/* Estilo para el section principal */
+section#news {
+  display: flex;
+  flex-direction: column;
+  /* si añado aqui wrap a cada elemento es flex:100% */
+}
+
+section#news>h2 {
+  font-family: Queens Park, serif;
+  font-size: 3rem;
+  text-align: center;
+
+}
+
+section#news>article {
+
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+/* imagen tendra como tamaño el 100% del contenedor padre */
+section#news>article>img {
+  width: 100%;
+  height: auto;
+
+}
+
+section#news>article>h3,
+section#news>article>h4,
+section#news>article>h5{
+  font-family: 'Oswald',sans-serif;
+}
+
+section#news>article>h4,
+section#news>article>h5{
+  margin:0;
+  text-align: right;
+  font-weight: 300;
+
+}
+
+section#news>article>p{
+  font-family: 'Merriweather',serif;
+line-height: 1.5;
 
 
- }
- 
- 
+}
+/* Punto de ruptura en 750px */
 
-
-/*version tablet*/
 @media (min-width:750px){
+h2{font-size: 3rem;}
+section#news{
+    flex-direction: row ;
+    flex-wrap: wrap;
+    } 
 
+    section#news>h2{
+      flex:100%;
 
-    section#news{
-      
-        flex-direction: row;
-        flex-wrap: wrap;
-     }    
-
-     section#news >h2{
-        flex: 100%;
-        text-align: center;
-
-     }
-     
-     section#news > article {
-       
-       flex:1
     }
-
-    section#news > article.breaking {
-        flex: 2
-     }
-
-    
-
+ section#news>article{
+      flex:1;
+    }
+    section#news>article.breaking{
+      /* h2 debe ocupar el 100 del width   o tthchil2 */
+      flex:2;
+    }
 
 
 }
