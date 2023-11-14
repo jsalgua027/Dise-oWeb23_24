@@ -93,11 +93,14 @@ div#content main section article.news-art p{
 }
 
 /*version movil*/
-/*quito el chebox*/
 
 #hamburger {
   display: none;
+
 }
+
+
+
 
 label {
   background-color: #004166;
@@ -138,3 +141,19 @@ li a {
 li a:hover {
   background-color: #111;
 }
+
+/* version tablet*/
+
+@media (min-width:720px) {
+  main section article{
+     background-color: #ea2126;
+     
+   
+
+   }
+  
+
+}
+
+
+
