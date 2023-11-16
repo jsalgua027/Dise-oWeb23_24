@@ -1,0 +1,168 @@
+*{box-sizing: border-box;}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: black;
+  background-color: white;
+}
+
+header, footer{
+  background-color: #e6e7e8;
+  border: 2px solid #3f3f3f;
+  border-radius: 5px;
+}
+
+footer{
+  color: #3f3f3f;
+  height: 2rem;
+}
+
+header img#logo{
+  width: 5rem;
+  height: 4.35rem;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Bree Serif', serif;
+  color: #00acdd;
+}
+
+header h1{
+  color: #004166;
+  font-weight: bold;
+}
+
+header h1 span#subject{
+  color: #96bc33;
+}
+
+a{
+  text-decoration: none;
+  cursor:pointer;
+}
+
+a:link{
+  color: #00acdd;
+}
+
+a:visited{
+  color: #ea2126;
+}
+
+a:hover{
+  cursor: pointer;
+  color: #f58a1e;
+}
+
+nav ul li{
+  list-style-type: none;
+}
+nav ul{
+	padding-left: 0;
+}
+
+nav#main-menu{
+  background-color: #004166;
+  font-weight: bold;
+  border: 2px solid #e6e7e8;
+  border-radius: 5px;
+}
+
+main section#principal{
+  border: 2px solid #004166;
+  border-radius: 5px;
+}
+
+main section article.news-art{
+  border: 5px solid #e6e7e8;
+  border-radius: 0.8rem;
+}
+div#content main section#principal article#primerElemento{
+  background-color: #e6e7e8;
+  border-color: #f58a1e;
+  
+}
+
+div#content main section article.news-art h3{
+  width: 20rem;
+  height: auto;
+  border: 1px solid yellow;
+}
+
+div#content main section article.news-art img{
+  width: 20rem;
+  height: auto;
+  border: 1px solid yellow;
+}
+
+div#content main section article.news-art p{
+  padding: 0 1rem;
+  border: 1px solid yellow;
+}
+
+/*version movil*/
+
+#hamburger {
+  display: none;
+
+}
+
+
+
+
+label {
+  background-color: #004166;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  display: block;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background-color:#004166;
+  text-align: center;
+  transition: max-height 0.3s;
+  max-height: 0;
+}
+
+#hamburger:checked ~ ul {
+  max-height: 200px; /* Ajusta la altura máxima según sea necesario */
+}
+
+li {
+  float: none; /* Asegura que los elementos de la lista estén uno debajo del otro */
+}
+
+li a {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+/* version tablet*/
+
+@media (min-width:720px) {
+  main section article{
+     background-color: #ea2126;
+     
+   
+
+   }
+  
+
+}
+
+
+
