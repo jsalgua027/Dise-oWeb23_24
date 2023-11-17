@@ -283,7 +283,7 @@ div#content main section article.news-art p {
   }
   div#content > nav#main-menu > input, div#content > nav#main-menu > ul{
     display:flex;
-    
+    justify-content: space-evenly;
   }
  
   div#content > nav#main-menu > input{
