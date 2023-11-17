@@ -130,12 +130,13 @@ div#content main section article.news-art p {
 
 label {
   background-color: #004166;
-  color: #fff;
-  cursor: pointer;
+   cursor: pointer;
   padding: 10px;
   border-radius: 5px;
   display: block;
   text-align: center;
+  color: #fff;
+ 
 }
 
 ul {
@@ -303,42 +304,15 @@ li a:hover {
   
 
   }
+  #hamburger {
+    display: hidden;
+  
+  }
+  
 
-
-/*version menu*/
-
-#hamburger {
-  display: none;
-
-}
-
-
-
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-  background-color: #004166;
-  text-align: center;
-  transition: max-height 0.3s;
-  max-height: 0;
-}
-
-
-li {
-  float: none;
-  /* Asegura que los elementos de la lista estén uno debajo del otro */
-}
-
-li a {
- 
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-
+  #hamburger:checked~ul {
+  float: right;
+    /* Ajusta la altura máxima según sea necesario */
+  }
 
 }
