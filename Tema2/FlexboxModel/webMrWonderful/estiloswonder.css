@@ -181,7 +181,7 @@ footer {
 
 
 /*El menú adicional es flexible y va en segunda posición*/
-footer>nav#menu-social-adicional {
+footer>nav#menu-social-adicional>ul {
 display: flex;
 flex-direction: row;
 
@@ -189,23 +189,21 @@ flex-direction: row;
 
 }
 footer>nav#menu-social-adicional>ul>li i {
-	border: 1px solid;
+	
 	font-size: 1.5rem;
 	color: #cda194;
 	padding: 0 0.5rem;
 	flex-basis: 15%;
 }
 /*El menú social hay que hacerlo flexible*/
-footer>nav#menu-adicional {
-display: flex;
+footer>nav>span>ul#menu-adicional {
+	display: flex;
 flex-direction: column;
+justify-content: center;
 
 	/*lo colocamos en primer lugar dentro del pie*/
 order: 2;
 }
-
-/*El menu social también es flexible*/
-
 
 
 
@@ -216,7 +214,33 @@ footer>small {
 	order: 3;
 }
 
-/*VERIÓN DE ESCRITORIO*/
+/*VERIÓN DE ESCRITORIO********************************/
+@media (min-width:800px) {
+
+	main>article.item {
+		
+		flex-basis:  25%;/* contorlo el espacio básico que ocupa el item .(este es el que manda en cada version)*/
+				
+	}
+	header>nav#menu-principal>ul#menu {
+		display: flex;
+		
+		
+
+		
+	}
+	header>nav#menu-principal>ul#menu>li>a {
+		
+		flex-basis: 100%;
+	   
+		
+
+		
+	}
+	
+  
+	}
+  
 /*En la cabecera va logo e iconos en la misma línea y debajo el menú*/
 /*Hay 4 artículos por fila*/
 /*La barra social y el menú adicional están uno al lado del otro*/
