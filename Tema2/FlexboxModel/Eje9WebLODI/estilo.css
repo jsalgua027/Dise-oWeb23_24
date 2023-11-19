@@ -1,0 +1,72 @@
+* {
+box-sizing: border-box;
+}
+
+/* VOY A ESCONDER ZABECERA Y PIE PARA */
+
+footer{
+
+    display: none;
+}
+
+/*header*/
+header{
+display: flex;
+flex-wrap: wrap;
+}
+header>nav#menu-principal>input,ul#menu{
+    display: none;
+    order: 1;
+    
+}
+header>picture{
+   
+    order: 2
+    
+}
+
+header nav#buscador >ul>li{
+  list-style: none;
+  order: 3;
+                                                                    
+}
+
+header nav#compra >ul>li{
+    list-style: none;
+    order: 4;
+  }
+
+
+/* main*/
+body>main{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+/* article*/
+
+body>main>article.item{
+    margin: 3px;
+     flex-basis: 48%;
+     border: 1px solid;
+     display: flex;
+     flex-direction: column;
+}
+
+main>article.item>a>picture>img{
+   order: 1;
+   width: 100%;
+   height: auto;
+  
+}
+main>article.item>a>h3{
+order: 2;
+text-decoration: none;
+}
+main>article.item>p{
+  order :3;
+ }
+
+
+

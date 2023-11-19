@@ -120,7 +120,6 @@ main>article.item {
 	margin-bottom: 0.5rem;
 	flex-basis: 50%;
 	/* contorlo el espacio básico que ocupa el item .(este es el que manda en cada version)*/
-	
 	padding: 5%;
 
 
@@ -158,7 +157,7 @@ main>article.item>span {
 	/* consigo el ajuste de la imagen */
 	order: 3;
 	margin: 0 auto;
-	
+
 
 }
 
@@ -192,7 +191,7 @@ footer {
 footer>nav#menu-social-adicional>ul {
 	display: flex;
 	flex-direction: row;
-	
+
 
 	/*lo colocamos en primer lugar dentro del pie*/
 
@@ -204,14 +203,14 @@ footer>nav#menu-social-adicional>ul>li i {
 	color: #cda194;
 	padding: 0 0.5rem;
 	flex-basis: 15%;
-	
+
 }
 
 /*El menú social hay que hacerlo flexible*/
 footer>nav>span>ul#menu-adicional>li>a {
 	display: flex;
 	flex-direction: column;
-	
+
 	/*lo colocamos en primer lugar dentro del pie*/
 	order: 2;
 }
@@ -262,14 +261,15 @@ footer>small {
 	header>nav#search {
 		order: 1;
 		flex-basis: 5%;
-	
+
 	}
+
 	/*En tercera posición se encuentra el logo*/
 	header>a#logo {
 		order: 4;
 		font-size: 1.4rem;
 		flex-basis: 100%;
-		
+
 	}
 
 	/*En cuarta posición está el icono del usuario de login*/
@@ -277,15 +277,17 @@ footer>small {
 		order: 2;
 		font-size: 1.4rem;
 		flex-basis: 5%;
-		
+
 	}
+
 	/*Por último, en quinta posición se encuentra la bolsa de la compra*/
 	header>nav#bag {
 		order: 3;
 		flex-basis: 5%;
 	}
+
 	header>nav#menu-principal {
-	
+
 		order: 5;
 		flex-basis: 100%;
 	}
@@ -302,16 +304,17 @@ footer>small {
 
 		flex-direction: row;
 		flex-wrap: wrap;
-		
+
 	}
+
 	footer>nav#menu-social-adicional {
 		flex-basis: 50%;
-		
+
 	}
 
 	footer>nav {
 		flex-basis: 50%;
-		
+
 	}
 
 	footer>nav>span {
@@ -319,7 +322,7 @@ footer>small {
 	}
 
 	footer>small {
-		
+
 		flex-basis: 100%;
 		text-align: center;
 	}
