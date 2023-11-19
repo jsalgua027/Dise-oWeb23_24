@@ -120,7 +120,7 @@ main>article.item {
 	margin-bottom: 0.5rem;
 	flex-basis: 50%;
 	/* contorlo el espacio básico que ocupa el item .(este es el que manda en cada version)*/
-	border: 1px solid;
+	
 	padding: 5%;
 
 
@@ -211,8 +211,6 @@ footer>nav#menu-social-adicional>ul>li i {
 footer>nav>span>ul#menu-adicional {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	
 
 	/*lo colocamos en primer lugar dentro del pie*/
 	order: 2;
@@ -265,36 +263,30 @@ footer>small {
 	header>nav#search {
 		order: 1;
 		flex-basis: 5%;
-		border: 1px solid red;
+	
 	}
-
 	/*En tercera posición se encuentra el logo*/
 	header>a#logo {
 		order: 4;
 		font-size: 1.4rem;
 		flex-basis: 100%;
-		border: 1px solid blue;
+		
 	}
-
 
 	/*En cuarta posición está el icono del usuario de login*/
 	header>nav#login {
 		order: 2;
 		font-size: 1.4rem;
 		flex-basis: 5%;
-		border: 1px solid yellow;
+		
 	}
-
 	/*Por último, en quinta posición se encuentra la bolsa de la compra*/
 	header>nav#bag {
 		order: 3;
 		flex-basis: 5%;
-		border: 1px solid black;
 	}
-
-
 	header>nav#menu-principal {
-		border: 1px green;
+	
 		order: 5;
 		flex-basis: 100%;
 	}
@@ -318,18 +310,17 @@ footer>small {
 		
 	}
 
-
 	footer>nav {
 		flex-basis: 50%;
 		
 	}
-	
+
 	footer>nav>span {
 		border-bottom: 1px solid;
 	}
 
 	footer>small {
-		border: 1px solid;
+		
 		flex-basis: 100%;
 		text-align: center;
 	}
