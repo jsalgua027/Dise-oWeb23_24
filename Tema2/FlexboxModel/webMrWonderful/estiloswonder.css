@@ -208,14 +208,13 @@ footer>nav#menu-social-adicional>ul>li i {
 }
 
 /*El menú social hay que hacerlo flexible*/
-footer>nav>span>ul#menu-adicional {
+footer>nav>span>ul#menu-adicional>li>a {
 	display: flex;
 	flex-direction: column;
-
+	
 	/*lo colocamos en primer lugar dentro del pie*/
 	order: 2;
 }
-
 
 
 /*El texto del pie va al final*/
