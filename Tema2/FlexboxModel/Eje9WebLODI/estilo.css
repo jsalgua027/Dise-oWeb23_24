@@ -2,14 +2,6 @@
   box-sizing: border-box;
 }
 
-/* VOY A ESCONDER ZABECERA Y PIE PARA */
-
-footer {
-
-  display: none;
-}
-
-
 /*HEADER*/
 header {
   display: flex;
@@ -17,59 +9,60 @@ header {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  
+
 }
+
 /*lista de menu principal*/
-header>nav#menu-principal>input,ul#menu {
+header>nav#menu-principal>input,
+ul#menu {
   display: none;
- 
+}
+
+header>nav#menu-principal {
+  order: 1;
+  flex-basis: 10%;
+  text-align: center;
 
 }
-header>nav#menu-principal{
-order: 1;
-border: 1px solid yellow;
-flex-basis: 10%;
-text-align: center;
 
-}
 /*logo*/
 header>picture {
   order: 3;
-  border: 1px solid red;
   text-align: center;
   flex-basis: 25%;
 }
+
 /*icono buscador*/
-header>nav#buscador{
-   order: 2;
-   border: 1px solid blue;
-   
-   flex-basis: 10%;
+header>nav#buscador {
+  order: 2;
+  flex-basis: 5%;
 
 }
-header>nav#buscador>ul>li{
+
+header>nav#buscador>ul>li {
   list-style: none;
- 
+
 }
-header>nav#buscador>ul>li>a>i{
+
+header>nav#buscador>ul>li>a>i {
   color: black;
- 
 }
 
 /*icono compra*/
 
-header>nav#compra{
-   order: 4;
-   flex-basis: 10%;
-   border: 1px solid olivedrab;
-   text-align: center;
+header>nav#compra {
+  order: 4;
+  flex-basis: 5%;
+  text-align: center;
 
 }
-header>nav#compra>ul>li{
+
+header>nav#compra>ul>li {
   list-style: none;
 }
-header>nav#compra>ul>li>a>i{
-  color:black
+
+header>nav#compra>ul>li>a>i {
+  color: black
 }
 
 
@@ -87,7 +80,6 @@ body>main {
 main>article.item {
   margin: 3px;
   flex-basis: 48%;
-  border: 1px solid;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -96,15 +88,11 @@ main>article.item {
 
 main>article.item>:nth-child(3) {
   order: 1;
-
-
 }
 
 main>article.item>:nth-child(3)>picture>img {
-
   width: 100%;
   height: auto;
-
 }
 
 main>article.item>:nth-child(1) {
@@ -115,4 +103,49 @@ main>article.item>:nth-child(1) {
 
 main>article.item>:nth-child(2) {
   order: 3;
+}
+
+
+/*FOOTER*/
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/*menu adicional*/
+footer>nav#menu-adicional {
+  flex-basis: 100%;
+}
+
+footer>nav#menu-adicional>ul>li {
+  list-style: none;
+  display: flex;
+}
+
+footer>nav#menu-adicional>ul>li>a {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  flex-basis: 100%;
+  border-bottom: 1px solid lightgray;
+  padding: 1rem;
+}
+
+/*iconos sociales*/
+footer>nav#iconos-sociales>ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+footer>nav#iconos-sociales>ul>li {
+  list-style: none;
+  flex-basis: 15%;
+
+}
+
+footer>nav#iconos-sociales>ul>li>a {
+  list-style: none;
+  text-decoration: none;
+  color: lightslategray;
 }
