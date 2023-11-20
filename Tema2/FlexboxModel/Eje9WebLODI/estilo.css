@@ -1,75 +1,118 @@
 * {
-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* VOY A ESCONDER ZABECERA Y PIE PARA */
 
-footer{
+footer {
 
-    display: none;
-}
-
-/*header*/
-header{
   display: none;
-  /*display: flex;*/
-
-flex-wrap: wrap;
-}
-header>nav#menu-principal>input,ul#menu{
-    display: none;
-    order: 1;
-    
-}
-header>picture{
-   
-    order: 2
-    
 }
 
-header nav#buscador >ul>li{
-  list-style: none;
-  order: 3;
-                                                              
-}
 
-header nav#compra >ul>li{
-    list-style: none;
-    order: 4;
-  }
-
-
-/* main*/
-body>main{
+/*HEADER*/
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
   
-    display: flex;
-    flex-wrap: wrap;
+}
+/*lista de menu principal*/
+header>nav#menu-principal>input,ul#menu {
+  display: none;
+ 
+
+}
+header>nav#menu-principal{
+order: 1;
+border: 1px solid yellow;
+flex-basis: 10%;
+text-align: center;
+
+}
+/*logo*/
+header>picture {
+  order: 3;
+  border: 1px solid red;
+  text-align: center;
+  flex-basis: 25%;
+}
+/*icono buscador*/
+header>nav#buscador{
+   order: 2;
+   border: 1px solid blue;
+   text-align: center;
+   flex-basis: 10%;
+
+}
+header>nav#buscador>ul>li{
+  list-style: none;
+ 
+}
+header>nav#buscador>ul>li>a>i{
+  color: black;
+ 
+}
+
+/*icono compra*/
+
+header>nav#compra{
+   order: 4;
+   flex-basis: 10%;
+   border: 1px solid olivedrab;
+   text-align: center;
+
+}
+header>nav#compra>ul>li{
+  list-style: none;
+}
+header>nav#compra>ul>li>a>i{
+  color:black
+}
+
+
+
+/*MAIN*/
+body>main {
+
+  display: flex;
+  flex-wrap: wrap;
 
 }
 
 /* article*/
 
-main>article.item{
-    margin: 3px;
-     flex-basis: 48%;
-     border: 1px solid;
-     display: flex;
-     flex-direction: column;
+main>article.item {
+  margin: 3px;
+  flex-basis: 48%;
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
 
-main>article.item>:nth-child(3){
-   order: 1;
-   width: 100%;
-   height: auto;
-  
+main>article.item>:nth-child(3) {
+  order: 1;
+
+
 }
-main>article.item>:nth-child(1){
-order: 2;
-text-decoration: none;
+
+main>article.item>:nth-child(3)>picture>img {
+
+  width: 100%;
+  height: auto;
+
 }
-main>article.item>:nth-child(2){
-  order :3;
- }
 
+main>article.item>:nth-child(1) {
+  order: 2;
+  text-decoration: none;
+  color: black
+}
 
-
+main>article.item>:nth-child(2) {
+  order: 3;
+}
