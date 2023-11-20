@@ -43,7 +43,7 @@ header>picture {
 header>nav#buscador{
    order: 2;
    border: 1px solid blue;
-   text-align: center;
+   
    flex-basis: 10%;
 
 }
