@@ -50,6 +50,7 @@ header>nav#menu-principal>input {
 	display: none;
 }
 
+
 /*El menu principal es flexible*/
 header>nav#menu-principal>ul#menu {
 	display: flex;
@@ -57,6 +58,17 @@ header>nav#menu-principal>ul#menu {
 	flex-flow: column;
 	padding: 0.3rem 0;
 	border-bottom: 1px solid grey;
+	background-color: white;
+	width: 100%;
+}
+
+header > nav#menu-principal >input:checked+ul#menu{
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	left:0;
+	top:4rem;
+	padding-left: 1rem;
 }
 
 /*En segunda posición está el buscador*/
@@ -75,7 +87,6 @@ header>a#logo {
 header>a#logo>picture>img#wonder {
 	width: 200px;
 	height: auto;
-	
 }
 
 /*En cuarta posición está el icono del usuario de login*/
@@ -96,10 +107,6 @@ main {
 	display: flex;
 	flex-flow: row wrap;
 }
-/*
-main>article.item>picture {
-	display: flex;
-}*/
 
 
 /*Los artículos tienen que ser flexibles*/
@@ -111,8 +118,6 @@ main>article.item {
 	flex: 0 50%;
 	/* contorlo el espacio básico que ocupa el item .(este es el que manda en cada version)*/
 	padding: 1rem;
-	
-
 }
 
 main>article.item>* {
@@ -123,7 +128,6 @@ main>article.item>* {
 main>article.item>p {
 	order: 2;
 	text-align: center;
-
 }
 
 /*La imagen del artículo aparece en primer lugar*/
@@ -141,8 +145,6 @@ main>article.item>picture img {
 main>article.item>span {
 	order: 3;
 	margin: 0 auto;
-	
-
 }
 
 /*El botón lo colocamos en última posición*/
@@ -258,6 +260,15 @@ footer>nav#menu-social-adicional>ul>li i {
 	/*Ocultamos el icono de menú*/
 	header>nav#menu-principal>label {
 		display: none;
+	}
+
+	header > nav#menu-principal >input:checked+ul#menu{
+		display: flex;
+		flex-direction: row;
+		position: inherit;
+		left:0;
+		top:auto;
+		padding-left: 0
 	}
 
 	/*FOOTER*/
