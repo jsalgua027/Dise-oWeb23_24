@@ -7,7 +7,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
 
 }
@@ -20,7 +20,7 @@ ul#menu {
 
 header>nav#menu-principal {
   order: 1;
-  flex-basis: 10%;
+
   text-align: center;
 
 }
@@ -29,14 +29,13 @@ header>nav#menu-principal {
 header>picture {
   order: 3;
   text-align: center;
-  flex-basis: 25%;
+ 
 }
 
 /*icono buscador*/
 header>nav#buscador {
   order: 2;
-  flex-basis: 5%;
-
+ 
 }
 
 header>nav#buscador>ul>li {
