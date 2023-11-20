@@ -24,30 +24,23 @@ a:hover {
 }
 
 ul {
-
 	list-style: none;
 	padding-left: 0;
 }
 
 /*Hacemos la cabecera flexible*/
 header {
-
 	display: flex;
-	justify-content: space-around;
-	/*La cabecera ocupa todo el ancho de la página*/
-	width: 100%;
-
+	justify-content: space-between;
+	align-items: center;
 }
 
-/*La hamburguesa la colocamos al principio*/
-
 header>nav#menu-principal {
-
+	order: 1;/*La hamburguesa la colocamos al principio*/
 	padding-right: 0.5rem;
 }
 
 header>nav#menu-principal>label>span {
-	order: 1;
 	font-weight: bold;
 	font-size: 2rem;
 }
@@ -59,9 +52,9 @@ header>nav#menu-principal>input {
 
 /*El menu principal es flexible*/
 header>nav#menu-principal>ul#menu {
-
 	display: flex;
 	display: none;
+	flex-flow: column;
 	padding: 0.3rem 0;
 	border-bottom: 1px solid grey;
 }
@@ -81,8 +74,9 @@ header>a#logo {
 /*El logo de la cabecera tiene un tamaño fijo*/
 header>a#logo>picture>img#wonder {
 	width: 200px;
+	height: auto;
+	
 }
-
 
 /*En cuarta posición está el icono del usuario de login*/
 header>nav#login {
@@ -98,40 +92,32 @@ header>nav#bag {
 }
 
 /*Hacemos flexible el cuerpo principal*/
-
-/*En la versión de móvil se muestran en filas de 2*/
-body main {
+main {
 	display: flex;
-	flex-wrap: wrap;
-
+	flex-flow: row wrap;
 }
-
+/*
 main>article.item>picture {
 	display: flex;
+}*/
 
 
-}
-
-
-
+/*Los artículos tienen que ser flexibles*/
 main>article.item {
 	display: flex;
 	flex-flow: column;
 	margin-bottom: 0.5rem;
-	flex-basis: 50%;
+	/*En la versión de móvil se muestran en filas de 2*/
+	flex: 0 50%;
 	/* contorlo el espacio básico que ocupa el item .(este es el que manda en cada version)*/
-	padding: 5%;
-
+	padding: 1rem;
+	
 
 }
 
-/*Los artículos tienen que ser flexibles*/
 main>article.item>* {
 	margin-bottom: 0.5rem;
-	display: flex;
-
 }
-
 
 /*El párrafo con la descripción del artículo va en segundo lugar*/
 main>article.item>p {
@@ -141,23 +127,21 @@ main>article.item>p {
 }
 
 /*La imagen del artículo aparece en primer lugar*/
+main>article.item>picture{
+	order: 1;
+}
 /*Las imágenes de los articulos tienen una anchura relativa*/
 main>article.item>picture img {
-	/* consigo el ajuste de la imagen */
-	order: 1;
 	margin-bottom: 0.5rem;
 	width: 100%;
 	height: auto;
-
 }
 
 /*El precio va en tercera posición*/
 main>article.item>span {
-
-	/* consigo el ajuste de la imagen */
 	order: 3;
 	margin: 0 auto;
-
+	
 
 }
 
@@ -178,143 +162,112 @@ main>article.item>input:hover {
 }
 
 /*FOOTER*/
-/*hacemos el pie flexible*/
 footer {
-	display: flex;
+	display: flex; /*hacemos el pie flexible*/
 	flex-direction: column;
 	align-items: center;
 	background-color: lightgray;
+	padding: 1rem;
+}
+/*El texto del pie va al final*/
+footer> small{
+	order:3;
+}
+/*El menú adicional es flexible y va en segunda posición*/
+footer>nav:nth-child(3){
+	order:2;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	margin-top: 1rem;
+}
+footer>nav:nth-child(3)>ul#menu-adicional{
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+footer>nav#menu-social-adicional{
+	order:1; 	/*Lo colocamos en primer lugar dentro del pie*/
+
+	display: flex; /*El menú social hay que hacerlo flexible*/
+	flex-flow: column;
+	align-items: center;
 }
 
-
-/*El menú adicional es flexible y va en segunda posición*/
 footer>nav#menu-social-adicional>ul {
 	display: flex;
-	flex-direction: row;
-
-
-	/*lo colocamos en primer lugar dentro del pie*/
-
 }
 
 footer>nav#menu-social-adicional>ul>li i {
-
 	font-size: 1.5rem;
 	color: #cda194;
 	padding: 0 0.5rem;
-	flex-basis: 15%;
-
-}
-
-/*El menú social hay que hacerlo flexible*/
-footer>nav>span>ul#menu-adicional>li>a {
-	display: flex;
-	flex-direction: column;
-
-	/*lo colocamos en primer lugar dentro del pie*/
-	order: 2;
 }
 
 
-/*El texto del pie va al final*/
-
-footer>small {
-
-	order: 3;
-}
-
-/*VERIÓN DE ESCRITORIO********************************/
-
-
-@media (min-width:800px) {
+/*VERIÓN DE ESCRITORIO*/
+@media (min-width:1200px) {
 
 	/*Hay 4 artículos por fila*/
 	main>article.item {
-
-		flex-basis: 25%;
-		/* contorlo el espacio básico que ocupa el item .(este es el que manda en cada version)*/
-
+		flex: 0 25%;
 	}
 
+	/*En la cabecera va logo e iconos en la misma línea y debajo el menú*/
 	header {
 		flex-wrap: wrap;
-		justify-content: end;
 	}
 
+	header>nav#search{
+		margin-left: auto;
+	}
+	/*El menú ocupa solo una línea*/
+	header>nav#menu-principal{
+		flex:100%;
+		order: 5;
+	}
 	/*La barra social y el menú adicional están uno al lado del otro*/
 	header>nav#menu-principal>ul#menu {
 		display: flex;
-		flex-wrap: wrap;
+		flex-flow: row nowrap;
 		justify-content: space-around;
 	}
 
-	header>nav#menu-principal>ul#menu>li>a {
-
-		flex-basis: 100%;
-
-
-	}
-
-	/*   LOGOS DE LA CABECERA*/
-
-	/*En segunda posición está el buscador*/
 	header>nav#search {
-		order: 1;
-		flex-basis: 5%;
-
-	}
-
-	/*En tercera posición se encuentra el logo*/
-	header>a#logo {
-		order: 4;
-		font-size: 1.4rem;
-		flex-basis: 100%;
-
-	}
-
-	/*En cuarta posición está el icono del usuario de login*/
-	header>nav#login {
 		order: 2;
+		flex-basis: 5%;
+	}
+
+	header>a#logo {
+		order: 1;
+		font-size: 1.4rem;
+		flex: 20%;
+	}
+
+	header>nav#login {
+		order: 3;
 		font-size: 1.4rem;
 		flex-basis: 5%;
-
 	}
 
-	/*Por último, en quinta posición se encuentra la bolsa de la compra*/
 	header>nav#bag {
-		order: 3;
+		order: 4;
 		flex-basis: 5%;
 	}
 
-	header>nav#menu-principal {
-
-		order: 5;
-		flex-basis: 100%;
-	}
-
+	/*Ocultamos el icono de menú*/
 	header>nav#menu-principal>label {
 		display: none;
 	}
 
-
-
-	/*FOOTER******************************************/
-
+	/*FOOTER*/
 	footer {
-
-		flex-direction: row;
-		flex-wrap: wrap;
-
+		flex-flow: row wrap;
 	}
 
-	footer>nav#menu-social-adicional {
-		flex-basis: 50%;
-
-	}
-
+	/*La barra social y el menú adicional están uno al lado del otro*/
 	footer>nav {
-		flex-basis: 50%;
-
+		flex: 50%;
 	}
 
 	footer>nav>span {
@@ -322,15 +275,7 @@ footer>small {
 	}
 
 	footer>small {
-
-		flex-basis: 100%;
+		flex: 100%;
 		text-align: center;
 	}
-
-	/*En la cabecera va logo e iconos en la misma línea y debajo el menú*/
-	/*Hay 4 artículos por fila*/
-	/*La barra social y el menú adicional están uno al lado del otro*/
-
-
-
 }
