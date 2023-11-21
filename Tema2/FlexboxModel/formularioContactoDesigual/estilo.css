@@ -1,0 +1,45 @@
+body{box-sizing: border-box;}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+div#contenedor{
+   display: flex;
+   display: contents; 
+}
+
+/*HEADER*/
+div#contenedor header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+div#contenedor header nav#menu-principal>ul#menu{
+    display: none;
+}
+
+div#contenedor header nav#bloque-iconos>ul{
+    display: flex;
+    flex-direction: row;
+
+}
+div#contenedor header picture#logo-cabecera img{
+width: 100%;
+height: auto;
+
+}
+
+/*MAIN*/
+ div#contenedor>main{
+    display: none;
+}
+/*FOOTER*/
+div#contenedor footer{
+    display: none;
+}
