@@ -1,45 +1,163 @@
-body{box-sizing: border-box;}
-ul{
+body {
+    box-sizing: border-box;
+}
+
+ul {
     list-style: none;
 }
-a{
+
+a {
     text-decoration: none;
     color: black;
 }
 
 
-div#contenedor{
-   display: flex;
-   display: contents; 
+div#contenedor {
+    display: flex;
+    display: contents;
 }
 
 /*HEADER*/
-div#contenedor header{
+div#contenedor header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 
 }
-div#contenedor header nav#menu-principal>ul#menu{
-    display: none;
-}
 
-div#contenedor header nav#bloque-iconos>ul{
+/*logo*/
+div#contenedor header picture#logo-cabecera img {
+    width: 50%;
+    height: 50%;
+    border: 1px solid;
+    
+}
+/*iconos*/
+div#contenedor header nav#bloque-iconos {
+    
+    border: 1px solid blueviolet;
+   
+}
+div#contenedor header nav#bloque-iconos>ul {
     display: flex;
     flex-direction: row;
+    border: 1px solid rgb(50, 26, 72);
+
+     
+}
+div#contenedor header nav#bloque-iconos>ul>li {
+   font-size: x-large;
+   margin: 10px;
+     
+}
+
+/*menu principal*/
+div#contenedor header nav#menu-principal {
+    border: 1px solid red;
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    padding: 0.2rem;
 
 }
-div#contenedor header picture#logo-cabecera img{
-width: 100%;
-height: auto;
 
+div#contenedor header nav#menu-principal>ul#menu {
+    color:white;
+    display: none
 }
+
+/*
+intento de desplar el menu 
+div#contenedor header nav#menu-principal>ul#menu>div#hamburguesa>span:checked+ul#menu {
+   display: flex;
+flex-flow: column;
+position: absolute;
+top: 3rem;
+left:0;
+background-color: aliceblue;
+padding: 1rem;
+width: 60%;
+  
+}
+*/
+
+div#contenedor header nav#menu-principal>div#hamburguesa {
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     
+ }
+div#contenedor header nav#menu-principal>div#hamburguesa>span {
+   border: 1px solid blue;
+   color:white;
+
+   font-size:x-large
+    
+}
+
 
 /*MAIN*/
- div#contenedor>main{
-    display: none;
+div#contenedor>main>section#form-contacto {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   
 }
+div#contenedor>main>section#form-contacto>h2 {
+    
+    border: 1px solid red;
+    padding: 1rem;
+    font-size: x-large;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+/*hago flexible el contenedor del formulario*/
+div#contenedor>main>section#form-contacto>form#contacto {
+    display: flex;
+    flex-direction: column;
+      border: 1px solid;
+ }
+ /*quito los label del formulario*/
+ div#contenedor>main>section#form-contacto>form#contacto>label {
+   display: none;
+    
+ }
+ /*general de todos los elementos dedel formulario*/
+ div#contenedor>main>section#form-contacto>form#contacto>* {
+    padding: 0.5rem;
+    margin: 0.2rem; 
+  }
+  /*al input de typo boton le doy un estilo*/
+  div#contenedor>main>section#form-contacto>form#contacto>input[type="button"] {
+    color:white;
+    background-color: black;
+    
+  }
+  /*estilo del select*/
+  div#contenedor>main>section#form-contacto>form#contacto>select {
+   
+    background-color: lightgray;
+    
+  }
+  /*cuando los input estan checked*/
+  div#contenedor>main>section#form-contacto>form#contacto>input[type="text"]:checked {
+   background-color: aqua;
+    
+    
+  }
+  
+  
+  
+  
+ 
+ 
+
 /*FOOTER*/
-div#contenedor footer{
+div#contenedor footer {
     display: none;
 }
