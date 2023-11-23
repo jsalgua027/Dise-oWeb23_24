@@ -1,0 +1,16 @@
+*{box-sizing: border-box;}
+/*estilos generales*/
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+/* menu*/
+
+div#contendor>nav>ul{
+
+    display: flex;
+    flex-direction:row;
+}
