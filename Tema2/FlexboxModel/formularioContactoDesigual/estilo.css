@@ -68,9 +68,8 @@ div#contenedor header nav#menu-principal>ul#menu {
     display: none
 }
 
-
-/*intento de desplar el menu
-div#contenedor header nav#menu-principal>ul#menu>div#hamburguesa>span:hover+ul#menu {
+/*
+div#contenedor header nav#menu-principal>div#hamburguesa:hover+ul#menu {
    display: flex;
 flex-flow: column;
 position: absolute;
@@ -81,7 +80,27 @@ padding: 1rem;
 width: 60%;
   
 }
-*/ 
+*/
+
+
+
+header>nav#menu-principal>div#hamburguesa:hover+ul#menu{
+    display:flex;
+    flex-direction:column;
+   color: white;
+    border:1px solid black;
+  
+
+}
+header>nav#menu-principal>div#hamburguesa>ul#menu li a{
+      color: white;
+     
+
+}
+
+
+
+
 
 div#contenedor header nav#menu-principal>div#hamburguesa {
   
