@@ -4,6 +4,8 @@ body {
 
 ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 a {
@@ -57,7 +59,7 @@ div#contenedor header nav#menu-principal {
     flex-direction: column;
     align-items: center;
     background-color: black;
-    padding: 0.2rem;
+ 
 
 }
 
@@ -66,9 +68,9 @@ div#contenedor header nav#menu-principal>ul#menu {
     display: none
 }
 
-/*
-intento de desplar el menu 
-div#contenedor header nav#menu-principal>ul#menu>div#hamburguesa>span:checked+ul#menu {
+
+/*intento de desplar el menu
+div#contenedor header nav#menu-principal>ul#menu>div#hamburguesa>span:hover+ul#menu {
    display: flex;
 flex-flow: column;
 position: absolute;
@@ -79,7 +81,7 @@ padding: 1rem;
 width: 60%;
   
 }
-*/
+*/ 
 
 div#contenedor header nav#menu-principal>div#hamburguesa {
   
@@ -154,7 +156,7 @@ div#contenedor>main>section#form-contacto>form#contacto {
 }
 footer nav#menu-adicional>ul>li {
     text-align: center;
-     margin-right: 2rem;
+ 
     padding: 0.2rem;
      
 }
