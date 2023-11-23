@@ -1,205 +1,289 @@
-body {
+* {
     box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
-
-
-div#contenedor {
+/* Contenedor de todo el body */
+div#contenido {
     display: flex;
-    display: contents;
+    flex-direction: column;
+
+
 }
 
-/*HEADER*/
-div#contenedor header {
+/* HEADER */
+header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    /* border:1px solid red;  */
 
 }
 
-/*logo*/
-div#contenedor header picture#logo-cabecera img {
-    width: 50%;
-    height: 50%;
-  
-    
+/* Quitar los puntos a los li */
+header>nav li {
+    list-style: none;
 }
-/*iconos*/
 
-div#contenedor header nav#bloque-iconos>ul {
+/* Quitar estilo a los enlaces */
+header nav ul a {
+    color: black;
+    text-decoration: none;
+
+}
+
+/* LOGOTIPO***** */
+picture#logo-cabecera {
+    flex: 50%;
+}
+
+/* Estilo imagen logotipo */
+picture#logo-cabecera>img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+}
+
+/* ICONOS* */
+header>nav#bloque-iconos {
+    flex: 50%;
     display: flex;
     flex-direction: row;
-    
+    justify-content: flex-end;
+    text-align: right;
 
-     
-}
-div#contenedor header nav#bloque-iconos>ul>li {
-   font-size: x-large;
-   margin: 10px;
-     
+  
 }
 
-/*menu principal*/
-div#contenedor header nav#menu-principal {
-   
-    flex-basis: 100%;
+/* Desplazo los iconos de bolsa y buscador  */
+header>nav#bloque-iconos ul {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+  
+}
+
+header>nav#bloque-iconos>ul>li {
+    font-size: 2rem;
+    margin: 0 1.5rem;
+}
+
+/* MENU */
+/* Estilos para el menú principal  */
+header>nav#menu-principal {
+    display: flex;
+    flex-flow: column wrap;
+    flex: 100%;
+    text-align: center;
+    color: white;
     background-color: black;
- 
-
-}
-
-div#contenedor header nav#menu-principal>ul#menu {
-    color:white;
-    display: none
-}
-
-/*
-div#contenedor header nav#menu-principal>div#hamburguesa:hover+ul#menu {
-   display: flex;
-flex-flow: column;
-position: absolute;
-top: 3rem;
-left:0;
-background-color: aliceblue;
-padding: 1rem;
-width: 60%;
-  
-}
-*/
-
-
-
-header>nav#menu-principal>div#hamburguesa:hover+ul#menu{
-    display:flex;
-    flex-direction:column;
-   color: white;
-    border:1px solid black;
-  
-
-}
-header>nav#menu-principal>div#hamburguesa>ul#menu li a{
-      color: white;
-     
-
-}
-
-
-
-
-
-div#contenedor header nav#menu-principal>div#hamburguesa {
-  
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-     
- }
-div#contenedor header nav#menu-principal>div#hamburguesa>span {
-
-   color:white;
-   font-size:x-large
     
 }
 
+/* Estilos para el div que contiene icono hamburguesa+menu */
+header>nav#menu-principal>div#hamburguesa {
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    color: white;
+}
+
+/* Estilos para la burguer */
+header>nav#menu-principal>div#hamburguesa>span:nth-child(1) {
+    font-size: 2rem;
+
+}
+
+/* Estilos para el span del texto menú */
+header>nav#menu-principal>div#hamburguesa>span {
+    font-weight: bold;
+    font-size: 1.5rem;
+
+}
+
+/* Ocultamos a priori el id menu */
+header>nav#menu-principal>ul#menu {
+
+    display: none;
+    margin: 0;
+    /* font-weight: bold; */
+
+}
+
+/* Bloqueo el ul de submenu */
+header>nav#menu-principal>ul#menu>li ul.submenu {
+    display: none;
+
+}
+
+/* Resaltamos los li y los enlaces  */
+ul#menu>li {
+    list-style: none;
+
+
+}
+
+ul#menu li>a {
+    color: #fff;
+    text-decoration: none;
+
+
+}
+
+/* Mostramos el menu al hacer checked */
+header>nav#menu-principal>div#hamburguesa:hover+ul#menu {
+    display: flex;
+    flex-direction: column;
+ 
+}
 
 /*MAIN*/
 div#contenedor>main>section#form-contacto {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
+
 div#contenedor>main>section#form-contacto>h2 {
+    padding: 0.3rem;
+    font-size: 30px;
     
- 
-    padding: 1rem;
-    font-size:xx-large;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
+
 }
+
 /*hago flexible el contenedor del formulario*/
 div#contenedor>main>section#form-contacto>form#contacto {
     display: flex;
     flex-direction: column;
-      border: 1px solid;
- }
- /*quito los label del formulario*/
- div#contenedor>main>section#form-contacto>form#contacto>label {
-   display: none;
-    
- }
- /*general de todos los elementos del formulario*/
- div#contenedor>main>section#form-contacto>form#contacto>* {
-    padding: 0.5rem;
-    margin: 0.2rem; 
-  }
-  /*al input de typo boton le doy un estilo*/
-  div#contenedor>main>section#form-contacto>form#contacto>input[type="button"] {
-    color:white;
-    background-color: black;
-    
-  }
-  /*estilo del select*/
- 
-  /*cuando los input estan checked  NO funcina
-  div#contenedor > main > section#form-contacto > form#contacto > input[type="text"]:checked {
-    background-color:black;
-    color: white;
+       
 }
-*/
 
-  
+/*quito los label del formulario*/
+div#contenedor>main>section#form-contacto>form#contacto>label {
+    display: none;
+
+}
+
+/*general de todos los elementos del formulario*/
+div#contenedor>main>section#form-contacto>form#contacto>* {
+    padding: 0.5rem;
+    margin: 0.2rem;
+    border-radius: 5px;
+}
+
+/*al input de typo boton le doy un estilo*/
+div#contenedor>main>section#form-contacto>form#contacto>input[type="button"] {
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+
+}
+
+/* Estilo para la categoria */
+form#contacto>select#categoria {
+    background-color: lightgrey;
+    color: grey;
+
+}
+
+/* Mensaje maximo 1000 caracteres */
+form#contacto>span#caracteres {
+    margin-left: 0.5rem;
+    color: grey
+}
+/* EFECTO FOCUS EN LOS INPUTS */
+form#contacto>input:focus {
+    background-color: #000;
+    color: #fff;
+}
+
 /*FOOTER*/
- footer nav#menu-adicional {
+footer nav#menu-adicional {
     display: flex;
-    border: 1px solid;
     justify-content: center;
     width: 100%;
     background-color: black;
-   
+
 }
+/*le quito margin y paddin al ul que me estoy volviendo loco*/
+#menu-adicional > ul{
+    margin: 0;
+    padding: 0;
+    }
 footer nav#menu-adicional>ul>li {
     text-align: center;
- 
+
     padding: 0.2rem;
-     
+
 }
+
 footer nav#menu-adicional>ul>li>a {
     color: white;
-     
+
 }
+
+
 /*version tablet*/
- @media (min-width:900px) {
-    
-    body{
-        background-color: aqua;
-    }
+@media (min-width:900px) {
 
+/*header*/   
     div#contenedor header nav#menu-principal>ul#menu {
-        color:white;
+        color: white;
         display: flex;
+        justify-content: space-around;
+    }
 
-    }
-    div#contenedor header nav#menu-principal>ul#menu>li>ul#submenu> {
-        color:white;
-      
-        
-    }
+   /* Estilos para la burguer */
+header>nav#menu-principal>div#hamburguesa>span:nth-child(1) {
+    display: none;
+}
+
+/* Estilos para el span del texto menú */
+header>nav#menu-principal>div#hamburguesa>span {
+    display: none;
+}
+
+/*main*/
+
+div#contenedor>main>section#form-contacto>form#contacto {
+   
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 75%;
+    align-items: center;
+       
+}
+section#form-contacto>form#contacto{
+margin-bottom: 10px;
+
+}
+
+/*muestro los label del formulario*/
+div#contenedor>main>section#form-contacto>form#contacto label {
+   display: flex;
+   flex-basis: 30%;
+    border: 1px solid;
+   
+}
+/*quito el span del formualario*/
+div#contenedor>main>section#form-contacto>form#contacto span:nth-child(1) {
+    display: none;
     
+ }
+
+div#contenedor>main>section#form-contacto>form#contacto input {
+   
+    flex-basis: 60%;
+    margin: 0 auto;
+   
+ }
+ div#contenedor>main>section#form-contacto>form#contacto select {
+    margin: 0 auto;
+    flex-basis: 60%;
+    
+ }
+
 
 }
