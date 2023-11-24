@@ -1,0 +1,47 @@
+body{box-sizing: border-box;}
+
+/*HEADER******/
+header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+header>nav#menu{
+ order: 1;
+ flex: 33%;
+ border: 1px solid red;
+}
+header>div#logo{
+    order:2;
+    flex: 33%;
+    text-align: center;
+    border: 1px solid yellow;
+}
+header>nav#bolsa-corazon{
+    order:3;
+    flex: 32%;
+    border: 1px solid blue;
+    text-align: right;
+}
+header>div#buscador{
+    order: 4;
+    flex: 100%;
+   padding: 0.2rem;
+    display: flex
+  
+}
+header>div#buscador> input{
+    flex:1;
+    
+    padding: 0.2rem;
+}
+header>div#buscador> img{
+   position: absolute;
+  right: 1rem;
+   
+}
+
+
+main,footer{ display: none}
