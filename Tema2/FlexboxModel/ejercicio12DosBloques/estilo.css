@@ -6,11 +6,42 @@ li{
 a{
     text-decoration: none;
     color: black;
+    border-bottom: 1px solid;
+    border-radius: 10%;
 }
 /* menu*/
-
-div#contendor>nav>ul{
-
+div#contenedor{
+    display: flex;
+  
+}
+div#contenedor>nav{
+    display: flex;
+    flex-basis: 100%;
+    background-color: rgb(179, 191, 204);
+    border: 2px solid rgb(245, 245, 180);
+    border-radius: 5%;
+}
+div#contenedor>nav>ul{
     display: flex;
     flex-direction:row;
+    flex-basis: 100%;
+}
+div#contenedor>nav>ul>li{
+    flex-basis: 10%;
+    padding-right: 0.2rem;
+      margin-right: 0.5rem;  
+      
+}
+div#contenedor>nav>ul>li#login{
+    flex-basis: 70%;
+    text-align: right;
+}
+div#contenedor>nav>ul>li:nth-child(1){
+   border-right: 1px solid ;
+       
+}
+div#contenedor>nav>ul>li:nth-child(2){
+   
+    border-right: 1px solid ;
+        
 }
