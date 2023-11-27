@@ -7,37 +7,81 @@ body{
     font-weight: bold;
 }
 
+/*boton*/
+button {
+    border-radius: 20rem;
+    background-color: black;
+    padding: 15px;
+    color: burlywood;
+    width: 200px;
+    margin: 0 auto;
+}
+a {
+
+    color: black;
+}
+
 /*formulario*/
-form{
+main form{
     display: flex;
     flex-direction: column;
     padding: 10px;
     margin: 0 auto;
-    align-items: center;
     border: 1px solid black;
-    width: 50%;
 
 
 }
+
 form input {
 
     border: none;
     border-bottom: 1px solid grey;
-       margin: 5px;
+    margin: 5px;
+    padding: 0.5rem;
+   
+    }
+
+form div:nth-child(1){
+    padding: 0.5rem;
+       
+    
 }
+ main > form > div:nth-child(6){
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+  
+  
+}
+ main > form > div:nth-child(6)>label{
+    flex: 100%;
+    padding: 0.5rem;
+    
+   
+}
+ main > form > div:nth-child(6)>select{
+  flex-basis: 33%;
+    padding: 0.5rem;
+  
+}
+
+main>form>select#paisS{
+    padding: 0.2rem;
+}
+main>form>select#provinciaS{
+    padding: 0.2rem;
+}
+
+
 form *::placeholder, select{
     font-weight: bold;
     color: black;
 
 }
-form>*{
-width: 200px;
 
-}
 
 /*boton*/
-
-
 button {
     border-radius: 20rem;
     background-color: black;
@@ -45,9 +89,55 @@ button {
     color: burlywood;
     width: 200px;
 }
-
 a {
 
     color: black;
+}
+
+
+/*version escritorio*/
+
+@media (min-width:800px){
+
+
+main form{
+    
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 0 auto;
+    border: 1px solid black;
+    max-width:50rem;
+
+}
+
+/*señor y señora*/
+form div:nth-child(1){
+    flex-basis: 100%;
+    
+    }
+
+/* inputs*/
+form input {
+
+    border: none;
+    border-bottom: 1px solid grey;
+    flex: 33%;
+   
+    }
+
+ /*nacimiento*/
+ main > form > div:nth-child(6){
+  flex: 100%;
+}
+
+
+   /*pais y provincia*/
+   main>form>select#paisS{
+    flex: 33%;
+   }
+main>form>select#provinciaS{
+    flex: 33%;
+}
 
 }
