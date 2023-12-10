@@ -15,6 +15,10 @@ header>nav#menu {
     flex: 33%;
 
 }
+header>nav#menu>label>input {
+   display: none;
+}
+/*TANFORMACION DE LA HAMBURGUESA*/
 
 header>div#logo {
     order: 2;

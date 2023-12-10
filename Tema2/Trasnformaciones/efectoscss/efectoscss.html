@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+    	body{font-size: 16px;}
+		div{
+            width:12.5rem;
+            height:100px;
+            background:#676470;
+            border:1px solid grey;
+            border-spacing: 1.5rem;
+            padding: 0.5rem;
+            transition:all 0.3s ease;
+            display:table-cell;
+            border-radius: 0.5rem;
+		}
+		.fade{
+        	opacity:0.5;
+		}
+		.fade:hover{
+        	opacity:1;
+		}
+		.color:hover{
+			background:#53a7ea;
+		}
+		.grow:hover
+		{
+			transform: scale(1.3);
+		}
+		.shrink:hover{
+			transform: scale(0.8);
+		}
+		.rotate:hover{
+			transform:rotateZ(20deg);
+		}
+		.circle:hover{
+			border-radius: 1.5rem;
+		}
+		.threed:hover{
+			box-shadow:
+				1px 1px #53a7ea,
+				2px 2px #53a7ea,
+				3px 3px #53a7ea;
+			transform: translateX(-3px);
+		}
+    </style>
+</head>
+<body>
+    <div class=fade>Efecto Fade</div>
+    <div class=color>Cambio de color</div>
+    <div class=grow> Agrandar</div>
+    <div class=shrink> Encoger</div>
+    <div class=rotate> Rotar</div>
+    <div class=circle> Redondear</div>
+    <div class=threed> Sombra</div>
+</body>
+</html>
