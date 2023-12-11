@@ -1,0 +1,255 @@
+/*estilos generales*/
+
+body{
+    box-sizing: border-box;
+    background-color: #efedeb;
+    margin: 0;
+    
+}
+ul,li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+header{
+    background-color: #1f1e1f;
+}
+footer{
+    background-color: black;
+}
+section{
+    background-color: #f5f4f3;
+}
+article{
+    background: white; color: #515152; border: 2px solid #eeedec;
+}
+
+/*HEADER*/
+header#header-web{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 12px;
+    align-items: center;
+}
+/*escondo el menu*/
+header#header-web nav#menu-principal ul{
+    display: none;
+}
+/*escondo  el input*/
+header#header-web nav#menu-principal input{
+    display: none;
+}
+/*color y orden de la hamburg*/
+header#header-web nav#menu-principal label span{
+    color:white
+}
+/* oderno los elementos del header controlo el tamaño*/
+header#header-web nav#menu-principal{
+    order:1;
+    flex: 0 9%;
+
+}
+header#header-web a#logo {
+    order:2;
+    flex: 0 28%;
+
+}
+header#header-web nav#bloque-iconos {
+    order:3;
+    flex: 0 57%;
+  
+    display: flex;
+    justify-content: end;
+}
+/* los iconos  login,bolsa*/
+header#header-web nav#bloque-iconos a{
+    padding: 5px;
+}
+/*menu desplegable*/
+
+header#header-web nav#menu-principal input:checked+ul{
+   display: flex;
+   flex-direction: column;
+   position: absolute;
+   background-color: black;
+   margin-top: 20px;
+   width: 100%;
+}
+
+/*MAIN*/
+/*h2 yl el div*/
+main section#sec-gelducha{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  
+   
+}
+main section#sec-gelducha h2{ 
+   flex: 0 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+   
+}
+
+main section#sec-gelducha div{ 
+    flex: 0 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    
+ }
+ main section#sec-gelducha article.item-sec{ 
+    flex: 0 48%;
+ }
+
+ /*ARTICLES*/
+
+ main section#sec-gelducha article.item-sec{ 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+ }
+
+ main section#sec-gelducha article.item-sec picture img{
+    flex: 0 100%; 
+   width: 100%;
+   height: auto;
+   order:1
+  }
+  main section#sec-gelducha article.item-sec h3{
+    flex: 0 100%; 
+    order:2;
+    text-align: center;
+    
+   }
+   main section#sec-gelducha article.item-sec p{ 
+    order:3;
+    flex: 0 100%;
+    text-align: center;
+    
+   }
+   main section#sec-gelducha article.item-sec span{
+    flex: 0 48%; 
+    order:4;
+    margin-left: 4px;
+    
+   }
+   main section#sec-gelducha article.item-sec img{ 
+    flex: 0 50%; 
+    order:5;
+    
+ }
+ main section#sec-gelducha article.item-sec >img{ 
+   width: 50%;
+    height: auto;
+ }
+
+
+  
+   main section#sec-gelducha article.item-sec input{ 
+    display: none;
+   }
+ 
+
+
+
+/*FOOTER*/
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+/*menu adicional*/
+footer nav#menu-adicional {
+flex: 0 100%;
+width: 100%;
+padding: 10px;
+}
+
+footer nav#menu-adicional ul{
+   
+    display: flex;
+    flex-direction: column;
+    
+}
+footer nav#menu-adicional ul li{
+   
+padding: 30px;
+border-bottom: 1px solid white;
+}
+   
+
+footer nav#menu-adicional ul li ul{
+display: none;
+}
+footer nav#menu-adicional ul li span{
+    color:white;
+    
+     
+         
+}
+/*menu social*/
+footer nav#menu-social {
+    flex: 0 100%;
+    
+    
+}
+footer nav#menu-social ul{
+    flex: 0 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+footer nav#menu-social ul li a img{
+     width: 50%;
+       height: auto;
+}
+
+footer nav#menu-social ul li{
+    flex: 0 20%;
+       
+}
+footer small{
+    color: white;
+}
+
+
+/*  version tablet*/
+
+@media (min-width:800px) {
+   
+    main section#sec-gelducha article.item-sec{ 
+        flex: 0 32%;
+        
+     }
+    
+}
+
+/*version escritorio*/
+
+@media (min-width:1024px) {
+   
+  
+
+    main section#sec-gelducha article.item-sec{ 
+        flex: 0 20%;
+         }
+
+     footer nav#menu-social ul li  a img{
+       display: none;
+                
+    }
+
+   
+}
