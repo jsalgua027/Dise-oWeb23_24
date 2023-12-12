@@ -18,7 +18,71 @@ header>nav#menu {
 header>nav#menu>label>input {
    display: none;
 }
-/*TANFORMACION DE LA HAMBURGUESA*/
+/*TRANSFORMACION DE LA HAMBURGUESA*/
+/*escondo la imagen*/
+header>nav#menu img{
+    display: none;
+}
+/*pinto el label */
+
+ nav#menu>label{
+    display:inline-block;
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    
+    
+    }
+
+    label>span.hamburguer-line{
+        position:absolute;
+        top:0.5rem;
+        left: 0.5rem;
+        width: 1.5rem;
+        height: .3rem;
+        background:black;
+        transition: background 0s .25s;
+        }
+
+        label>span.hamburguer-line:nth-child(2){
+            top:1rem;
+            transition: top .25s ease .3s ,
+            transform  .25s ease .0s;
+            
+        
+        }
+        label>span.hamburguer-line:nth-child(4){
+            top:1.5rem;
+           transition: top .25s ease .3s ,
+            transform  .25s ease .0s;
+        
+        }
+        /*tranformaciones*/
+        input:checked~span.hamburguer-line:nth-child(2){
+            transition: top 1s, rotate 1s ;
+            transition-delay: 0s, 1s ;
+            top:1rem;
+            rotate: 40deg;
+           
+        
+            
+        }
+        input:checked~span.hamburguer-line:nth-child(4){
+            transition: top 1s, rotate 1s;
+            transition-delay: 0s, 1s ;
+            top:1rem;
+             rotate: -40deg;
+        
+        }
+        input:checked~span.hamburguer-line:nth-child(3){
+            transition: background 1s;
+            background: none;
+        }
+
+
+
+
 
 header>div#logo {
     order: 2;
