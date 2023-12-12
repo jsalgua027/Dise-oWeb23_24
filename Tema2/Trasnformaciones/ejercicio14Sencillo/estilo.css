@@ -1,0 +1,59 @@
+input{
+    display: none;
+}
+
+label{
+display:inline-block;
+position: relative;
+width: 6rem;
+height: 6rem;
+background-color: lightblue;
+cursor: pointer;
+
+
+}
+
+label>span.hamburguer-line{
+    position:absolute;
+    top:2.75rem;
+    left: 1rem;
+    width: 4rem;
+    height: .4rem;
+    background: white;
+    transition: background 0s .25s;
+    }
+
+label>span.hamburguer-line:nth-child(2){
+    top:1.6rem;
+    transition: top .25s ease .3s ,
+    transform  .25s ease .0s;
+    
+
+}
+label>span.hamburguer-line:nth-child(4){
+    top:3.9rem;
+   transition: top .25s ease .3s ,
+    transform  .25s ease .0s;
+
+}
+/*tranformaciones*/
+input:checked~span.hamburguer-line:nth-child(2){
+    transition: top 1s, rotate 1s ;
+    transition-delay: 0s, 1s ;
+    top:2.75rem;
+    rotate: 40deg;
+   
+
+    
+}
+input:checked~span.hamburguer-line:nth-child(4){
+    transition: top 1s, rotate 1s;
+    transition-delay: 0s, 1s ;
+    top:2.75rem;
+     rotate: -40deg;
+
+}
+input:checked~span.hamburguer-line:nth-child(3){
+    transition: background 1s;
+    background: none;
+}
