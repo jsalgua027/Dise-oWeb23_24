@@ -18,6 +18,10 @@ div.row{
 li>a>img{
     width: 70%;
     height: auto;
+ 
+    transition: width .25s ease .4s ,
+    transform  .25s ease .0s;
+
    
 }
 ul{
@@ -32,5 +36,14 @@ ul>li{
     padding: 5px;
     padding-bottom: 2rem;
     rotate: 15deg;
+
+}
+li>a>img:hover{
+    width: 100%;
    
+   
+}
+ul>li:hover{
+    rotate: 0deg;
+
 }
