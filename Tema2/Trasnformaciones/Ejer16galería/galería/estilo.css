@@ -10,7 +10,7 @@ ul{
    flex-wrap: wrap;
 }
 div.row{
-    background-color: rgb(187, 82, 17);
+    background-image: url("images/99.jpg");
 
 }
 
@@ -36,8 +36,25 @@ ul>li{
     padding: 5px;
     padding-bottom: 2rem;
     rotate: 15deg;
+    display: flex;
+    flex-direction: column;
 
 }
+div.row > div.columns>ul.polaroids>li>a{
+    content: attr(title);
+    padding-top:1.5rem;
+    text-decoration: none;
+    color: black;
+    
+    
+
+  }
+div.row > div.columns>ul.polaroids>li>a::after {
+    content: attr(title);
+    padding-top:1.5rem;
+
+  }
+
 li>a>img:hover{
     width: 100%;
    

@@ -88,9 +88,7 @@ input:checked~label {
 input:checked~label {
     transition: left ease-out 1s;
 }
-input:not(:checked)~label{
-    transition: left ease-out 1s;
-}
+
 
 ul#menu>li{
     display:block;
