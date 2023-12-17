@@ -23,6 +23,8 @@ label{
     display:flex;
     flex-direction: column;
     align-items: center;
+    left: 0;
+    transition: left ease-out 1s;
     
 }
 
@@ -31,6 +33,7 @@ label>span.hamburguer-line {
     height: .25rem;
     background: white;
     margin-top: 0.8rem;
+    left: 0;
     
 }
 label>span.hamburguer-line:nth-child(2) {
@@ -44,5 +47,17 @@ label>span.hamburguer-line:nth-child(3) {
 nav#menu{
     position: absolute;
     left: -50%;
+    height: 100%;
+    transition: left ease-out 1s;
+
 }
 /*transicion*/
+input:checked~nav#menu{
+    left:0% ;
+}
+input:checked~label{
+    left: 100px;
+}
+input:checked~span.hamburguer-line{
+    left: 100px;
+}

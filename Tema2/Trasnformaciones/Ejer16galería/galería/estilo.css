@@ -1,66 +1,77 @@
-body{
+
+* {
     box-sizing: border-box;
 }
-li{
-    list-style: none;
-}
-ul{
-   display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
-}
-div.row{
+
+body {
     background-image: url("images/99.jpg");
 
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-
-li>a>img{
-    width: 70%;
-    height: auto;
- 
-    transition: width .25s ease .4s ,
-    transform  .25s ease .0s;
-
-   
-}
-ul{
+div.row {
     display: flex;
-    justify-content: center;
+
+
 }
-ul>li{
-    text-align: center;
-    flex: 0 20%;
+
+div.row>div.columns {
+    display: flex;
+
+}
+
+div.row>div.columns>ul.polaroids {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 0;
+}
+
+div.row>div.columns>ul.polaroids>li {
     background-color: white;
-    margin: 15px;
-    padding: 5px;
-    padding-bottom: 2rem;
-    rotate: 15deg;
-    display: flex;
-    flex-direction: column;
-
+    padding: 1rem;
+    padding-bottom:1.5rem;
+    margin: 2rem;
 }
-div.row > div.columns>ul.polaroids>li>a{
+
+div.row>div.columns>ul.polaroids>li:nth-child(2n+2) {
+    transform: rotate(2.5deg);
+}
+
+div.row>div.columns>ul.polaroids>li:nth-child(3n+1) {
+    transform: rotate(-2.5deg);
+}
+
+div.row>div.columns>ul.polaroids>li:nth-child(5n+0) {
+    transform: rotate(5deg);
+}
+
+div.row>div.columns>ul.polaroids>li>a {
+text-decoration: none;
+color:black;
+font-size: larger;
+display:flex;
+flex-direction: column;
+align-items: center;
+}
+
+div.row>div.columns>ul.polaroids>li>a[title]::after {
     content: attr(title);
     padding-top:1.5rem;
-    text-decoration: none;
-    color: black;
-    
-    
-
-  }
-div.row > div.columns>ul.polaroids>li>a::after {
-    content: attr(title);
-    padding-top:1.5rem;
-
-  }
-
-li>a>img:hover{
-    width: 100%;
-   
-   
 }
-ul>li:hover{
-    rotate: 0deg;
 
+div.row>div.columns>ul.polaroids>li:hover {
+    transform: scale(1.2);
+    transition-duration: 0.5s;
 }
+
+div.row>div.columns>ul.polaroids>li {
+    transition-duration: 0.5s;
+}
+
+
+div.row>div.columns>ul.polaroids>li>a>img {
+    height: 275px
+}
+
