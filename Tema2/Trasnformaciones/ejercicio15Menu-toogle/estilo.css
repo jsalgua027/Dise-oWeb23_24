@@ -3,103 +3,76 @@
 }
 
 body {
-
-    background-color: rgb(0, 123, 255);
+    background-color: rgb(210, 137, 58);
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
 input {
     display: none;
 }
 
-
 li {
     list-style: none;
     color: white;
     background-color: #222625;
     padding: 10px;
-    width: 200px;
+    width: 150px;
     border-bottom: 1px solid lightgrey;
 }
 
-ul#menu {
-    position: absolute;
-    left: -200px;
-    background-color: #222625;
-    height: 100%;
-    width: 200px;
-    padding: 5rem 0;
-}
-
-
-
 label {
-    display: inline-block;
-    position: absolute;
+    background-color: #222625;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
     left: 0px;
-    width: 3rem;
-    height: 3rem;
-    background-color: black;
-    cursor: pointer;
-
-
+     cursor: pointer;
+    transition: left 0.5s;
+    /* Agregado para la transición */
 }
 
 label>span.hamburguer-line {
-    position: absolute;
-    margin-left: -1rem;
-    margin-top: -0.125rem;
-    left: 50%;
     width: 2rem;
-    height: .25rem;
+    height: 0.25rem;
     background: white;
-    transition: background 0s .25s;
+    margin-top: 0.8rem;
+    transition: 0.3s;
 }
 
-label>span.hamburguer-line:nth-child(2) {
-    top: 25%
+nav#menu {
+    position: fixed;
+    top: 0px;
+    left: -100%;
+    height: 100%;
+    width: 200px;
+    background-color: #222625;
+    padding-top: 50px;
+    transition: 0.5s;
+   
 }
 
-label>span.hamburguer-line:nth-child(4) {
-    top: 50%
+main {
+    transition: margin-left 0.5s;
+    /* Agregado para la transición del contenido principal */
+    margin-left: 0;
 }
 
-
-
-/*tranformaciones*/
-/*muevo el menu dentro del body*/
-input:checked~ul#menu {
+/* Transición */
+input:checked~nav#menu {
     left: 0;
-
 }
 
-input:checked~ul#menu {
-    transition: left ease-out 1s;
-
-}
-input:not(:checked)~ul#menu{
-    transition: left ease-out 1s;
-}
-
-/*muevo el label*/
 input:checked~label {
     left: 200px;
+    /* Ancho del menú + espacio de separación */
 }
 
-input:checked~label {
-    transition: left ease-out 1s;
+input:checked~main {
+    margin-left: 200px;
+    /* Ancho del menú */
 }
-
-
-ul#menu>li{
-    display:block;
-    width:95%;
-    margin: 0 auto;
-    padding: 1rem;
-    text-align: center;
-    border-bottom: 1px solid white;
-    border-top: 1px solid white;
-    text-decoration: none;
-    color:white;
-}
-
 
