@@ -1,0 +1,108 @@
+*{box-sizing: border-box;}
+
+/* fuente de todo el body*/
+body {
+
+    font-family: 'Roboto', 'sans-serif';
+}
+
+
+
+/*header*/
+header {
+   
+
+    text-align: left;
+    margin: 10px;
+}
+
+
+
+/*fin general main*/
+
+/*general del formulario*/
+form#formulario {
+    display: flex;
+    flex-direction: column;
+     
+   
+    
+
+}
+
+form#formulario input {
+    width: 60%;
+    border: none;
+    border-bottom: 1px solid grey;
+    margin: 30px;
+
+   
+    
+}
+form *::placeholder, a{
+    font-weight: bold;
+    color: black;
+
+}
+
+
+
+/*boton*/
+form button {
+    border-radius: 20rem;
+    background-color: black;
+    padding: 15px;
+    color: burlywood;
+    width: 10rem;
+    margin: 30px;
+}
+
+/*a*/
+a {
+    text-decoration: none;
+    color: black;
+    width: 10rem;
+    margin: 30px;
+
+}
+h2{
+    width: 10rem;
+    margin: 30px;
+
+}
+
+form#formulario input :focus{
+   
+   
+    
+}
+
+
+
+/*justifac conten alineacion horizontal */
+/*aling item alinacion verticlal*/
+
+
+@media (min-width:700px){
+
+form#formulario input {
+    max-width: 200px;
+    min-width: 10em;
+    border: none;
+    border-bottom: 1px solid grey;
+    margin: 30px;
+
+   
+    
+}
+form#formulario {
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+  
+   
+    
+
+}
+
+}
