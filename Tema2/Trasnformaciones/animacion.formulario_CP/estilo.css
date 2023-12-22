@@ -80,7 +80,7 @@ body {
 .form input:focus + .lbl-nombre .text-nomb,
 .form input:valid + .lbl-nombre .text-nomb{
   transform: translateY(-150%);
-  font-size: 14px;
+ 
   color: #2ecece;
 }
 

@@ -35,16 +35,22 @@ form#formulario input {
     border: none;
     border-bottom: 1px solid grey;
     margin: 30px;
-
+    padding-top: 1.5rem;
+    transition: all 0.3s ease;
+    outline: none; /* Quita el borde de enfoque */
    
     
 }
-form *::placeholder, a{
+form * a{
     font-weight: bold;
     color: black;
 
 }
+ form input::placeholder{
+    font-weight: bold;
+    color: black;
 
+ }
 
 
 /*boton*/
@@ -72,12 +78,19 @@ h2{
 }
 
 form#formulario input :focus{
-   
+    font-size: 14px;
    
     
 }
 
+/* Agrega estos estilos para el campo de entrada */
 
+  input:focus::placeholder {
+    transform: translateY(-150%);
+    transition: transform 0.3s ease-in-out;
+   
+  }
+  
 
 /*justifac conten alineacion horizontal */
 /*aling item alinacion verticlal*/
