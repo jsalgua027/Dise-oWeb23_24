@@ -56,6 +56,11 @@ function mute() {
     updateVolumeIcons();
 }
 
+function volume() {
+    audio.volume = rango_volumen.value / 100;
+    //control_mute();
+}
+
 function bajar_volumen() {
     if (audio.volume > 0) {
         audio.volume -= 0.1;
