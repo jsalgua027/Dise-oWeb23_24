@@ -16,27 +16,27 @@
         </div>
         <div id="control-pista">
         
-        <button id="play">
+        <button id="play" onclick="play()">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                 <path fill="var(--ci-primary-color, currentColor)"
                  d="M444.4,235.236,132.275,49.449A24,24,0,0,0,96,70.072V434.214a24.017,24.017,0,0,0,35.907,20.839L444.03,276.7a24,24,0,0,0,.367-41.461ZM128,420.429V84.144L416.244,255.718Z" class="ci-primary"/>
               </svg>
               
         </button>
-        <button id="pausa">
+        <button id="pausa" onclick="pausa()">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                 <path fill="var(--ci-primary-color, currentColor)" d="M200,48H72A24.028,24.028,0,0,0,48,72V440a24.028,24.028,0,0,0,24,24H200a24.028,24.028,0,0,0,24-24V72A24.028,24.028,0,0,0,200,48Zm-8,384H80V80H192Z" class="ci-primary"/>
                 <path fill="var(--ci-primary-color, currentColor)" d="M440,48H312a24.028,24.028,0,0,0-24,24V440a24.028,24.028,0,0,0,24,24H440a24.028,24.028,0,0,0,24-24V72A24.028,24.028,0,0,0,440,48Zm-8,384H320V80H432Z" class="ci-primary"/>
               </svg>
               
         </button>
-        <button id="stop">
+        <button id="stop" onclick="pausa()">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                 <path fill="var(--ci-primary-color, currentColor)" d="M408,80H104a24.027,24.027,0,0,0-24,24V408a24.027,24.027,0,0,0,24,24H408a24.027,24.027,0,0,0,24-24V104A24.027,24.027,0,0,0,408,80Zm-8,320H112V112H400Z" class="ci-primary"/>
               </svg>
               
         </button>
-        <button id="reiniciar">
+        <button id="reiniciar" onclick="reiniciar()">
             <svg transform="rotate(180)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                 <path fill="var(--ci-primary-color, currentColor)"
                     d="M328.845,236.582,134.285,92.463A24,24,0,0,0,96,111.749V399.985a23.979,23.979,0,0,0,38.285,19.286l194.56-144.118h0a24,24,0,0,0,0-38.57ZM128,384.1V127.63L301.119,255.867Z"
@@ -46,7 +46,7 @@
             </svg>
         </button>
        
-        <button id="loop">
+        <button id="loop" onclick="repetir()">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                 <path fill="var(--ci-primary-color, currentColor)"
                     d="M464,210.511V264A112.127,112.127,0,0,1,352,376H78.627l44.686-44.687-22.626-22.626L56,353.373l-4.415,4.414L18.019,391.354,92.041,474.63l23.918-21.26L75.63,408H352c79.4,0,144-64.6,144-144V178.511Z"
@@ -72,7 +72,7 @@
     
             </button>
     
-            <button id="volume-on" onclick="mute()" class="oculto">
+            <button id="volume-on" onclick="mute()" >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                     <path fill="var(--ci-primary-color, currentColor)"
                         d="M145.373,120H16V392H145.373l104,104H288V16H249.373ZM128,360H48V152h80Zm128,97.373-96-96V150.627l96-96Z"
@@ -82,7 +82,7 @@
     
             </button>
             
-            <button id="volume-low" onclick="volume_low()">
+            <button id="bajar-volumen" onclick="bajar_volumen()">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                     <path fill="var(--ci-primary-color, currentColor)"
                         d="M320,168v32a56,56,0,0,1,0,112v32a88,88,0,0,0,0-176Z" class="ci-primary" />
@@ -95,7 +95,7 @@
     
             <input type="range" name="volume-range" id="volume-range" value="100" onchange="volume()">
     
-            <button id="volume-high" onclick="volume_high()">
+            <button id="subir-volumen" onclick="subir_volumen()">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                     <path fill="var(--ci-primary-color, currentColor)"
                         d="M145.373,120H16V392H145.373l104,104H288V16H249.373ZM128,360H48V152h80Zm128,97.373-96-96V150.627l96-96Z"
