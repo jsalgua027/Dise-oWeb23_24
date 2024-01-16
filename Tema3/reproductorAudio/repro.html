@@ -12,7 +12,11 @@
  <div id="contenedor">
     <div id="reproductor">
         <div id="barra-tiempo">
-            <audio id="audio" src="Audios/Kendrick Lama.mp3" controls></audio>
+            <audio id="audio" src="Audios/Kendrick Lama.mp3" controls ></audio>
+            
+            <span id="tiempo"></span>
+
+            <input type="range" name="time-range" id="time-range" value="0" step="1" onchange="modificar_tiempo()">
         </div>
         <div id="control-pista">
         
