@@ -9,6 +9,8 @@ var volume_off = document.getElementById("volume-off");
 var volume_on = document.getElementById("volume-on");
 var bajar_volumen = document.getElementById("bajar-volumen");
 var subir_volumen = document.getElementById("subir-volumen");
+var rango_volumen = document.getElementById("volume-range");
+var rango_tiempo = document.getElementById("time-range");
 var tiempo = document.getElementById("tiempo");
 window.onload = tiempo_repro();
 
@@ -67,20 +69,29 @@ function volume() {
     //control_mute();
 }
 
-function bajar_volumen() {
-    if (audio.volume > 0) {
-        audio.volume -= 0.1;
+function bajar_vol() {
+    if (audio.volume >= 0.05) {
+        audio.volume -= 0.05;
+        rango_volumen.value -= 5;
+    } else {
+        audio.volume = 0;
+        rango_volumen.value = 0;
+     
     }
     updateVolumeIcons();
 }
 
-function subir_volumen() {
-    if (audio.volume < 1) {
-        audio.volume += 0.1;
-    }
+function subir_vol() {
+    if (audio.volume <= 0.95) {
+        audio.volume += 0.05;
+        rango_volumen.value = Number(rango_volumen.value) + 5;
+       
+    } else {
+        audio.volume = 1;
+        rango_volumen.value = 100;
     updateVolumeIcons();
 }
-
+}
 function updateVolumeIcons() {
     if (audio.muted) {
         volume_on.style.display = "none";
@@ -107,8 +118,10 @@ function updateVolumeIcons3() {
 // tiempo
 //Evento para el tiempo transcurrido
 
-audio.addEventListener("timeupdate", tiempo_repro, true);
-
+//audio.addEventListener("timeupdate", tiempo_repro, true);
+audio.addEventListener("loadedmetadata", function() {
+    tiempo_repro();
+});
 
 function seg_to_contador(seg) {
 
@@ -166,6 +179,6 @@ boton_repetir_on.addEventListener("click", repetir);
 boton_repetir_off.addEventListener("click", repetir);
 volume_off.addEventListener("click", mute);
 volume_on.addEventListener("click", mute);
-tiempo.addEventListener("onchange",modificar_tiempo)
-bajar_volumen.addEventListener("click", bajar_volumen);
-subir_volumen.addEventListener("click", subir_volumen);
+tiempo.addEventListener("input",modificar_tiempo);
+bajar_volumen.addEventListener("click", bajar_vol);
+subir_volumen.addEventListener("click", subir_vol);
