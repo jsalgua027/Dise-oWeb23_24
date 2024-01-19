@@ -18,13 +18,10 @@ function play() {
     
     if (audio.paused) {
         audio.play();
-        
-       
         cambiarIconosPlayPause();
     } else {
-        
+       
         audio.pause();
-      
         cambiarIconosPlayPause();
     }
  
@@ -45,18 +42,18 @@ function cambiarIconosPlayPause() {
 
 function stop() {
     audio.pause();
-   
     audio.currentTime = 0;
+    rango_tiempo.value = 0;
 }
 function pausa() {
     audio.pause();
-    
     cambiarIconosPlayPause()
 }
 function reiniciar() {
     audio.currentTime = 0;
+    rango_tiempo.value = 0;
     audio.play();
-  
+    cambiarIconosPlayPause()
 }
 
 function repetir() {
@@ -67,10 +64,8 @@ function repetir() {
 }
 
 function mute() {
-   
-    audio.muted = !audio.muted;
-   
-    cambioIconosVolumen()
+       audio.muted = !audio.muted;
+        cambioIconosVolumen()
 }
 
 function volume() {
@@ -128,9 +123,11 @@ function cambioIconosLoop() {
 //Evento para el tiempo transcurrido
 
 audio.addEventListener("timeupdate", tiempo_repro, true);
+/*
  audio.addEventListener("loadedmetadata", function() {
     tiempo_repro();
-}); 
+});  */
+
 
 function seg_to_contador(seg) {
 
@@ -179,7 +176,8 @@ function modificar_tiempo() {
 }
 
 
-
+/*
+ 
 boton_play.addEventListener("click", play);
 boton_stop.addEventListener("click", stop);
 boton_pausa.addEventListener("click", pausa);
@@ -191,3 +189,5 @@ volume_on.addEventListener("click", mute);
 tiempo.addEventListener("input",modificar_tiempo);
 bajar_volumen.addEventListener("click", bajar_vol);
 subir_volumen.addEventListener("click", subir_vol);
+*/
+
