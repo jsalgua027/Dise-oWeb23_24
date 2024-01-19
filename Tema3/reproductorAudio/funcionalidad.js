@@ -18,23 +18,25 @@ function play() {
     
     if (audio.paused) {
         audio.play();
-        tiempo_repro()
+        
        
-        updateVolumeIcons2();
+        cambiarIconosPlayPause();
     } else {
         
         audio.pause();
-        updateVolumeIcons2();
+      
+        cambiarIconosPlayPause();
     }
  
 }
 
-function updateVolumeIcons2() {
+function cambiarIconosPlayPause() {
     if (audio.paused) {
+        
         boton_play.style.display = "inline-block";
         boton_pausa.style.display = "none";
     } else {
-        
+       
         boton_play.style.display = "none";
         boton_pausa.style.display = "inline-block";
     }
@@ -43,25 +45,32 @@ function updateVolumeIcons2() {
 
 function stop() {
     audio.pause();
+   
     audio.currentTime = 0;
 }
 function pausa() {
     audio.pause();
-    updateVolumeIcons2();
+    
+    cambiarIconosPlayPause()
 }
 function reiniciar() {
     audio.currentTime = 0;
     audio.play();
+  
 }
 
 function repetir() {
+   
     audio.loop = !audio.loop;
-    updateVolumeIcons3();
+    cambioIconosLoop();
+  
 }
 
 function mute() {
+   
     audio.muted = !audio.muted;
-    updateVolumeIcons();
+   
+    cambioIconosVolumen()
 }
 
 function volume() {
@@ -78,7 +87,7 @@ function bajar_vol() {
         rango_volumen.value = 0;
      
     }
-    updateVolumeIcons();
+    cambioIconosVolumen()
 }
 
 function subir_vol() {
@@ -89,10 +98,10 @@ function subir_vol() {
     } else {
         audio.volume = 1;
         rango_volumen.value = 100;
-    updateVolumeIcons();
+        cambioIconosVolumen()
 }
 }
-function updateVolumeIcons() {
+function cambioIconosVolumen() {
     if (audio.muted) {
         volume_on.style.display = "none";
         volume_off.style.display = "inline-block";
@@ -105,7 +114,7 @@ function updateVolumeIcons() {
 //Loop
 
 
-function updateVolumeIcons3() {
+function cambioIconosLoop() {
     if (audio.loop) {
         boton_repetir_on.style.display = "none";
         boton_repetir_off.style.display = "inline-block";
@@ -118,10 +127,10 @@ function updateVolumeIcons3() {
 // tiempo
 //Evento para el tiempo transcurrido
 
-//audio.addEventListener("timeupdate", tiempo_repro, true);
-audio.addEventListener("loadedmetadata", function() {
+audio.addEventListener("timeupdate", tiempo_repro, true);
+ audio.addEventListener("loadedmetadata", function() {
     tiempo_repro();
-});
+}); 
 
 function seg_to_contador(seg) {
 
