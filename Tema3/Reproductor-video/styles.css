@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto Slab';
+    color:#FFF2DC;
+}
+
+div#content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    max-width: 850px;
+}
+
+div#reproductor {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #FF600A;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid #FF600A;
+
+}
+
+button {
+    background: none;
+    min-width: 2rem;
+    border: none;
+    cursor: pointer;
+}
+
+video {
+    max-width: 100%;
+    border-bottom: 2px solid #FF600A;
+}
+
+div#barra-tiempo {
+    flex: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0.75rem 0;
+}
+
+div#pack-vol {
+    display: flex;
+    flex-flow: row;
+}
+
+div#pack-vel {
+    width: 8rem;
+    display: flex;
+    flex-flow: row;
+}
+
+div#pack-vel>button {
+    flex: 1
+}
+
+div#pack-vel>div {
+    flex: 2
+}
+
+div#vel-rep {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+svg {
+    height: 2rem;
+    width: 100%;
+    color: #FFF2DC
+}
+
+input[type="range"]{
+    cursor: grab;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    background-color: #FFF2DC;
+    border-radius: 2rem;
+    height: rem;
+  }
+
+
+input[type="range"]:active{
+    cursor: grabbing;
+}
+
+input#time-range {
+    width: 80%;
+}
+
+.oculto {
+    display: none;
+}
+
+.visible {
+    display: block;
+}

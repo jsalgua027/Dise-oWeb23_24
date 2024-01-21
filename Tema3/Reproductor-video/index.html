@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="#">
+    <title>Reproductor de vídeo</title>
+</head>
+
+<body onload="tiempo_repro(), calcular_time_range()">
+
+    <div id="content">
+
+        <div id="reproductor">
+
+            <video id="video" poster="videos/trailer.png">
+                <source src="videos/videos/trailer.mp4" type="video/mp4" />
+                <source src="videos/videos/trailer.ogv" type="video/ogg; codecs='theora, vorbis'" />
+                <source src="videos/videos/trailer.webm" type="video/webm; codecs='vp8, vorbis'" />
+                <source src="videos/videos/trailer.swf" type="video/flv; codecs='vp6, sorenson spark'" />
+            </video>
+
+            <div id="barra-tiempo">
+
+                <button id="backward" onclick="seg_backward()">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M276.055,143.463,196.592,64,87.571,173.021l-.041-.041L19.381,241.128l-4.3,4.328-7.085,7,68.217,68.216,11.342,11.26L196.592,440.967,276.055,361.5,167.034,252.484ZM196.592,395.712,98.885,298.005,87.53,286.732,53.348,252.551l.041-.041-.067-.068L87.53,218.235l.041.041L196.592,109.255,230.8,143.463,121.779,252.484,230.8,361.5Z"
+                            class="ci-primary" />
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M497.263,143.463,417.8,64,308.713,173.088l-.042-.041L240.59,241.128,229.4,252.406l-.119.119,68.148,68.148,11.288,11.2L417.8,440.967,497.263,361.5,388.242,252.484ZM452.008,361.5,417.8,395.712l-97.707-97.707-11.28-11.2-34.325-34.324,34.316-34.316.042.041L417.8,109.255l34.207,34.208L342.987,252.484Z"
+                            class="ci-primary" />
+                    </svg>
+                </button>
+
+                <span id="tiempo"></span>
+
+                <button id="forward" onclick="seg_forward()">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M503.933,255.933l.041-.041L435.893,187.81l-6.221-6.175-5.122-5.085L315.516,67.516l-79.462,79.463L345.075,256,236.054,365.021l79.462,79.463L424.537,335.463l.041.041.067-.067h0l68.081-68.082L504,256Zm-188.417,143.3-34.207-34.208L390.33,256,281.309,146.979l34.207-34.208,97.707,97.707,11.355,11.273L458.827,256l-34.249,34.249-.041-.041-.067.067Z"
+                            class="ci-primary" />
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M282.792,256l-.067-.067.041-.041L214.684,187.81,203.4,176.6,94.308,67.516,14.845,146.979,123.866,256,14.845,365.021l79.463,79.463L203.4,335.4l.041.041,68.082-68.082ZM203.3,290.316l-.041-.041L94.308,399.229,60.1,365.021,169.121,256,60.1,146.979l34.208-34.208,97.707,97.707,11.279,11.2L237.619,256Z"
+                            class="ci-primary" />
+                    </svg>
+                </button>
+
+                <input type="range" name="time-range" id="time-range" value="0" step="1" onchange="modificar_tiempo()">
+
+            </div>
+
+            <button id="play" onclick="play_pause()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path fill="var(--ci-primary-color, currentColor)"
+                        d="M444.4,235.236,132.275,49.449A24,24,0,0,0,96,70.072V434.214a24.017,24.017,0,0,0,35.907,20.839L444.03,276.7a24,24,0,0,0,.367-41.461ZM128,420.429V84.144L416.244,255.718Z"
+                        class="ci-primary" />
+                </svg>
+            </button>
+            <button id="pause" onclick="play_pause()" class="oculto">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path fill="var(--ci-primary-color, currentColor)"
+                        d="M200,48H72A24.028,24.028,0,0,0,48,72V440a24.028,24.028,0,0,0,24,24H200a24.028,24.028,0,0,0,24-24V72A24.028,24.028,0,0,0,200,48Zm-8,384H80V80H192Z"
+                        class="ci-primary" />
+                    <path fill="var(--ci-primary-color, currentColor)"
+                        d="M440,48H312a24.028,24.028,0,0,0-24,24V440a24.028,24.028,0,0,0,24,24H440a24.028,24.028,0,0,0,24-24V72A24.028,24.028,0,0,0,440,48Zm-8,384H320V80H432Z"
+                        class="ci-primary" />
+                </svg>
+            </button>
+            <button id="stop" onclick="stop()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path fill="var(--ci-primary-color, currentColor)"
+                        d="M408,80H104a24.027,24.027,0,0,0-24,24V408a24.027,24.027,0,0,0,24,24H408a24.027,24.027,0,0,0,24-24V104A24.027,24.027,0,0,0,408,80Zm-8,320H112V112H400Z"
+                        class="ci-primary" />
+                </svg>
+            </button>
+            <button id="restart" onclick="restart()">
+                <svg transform="rotate(180)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path fill="var(--ci-primary-color, currentColor)"
+                        d="M328.845,236.582,134.285,92.463A24,24,0,0,0,96,111.749V399.985a23.979,23.979,0,0,0,38.285,19.286l194.56-144.118h0a24,24,0,0,0,0-38.57ZM128,384.1V127.63L301.119,255.867Z"
+                        class="ci-primary" />
+                    <rect width="32" height="336" x="384" y="88" fill="var(--ci-primary-color, currentColor)"
+                        class="ci-primary" />
+                </svg>
+            </button>
+
+
+            <button id="loop-on" onclick="loop()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path fill="var(--ci-primary-color, currentColor)"
+                        d="M464,210.511V264A112.127,112.127,0,0,1,352,376H78.627l44.686-44.687-22.626-22.626L56,353.373l-4.415,4.414L18.019,391.354,92.041,474.63l23.918-21.26L75.63,408H352c79.4,0,144-64.6,144-144V178.511Z"
+                        class="ci-primary" />
+                    <path fill="var(--ci-primary-color, currentColor)"
+                        d="M48,256A112.127,112.127,0,0,1,160,144H433.373l-44.686,44.687,22.626,22.626L456,166.627l4.117-4.116,33.864-33.865L419.959,45.37,396.041,66.63,436.37,112H160C80.6,112,16,176.6,16,256v85.787l32-32Z"
+                        class="ci-primary" />
+                </svg>
+            </button>
+
+            <button id="loop-off" onclick="loop()" class="oculto">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <polygon fill="var(--ci-primary-color, currentColor)"
+                        points="208 312 208 344 320 344 320 312 280 312 280 176 248 176 248 200 216 200 216 232 248 232 248 312 208 312"
+                        class="ci-primary" />
+                    <path fill="var(--ci-primary-color, currentColor)"
+                        d="M464,210.511V264A112.127,112.127,0,0,1,352,376H78.627l44.686-44.687-22.626-22.626L56,353.373l-4.415,4.414L18.019,391.354,92.041,474.63l23.918-21.26L75.63,408H352c79.4,0,144-64.6,144-144V178.511Z"
+                        class="ci-primary" />
+                    <path fill="var(--ci-primary-color, currentColor)"
+                        d="M48,256A112.127,112.127,0,0,1,160,144H433.373l-44.686,44.687,22.626,22.626L456,166.627l4.117-4.116,33.864-33.865L419.959,45.37,396.041,66.63,436.37,112H160C80.6,112,16,176.6,16,256v85.787l32-32Z"
+                        class="ci-primary" />
+                </svg>
+
+            </button>
+
+
+
+            <div id="pack-vol">
+
+                <button id="volume-off" onclick="mute()">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <polygon fill="var(--ci-primary-color, currentColor)"
+                            points="490.51 187.313 467.882 164.687 403.598 228.971 339.313 164.687 316.686 187.313 380.971 251.598 316.686 315.883 339.313 338.51 403.598 274.226 467.882 338.51 490.51 315.883 426.225 251.598 490.51 187.313"
+                            class="ci-primary" />
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M145.373,120H16V392H145.373l104,104H288V16H249.373ZM128,360H48V152h80Zm128,97.373-96-96V150.627l96-96Z"
+                            class="ci-primary" />
+                    </svg>
+                </button>
+
+                <button id="volume-on" onclick="mute()" class="oculto">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M145.373,120H16V392H145.373l104,104H288V16H249.373ZM128,360H48V152h80Zm128,97.373-96-96V150.627l96-96Z"
+                            class="ci-primary" />
+
+                    </svg>
+                </button>
+
+
+                <button id="volume-low" onclick="volume_low()">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M320,168v32a56,56,0,0,1,0,112v32a88,88,0,0,0,0-176Z" class="ci-primary" />
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M145.373,120H16V392H145.373l104,104H288V16H249.373ZM128,360H48V152h80Zm128,97.373-96-96V150.627l96-96Z"
+                            class="ci-primary" />
+                    </svg>
+                </button>
+
+                <input type="range" name="volume-range" id="volume-range" value="100" onchange="volume()">
+
+                <button id="volume-high" onclick="volume_high()">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M145.373,120H16V392H145.373l104,104H288V16H249.373ZM128,360H48V152h80Zm128,97.373-96-96V150.627l96-96Z"
+                            class="ci-primary" />
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M408,256a88.1,88.1,0,0,0-88-88v32a56,56,0,0,1,0,112v32A88.1,88.1,0,0,0,408,256Z"
+                            class="ci-primary" />
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M320,57.445V89.722C401.307,101.4,464,171.512,464,256S401.307,410.6,320,422.278v32.277C419.005,442.66,496,358.158,496,256S419.005,69.34,320,57.445Z"
+                            class="ci-primary" />
+                    </svg>
+                </button>
+            </div>
+
+
+            <div id="pack-vel">
+
+                <button id="speed-low" onclick="speed_low()">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <rect width="368" height="32" x="72" y="240" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                    </svg>
+                </button>
+
+                <div id="vel-rep">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M425.706,142.294A240,240,0,0,0,16,312v88H160V368H48V312c0-114.691,93.309-208,208-208s208,93.309,208,208v56H352v32H496V312A238.432,238.432,0,0,0,425.706,142.294Z"
+                            class="ci-primary" />
+                        <rect width="32" height="32" x="80" y="264" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                        <rect width="32" height="32" x="240" y="128" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                        <rect width="32" height="32" x="136" y="168" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                        <rect width="32" height="32" x="400" y="264" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M297.222,335.1l69.2-144.173-28.85-13.848L268.389,321.214A64.141,64.141,0,1,0,297.222,335.1ZM256,416a32,32,0,1,1,32-32A32.036,32.036,0,0,1,256,416Z"
+                            class="ci-primary" />
+                    </svg>
+                    <span id="velocidad">x1</span>
+                </div>
+
+                <button id="speed-high" onclick="speed_high()">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <polygon fill="var(--ci-primary-color, currentColor)"
+                            points="440 240 272 240 272 72 240 72 240 240 72 240 72 272 240 272 240 440 272 440 272 272 440 272 440 240"
+                            class="ci-primary" />
+                    </svg>
+                </button>
+
+            </div>
+
+
+
+            <button id="fullscreen-on" onclick="fullscreen()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <polygon fill="var(--ci-primary-color, currentColor)"
+                        points="208 48 208 16 16 16 16 208 48 208 48 70.627 208.687 231.313 231.313 208.687 70.627 48 208 48"
+                        class="ci-primary" />
+                    <polygon fill="var(--ci-primary-color, currentColor)"
+                        points="464 304 464 441.373 299.313 276.687 276.687 299.313 441.373 464 304 464 304 496 496 496 496 304 464 304"
+                        class="ci-primary" />
+                </svg>
+            </button>
+
+        </div>
+    </div>
+    <script src="functions.js"></script>
+</body>
+
+</html>
