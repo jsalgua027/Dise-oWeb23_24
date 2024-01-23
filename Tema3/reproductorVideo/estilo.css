@@ -60,11 +60,16 @@ div#barra-tiempo>span {
     background: linear-gradient(to right,#D9BD9C 0%, #8C0444 100%);
 }
 
-#time-range::-webkit-slider-thumb {
-    background-color: yellow;
+input[type="range"]#time-range::-webkit-slider-thumb {
+    background-color: #FFF;
     /* Cambia el color del pulgar */
 }
 
+input[type="range"]#time-range::-moz-range-thumb {
+    background-color: yellow;
+    background: linear-gradient(to right,#D9BD9C 0%, #8C0444 100%);
+    /* Cambia el color del pulgar */
+}
 
 /* Todos los elemenos de tipo botón*/
 div#control-pista {
