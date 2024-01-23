@@ -4,6 +4,7 @@
 
 div#contenedor {
     width: 100%;
+    max-width: 780px;
     height: 150px;
     display: flex;
     flex-flow: row wrap;
@@ -16,12 +17,13 @@ h1 {
     text-align: center;
 }
 video{
-    width: 90%;
+    width: 100%;
+    max-width: 90%;
 }
 div#reproductor {
     display: flex;
     flex-flow: row wrap;
-    background-color: #D9BD9C;
+    background-color:#8C0444;
     justify-content: space-around;
     align-items: center;
     padding: 0.5rem;
@@ -32,14 +34,14 @@ div#reproductor {
 
 }
 
-/* todos los elementos que gestionan y muestran el tiempo del audio*/
+/* #8C0444 todos los elementos que gestionan y muestran el tiempo del audio #D9BD9C*/
 div#barra-tiempo {
     flex: 0 100%;
-    border: 1px solid#8C0444;
+    border-bottom: 1px solid#D9BD9C;
     justify-content: center;
     display: flex;
     flex-direction: row;
-    border-radius: 10px;
+  
 }
 
 div#barra-tiempo>span {
@@ -47,6 +49,7 @@ div#barra-tiempo>span {
     font-size: xx-large;
     flex: 0 50%;
     text-align: center;
+    color:#D9BD9C
 }
 
 #time-range {
@@ -54,7 +57,7 @@ div#barra-tiempo>span {
 }
 
 #time-range::-webkit-slider-runnable-track {
-    background: linear-gradient(to right, #8C0444 0%, #8C0444 100%);
+    background: linear-gradient(to right,#D9BD9C 0%, #8C0444 100%);
 }
 
 #time-range::-webkit-slider-thumb {
@@ -68,7 +71,7 @@ div#control-pista {
     display: flex;
     flex-direction: row;
     flex: 0 50%;
-    border: 1px solid #8C0444;
+  /*   border: 1px solid #D9BD9C; */
     border-radius: 10px;
     justify-content: center;
     padding: 0.2rem;
@@ -91,6 +94,7 @@ button {
   color:#8C0444;
   border-color:#d6bcd6;
   font-weight:bold;
+  margin-left: 0.5rem;
   border-top-left-radius:15px;
   border-top-right-radius:15px;
   border-bottom-left-radius:15px;
@@ -109,7 +113,7 @@ div#control-volumen {
     display: flex;
     flex-direction: row;
     flex: 0 50%;
-    border: 1px solid #8C0444;
+   /*  border: 1px solid#D9BD9C; */
     border-radius: 10px;
     justify-content: center;
     padding: 0.2rem;
@@ -117,5 +121,5 @@ div#control-volumen {
 }
 
 #volume-range::-webkit-slider-runnable-track {
-    background: linear-gradient(to right, #8C0444 0%, #8C0444 100%);
+    background: linear-gradient(to right, #D9BD9C, #8C0444 100%);
 }
