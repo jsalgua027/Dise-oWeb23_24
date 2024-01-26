@@ -4,7 +4,7 @@
 
 div#contenedor {
     width: 100%;
-    max-width: 780px;
+    max-width: 790px;
     height: 150px;
     display: flex;
     flex-flow: row wrap;
@@ -18,7 +18,9 @@ h1 {
 }
 video{
     width: 100%;
-    max-width: 90%;
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 5px;
 }
 div#reproductor {
     display: flex;
