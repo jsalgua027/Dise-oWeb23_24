@@ -14,6 +14,7 @@ var rango_tiempo = document.getElementById("time-range");
 var tiempo = document.getElementById("tiempo");
 window.onload = tiempo_repro();
 
+// metodo del play 
 function play() {
     
     if (audio.paused) {
@@ -26,7 +27,7 @@ function play() {
     }
  
 }
-
+// cambios de iconos cuando se pulsa
 function cambiarIconosPlayPause() {
     if (audio.paused) {
         
@@ -39,16 +40,18 @@ function cambiarIconosPlayPause() {
     }
 }
 
-
+// metodo del stop
 function stop() {
     audio.pause();
     audio.currentTime = 0;
     rango_tiempo.value = 0;
 }
+// metodo del pausa
 function pausa() {
     audio.pause();
     cambiarIconosPlayPause()
 }
+
 function reiniciar() {
     audio.currentTime = 0;
     rango_tiempo.value = 0;
@@ -70,7 +73,7 @@ function mute() {
 
 function volume() {
     audio.volume = rango_volumen.value / 100;
-    //control_mute();
+    
 }
 
 function bajar_vol() {
@@ -84,7 +87,7 @@ function bajar_vol() {
     }
     cambioIconosVolumen()
 }
-
+//volume
 function subir_vol() {
     if (audio.volume <= 0.95) {
         audio.volume += 0.05;
@@ -93,9 +96,10 @@ function subir_vol() {
     } else {
         audio.volume = 1;
         rango_volumen.value = 100;
-        cambioIconosVolumen()
+        cambioIconosVolumen() 
 }
 }
+// cambio de iconos para el mute
 function cambioIconosVolumen() {
     if (audio.muted) {
         volume_on.style.display = "none";
@@ -106,7 +110,7 @@ function cambioIconosVolumen() {
     }
 }
 
-//Loop
+//Cambio de iconos para los botones de loop
 
 
 function cambioIconosLoop() {
@@ -119,19 +123,16 @@ function cambioIconosLoop() {
     }
 }
 
-// tiempo
+// TIEMPO
 //Evento para el tiempo transcurrido
 
 audio.addEventListener("timeupdate", tiempo_repro, true);
-/*
- audio.addEventListener("loadedmetadata", function() {
-    tiempo_repro();
-});  */
+
 
 
 function seg_to_contador(seg) {
 
-    if (isNaN(seg)) { //Controla que entre a 0
+    if (isNaN(seg)) {
         seg = 0;
     }
     var contador = "00:00";
@@ -149,15 +150,15 @@ function tiempo_repro() {
 
     tiempo.innerHTML = seg_to_contador(audio.currentTime) + "/" + seg_to_contador(audio.duration);
 
-    if (isNaN(audio.duration)) { //Controla cuando no ha cargado el audio
+    if (isNaN(audio.duration)) { 
         rango_tiempo.value = 0;
     } else {
         rango_tiempo.value = audio.currentTime / audio.duration * 100;
     }
 
     rango_tiempo.step = 100 / audio.duration;
-
-    if (audio.currentTime == audio.duration) { //Cuando acaba cambia el boton play/pause
+//Cuando acaba cambia el boton play/pause
+    if (audio.currentTime == audio.duration) { 
         boton_pause.className = "oculto";
         boton_play.className = "visible";
 
@@ -165,7 +166,7 @@ function tiempo_repro() {
 }
 
 
-//Duracion
+//DURACION DEL TIEMPO
 
 
 function modificar_tiempo() {
