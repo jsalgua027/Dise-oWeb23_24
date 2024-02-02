@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+
+div#contenedor {
+    width: 100%;
+    max-width: 780px;
+    height: 150px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+
+}
+
+h1 {
+    text-align: center;
+}
+
+div#reproductor {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #8C0444;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: 2px solid #8C0444;
+    flex-basis: 90%;
+
+
+}
+
+/* #8C0444 todos los elementos que gestionan y muestran el tiempo del audio #D9BD9C*/
+div#barra-tiempo {
+    flex: 0 100%;
+    border-bottom: 1px solid#D9BD9C;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+
+}
+
+div#barra-tiempo>span {
+
+    font-size: xx-large;
+    flex: 0 50%;
+    text-align: center;
+    color: #D9BD9C
+}
+
+#time-range {
+    flex: 0 50%;
+}
+
+#time-range::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #D9BD9C 0%, #8C0444 100%);
+}
+
+#time-range::-webkit-slider-thumb {
+    background-color: yellow;
+    /* Cambia el color del pulgar */
+}
+
+
+/* Todos los elemenos de tipo botón*/
+div#control-pista {
+    display: flex;
+    flex-direction: row;
+    flex: 0 50%;
+    /*   border: 1px solid #D9BD9C; */
+    border-radius: 10px;
+    justify-content: center;
+    padding: 0.2rem;
+}
+
+button#pausa {
+    display: none;
+}
+
+button#volume-on {
+    display: none;
+}
+
+button {
+
+    font-family: Arial;
+    width: 45px;
+    height: auto;
+    border-width: 1px;
+    color: #8C0444;
+    border-color: #d6bcd6;
+    font-weight: bold;
+    margin-left: 0.5rem;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: inset 1px 1px 0px 1px #899599;
+    background: linear-gradient(#ededed, rgba(67, 111, 123, 1));
+}
+
+button:hover {
+    background: linear-gradient(#bab1ba, #ededed);
+}
+
+/* elementos botón de volumen*/
+div#control-volumen {
+    display: flex;
+    flex-direction: row;
+    flex: 0 50%;
+    /*  border: 1px solid#D9BD9C; */
+    border-radius: 10px;
+    justify-content: center;
+    padding: 0.2rem;
+
+}
+
+#volume-range::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #D9BD9C, #8C0444 100%);
+}
