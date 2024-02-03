@@ -14,7 +14,22 @@ ul{
 header{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     background-color: #F2EDEB;
+    width: 100%;
+
+}
+header>picture>img{
+    border: 1px solid black ;
+    flex: 0 28%;
+    width: 100%;
+    max-width: 95%;
+    height: auto;
+}
+header>svg{
+    border: 1px solid black ;
+    flex: 0 27%;
+
 }
 /*MAIN*/
 main{
