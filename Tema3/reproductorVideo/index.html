@@ -17,11 +17,11 @@
 
         <div id="reproductor">
 
-            <video id="video" poster="videos/trailer.png">
+            <video id="video" poster="videos/trailer.png" preload="auto">
                 <source src="videos/videos/trailer.mp4" type="video/mp4" />
                 <source src="videos/videos/trailer.ogv" type="video/ogg; codecs='theora, vorbis'" />
                 <source src="videos/videos/trailer.webm" type="video/webm; codecs='vp8, vorbis'" />
-                <source src="videos/videos/trailer.swf" type="video/flv; codecs='vp6, sorenson spark'" />
+              
             </video>
 
             <div id="barra-tiempo">
@@ -91,7 +91,7 @@
             </button>
 
 
-            <button id="loop-on" onclick="loop()">
+            <button id="loop-on" onclick="repetir()">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                     <path fill="var(--ci-primary-color, currentColor)"
                         d="M464,210.511V264A112.127,112.127,0,0,1,352,376H78.627l44.686-44.687-22.626-22.626L56,353.373l-4.415,4.414L18.019,391.354,92.041,474.63l23.918-21.26L75.63,408H352c79.4,0,144-64.6,144-144V178.511Z"
@@ -102,7 +102,7 @@
                 </svg>
             </button>
 
-            <button id="loop-off" onclick="loop()" class="oculto">
+            <button id="loop-off" onclick="repetir()" class="oculto">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                     <polygon fill="var(--ci-primary-color, currentColor)"
                         points="208 312 208 344 320 344 320 312 280 312 280 176 248 176 248 200 216 200 216 232 248 232 248 312 208 312"

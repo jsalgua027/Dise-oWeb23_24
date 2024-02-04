@@ -11,192 +11,215 @@ var ultimo_vol = 50;
 var indicador_velocidad = document.getElementById("velocidad");
 var tiempo = document.getElementById("tiempo");
 
-window.onload = tiempo_repro();
 
-
-function play_pause() {
+video.addEventListener("loadeddata", function() {
+    // Video completamente cargado
     tiempo_repro();
-    if (video.paused) {
-        video.play();
-        boton_play.className = "oculto";
-        boton_pause.className = "visible";
+});
+video.addEventListener('loadedmetadata', function() {
+    console.log('Metadata loaded');
+});
 
-    } else {
-        video.pause();
-        boton_pause.className = "oculto";
-        boton_play.className = "visible";
-    }
+video.addEventListener('canplay', function() {
+    console.log('Video can be played');
+});
+window.onload = tiempo_repro();
+/*controlo que en la carga inicial no me salgan los botones*/
+loop_on.style.display = "none";
+boton_pause.style.display = "none"
+/*play y pausa */
+function play_pause() {
+  tiempo_repro();
+  if (video.paused) {
+    video.play();
+    cambiarIconosPlayPause()
+  } else {
+    video.pause();
+    cambiarIconosPlayPause()
+  }
+}
+// cambios de iconos cuando se pulsa
+function cambiarIconosPlayPause() {
+  if (video.paused) {
+    boton_play.style.display = "none";
+    boton_pause.style.display = "inline-block";
+  } else {
+    boton_pause.style.display = "none";
+    boton_play.style.display ="inline-block";
+  }
 }
 
 function stop() {
-    if (video.currentTime != 0) {
-        video.pause();
-        video.currentTime = 0;
-        boton_pause.className = "oculto";
-        boton_play.className = "visible";
-        rango_tiempo.value = 0;
-    }
-
+  if (video.currentTime != 0) {
+    video.pause();
+    video.currentTime = 0;
+    boton_pause.className = "oculto";
+    boton_play.className = "visible";
+    rango_tiempo.value = 0;
+  }
 }
 
 function restart() {
-    video.currentTime = 0;
-    rango_tiempo.value = 0;
-    if (video.paused) {
-        video.play()
-        boton_play.className = "oculto";
-        boton_pause.className = "visible";;
-    } 
-
+  video.currentTime = 0;
+  rango_tiempo.value = 0;
+  if (video.paused) {
+    video.play();
+    boton_play.className = "oculto";
+    boton_pause.className = "visible";
+  }
 }
 
 function control_mute() {
-
-    if (video.volume == 0) {
-        volume_off.className = "oculto";
-        volume_on.className = "visible";
-    } else {
-        volume_on.className = "oculto";
-        volume_off.className = "visible";
-    }
+  if (video.volume == 0) {
+    volume_off.className = "oculto";
+    volume_on.className = "visible";
+  } else {
+    volume_on.className = "oculto";
+    volume_off.className = "visible";
+  }
 }
 
 function mute() {
-    if (video.volume > 0) {
-        ultimo_vol = video.volume;
+  if (video.volume > 0) {
+    ultimo_vol = video.volume;
 
-        video.volume = 0;
-        rango_volumen.value = 0;
+    video.volume = 0;
+    rango_volumen.value = 0;
+  } else {
+    video.volume = ultimo_vol;
+    rango_volumen.value = ultimo_vol * 100;
+  }
 
-    } else {
-        video.volume = ultimo_vol;
-        rango_volumen.value = ultimo_vol * 100;
-    }
-
-    control_mute();
+  control_mute();
 }
 
 function volume() {
-    video.volume = rango_volumen.value / 100;
-    control_mute();
+  video.volume = rango_volumen.value / 100;
+  control_mute();
 }
 
 function volume_low() {
-
-    if (video.volume >= 0.05) {
-        video.volume -= 0.05;
-        rango_volumen.value -= 5;
-    } else {
-        video.volume = 0;
-        rango_volumen.value = 0;
-        control_mute();
-    }
+  if (video.volume >= 0.05) {
+    video.volume -= 0.05;
+    rango_volumen.value -= 5;
+  } else {
+    video.volume = 0;
+    rango_volumen.value = 0;
+    control_mute();
+  }
 }
 
 function volume_high() {
-    if (video.volume <= 0.95) {
-        video.volume += 0.05;
-        rango_volumen.value = Number(rango_volumen.value) + 5;
-        control_mute();
-    } else {
-        video.volume = 1;
-        rango_volumen.value = 100;
-    }
+  if (video.volume <= 0.95) {
+    video.volume += 0.05;
+    rango_volumen.value = Number(rango_volumen.value) + 5;
+    control_mute();
+  } else {
+    video.volume = 1;
+    rango_volumen.value = 100;
+  }
+}
+function repetir() {
+  cambioIconosLoop();
+  video.loop = !video.loop;
+}
+//Cambio de iconos para los botones de loop
+
+function cambioIconosLoop() {
+  if (video.loop) {
+    loop_on.style.display = "none";
+    loop_off.style.display = "inline-block";
+  } else {
+    loop_off.style.display = "none";
+    loop_on.style.display = "inline-block";
+  }
 }
 
 //Evento para el tiempo transcurrido
 
 video.addEventListener("timeupdate", tiempo_repro, true);
 
-
 function seg_to_contador(seg) {
+  if (isNaN(seg)) {
+    //Controla que entre a 0
+    seg = 0;
+  }
+  var contador = "00:00";
+  if (seg < 3600) {
+    contador = new Date(seg * 1000).toISOString().substring(14, 19);
+  } else {
+    contador = new Date(seg * 1000).toISOString().substring(11, 19);
+  }
 
-    if (isNaN(seg)) { //Controla que entre a 0
-        seg = 0;
-    }
-    var contador = "00:00";
-    if (seg < 3600) {
-        contador = new Date(seg * 1000).toISOString().substring(14, 19)
-    } else {
-        contador = new Date(seg * 1000).toISOString().substring(11, 19)
-    }
-
-    return contador;
+  return contador;
 }
-
 
 function tiempo_repro() {
+  tiempo.innerHTML =
+    seg_to_contador(video.currentTime) + "/" + seg_to_contador(video.duration);
 
-    tiempo.innerHTML = seg_to_contador(video.currentTime) + "/" + seg_to_contador(video.duration);
+  if (isNaN(video.duration)) {
+    //Controla cuando no ha cargado el video
+    rango_tiempo.value = 0;
+  } else {
+    rango_tiempo.value = (video.currentTime / video.duration) * 100;
+  }
 
-    if (isNaN(video.duration)) { //Controla cuando no ha cargado el video
-        rango_tiempo.value = 0;
-    } else {
-        rango_tiempo.value = video.currentTime / video.duration * 100;
-    }
+  rango_tiempo.step = 100 / video.duration;
 
-    rango_tiempo.step = 100 / video.duration;
-
-    if (video.currentTime == video.duration) { //Cuando acaba cambia el boton play/pause
-        boton_pause.className = "oculto";
-        boton_play.className = "visible";
-
-    }
+  if (video.currentTime == video.duration) {
+    //Cuando acaba cambia el boton play/pause
+    boton_pause.className = "oculto";
+    boton_play.className = "visible";
+  }
 }
-
 
 //Duracion
 
-
 function modificar_tiempo() {
-    let nuevo_tiempo = rango_tiempo.value * video.duration / 100;
-    video.currentTime = nuevo_tiempo;
-    tiempo.innerHTML = seg_to_contador(nuevo_tiempo) + "/" + seg_to_contador(video.duration);
-
-}
-
-//Loop
-
-function loop() {
-
-    if (video.loop == false) {
-        video.loop = true;
-        loop_off.className = "visible";
-        loop_on.className = "oculto";
-        console.log(video.loop)
-    } else {
-        video.loop = false;
-        loop_off.className = "oculto";
-        loop_on.className = "visible";
-
-        console.log(video.loop)
-    }
+  let nuevo_tiempo = (rango_tiempo.value * video.duration) / 100;
+  video.currentTime = nuevo_tiempo;
+  tiempo.innerHTML =
+    seg_to_contador(nuevo_tiempo) + "/" + seg_to_contador(video.duration);
 }
 
 //Backward y Forward
 
 function seg_backward() {
-    if (video.paused) { //Para que no se inicie automaticamente
-        video.currentTime -= 5
-        video.pause();
-    } else {
-        video.currentTime -= 5
-    }
-
+  if (video.paused) {
+    //Para que no se inicie automaticamente
+    video.currentTime -= 5;
+    video.pause();
+  } else {
+    video.currentTime -= 5;
+  }
 }
 
 function seg_forward() {
-    if (video.paused) { //Para que no se inicie automaticamente
-        video.currentTime += 5
-        video.pause();
-    } else {
-        video.currentTime += 5
-    }
+  if (video.paused) {
+    //Para que no se inicie automaticamente
+    video.currentTime += 5;
+    video.pause();
+  } else {
+    video.currentTime += 5;
+  }
 }
-
 
 //Pantalla completa
 
 function fullscreen() {
-    video.requestFullscreen();
+    if (video.requestFullscreen) {
+        video.requestFullscreen();
+    } else if (video.mozRequestFullScreen) { // Firefox
+        video.mozRequestFullScreen();
+    } else if (video.webkitRequestFullscreen) { // Chrome, Safari and Opera
+        video.webkitRequestFullscreen();
+    } else if (video.msRequestFullscreen) { // IE/Edge
+        video.msRequestFullscreen();
+    }
+
+    // Muestra los controles del navegador en modo de pantalla completa
+    if (document.fullscreenEnabled || document.webkitFullscreenEnabled || document.mozFullScreenEnabled || document.msFullscreenEnabled) {
+        video.controls = true;
+    }
 }
