@@ -11,31 +11,30 @@ var ultimo_vol = 50;
 var indicador_velocidad = document.getElementById("velocidad");
 var tiempo = document.getElementById("tiempo");
 
-
-video.addEventListener("loadeddata", function() {
-    // Video completamente cargado
-    tiempo_repro();
+video.addEventListener("loadeddata", function () {
+  // Video completamente cargado
+  tiempo_repro();
 });
-video.addEventListener('loadedmetadata', function() {
-    console.log('Metadata loaded');
+video.addEventListener("loadedmetadata", function () {
+  console.log("Metadata loaded");
 });
 
-video.addEventListener('canplay', function() {
-    console.log('Video can be played');
+video.addEventListener("canplay", function () {
+  console.log("Video can be played");
 });
 window.onload = tiempo_repro();
 /*controlo que en la carga inicial no me salgan los botones*/
 loop_on.style.display = "none";
-boton_pause.style.display = "none"
+boton_pause.style.display = "none";
 /*play y pausa */
 function play_pause() {
   tiempo_repro();
   if (video.paused) {
     video.play();
-    cambiarIconosPlayPause()
+    cambiarIconosPlayPause();
   } else {
     video.pause();
-    cambiarIconosPlayPause()
+    cambiarIconosPlayPause();
   }
 }
 // cambios de iconos cuando se pulsa
@@ -45,7 +44,7 @@ function cambiarIconosPlayPause() {
     boton_pause.style.display = "inline-block";
   } else {
     boton_pause.style.display = "none";
-    boton_play.style.display ="inline-block";
+    boton_play.style.display = "inline-block";
   }
 }
 
@@ -208,18 +207,26 @@ function seg_forward() {
 //Pantalla completa
 
 function fullscreen() {
-    if (video.requestFullscreen) {
-        video.requestFullscreen();
-    } else if (video.mozRequestFullScreen) { // Firefox
-        video.mozRequestFullScreen();
-    } else if (video.webkitRequestFullscreen) { // Chrome, Safari and Opera
-        video.webkitRequestFullscreen();
-    } else if (video.msRequestFullscreen) { // IE/Edge
-        video.msRequestFullscreen();
-    }
+  if (video.requestFullscreen) {
+    video.requestFullscreen();
+  } else if (video.mozRequestFullScreen) {
+    // Firefox
+    video.mozRequestFullScreen();
+  } else if (video.webkitRequestFullscreen) {
+    // Chrome, Safari and Opera
+    video.webkitRequestFullscreen();
+  } else if (video.msRequestFullscreen) {
+    // IE/Edge
+    video.msRequestFullscreen();
+  }
 
-    // Muestra los controles del navegador en modo de pantalla completa
-    if (document.fullscreenEnabled || document.webkitFullscreenEnabled || document.mozFullScreenEnabled || document.msFullscreenEnabled) {
-        video.controls = true;
-    }
+  // Muestra los controles del navegador en modo de pantalla completa
+  if (
+    document.fullscreenEnabled ||
+    document.webkitFullscreenEnabled ||
+    document.mozFullScreenEnabled ||
+    document.msFullscreenEnabled
+  ) {
+    video.controls = true;
+  }
 }
