@@ -43,6 +43,7 @@ div#barra-tiempo {
     justify-content: center;
     display: flex;
     flex-direction: row;
+    padding: 0.2rem;
   
 }
 
@@ -120,10 +121,9 @@ div#control-volumen {
     display: flex;
     flex-direction: row;
     flex: 0 50%;
-   /*  border: 1px solid#D9BD9C; */
     border-radius: 10px;
     justify-content: center;
-    padding: 0.2rem;
+    padding: 0.3rem;
 
 }
 
