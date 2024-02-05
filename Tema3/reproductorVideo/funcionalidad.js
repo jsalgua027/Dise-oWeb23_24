@@ -26,6 +26,8 @@ window.onload = tiempo_repro();
 /*controlo que en la carga inicial no me salgan los botones*/
 loop_on.style.display = "none";
 boton_pause.style.display = "none";
+volume_off.style.display="none"
+
 /*play y pausa */
 function play_pause() {
   tiempo_repro();
@@ -68,15 +70,6 @@ function restart() {
   }
 }
 
-function control_mute() {
-  if (video.volume == 0) {
-    volume_off.className = "oculto";
-    volume_on.className = "visible";
-  } else {
-    volume_on.className = "oculto";
-    volume_off.className = "visible";
-  }
-}
 
 function mute() {
   if (video.volume > 0) {
@@ -88,13 +81,13 @@ function mute() {
     video.volume = ultimo_vol;
     rango_volumen.value = ultimo_vol * 100;
   }
-
-  control_mute();
+  cambioIconosVolumen()
+ 
 }
 
 function volume() {
   video.volume = rango_volumen.value / 100;
-  control_mute();
+
 }
 
 function volume_low() {
@@ -104,20 +97,36 @@ function volume_low() {
   } else {
     video.volume = 0;
     rango_volumen.value = 0;
-    control_mute();
+   
   }
+  cambioIconosVolumen()
 }
 
 function volume_high() {
   if (video.volume <= 0.95) {
     video.volume += 0.05;
     rango_volumen.value = Number(rango_volumen.value) + 5;
-    control_mute();
+
   } else {
     video.volume = 1;
     rango_volumen.value = 100;
+    cambioIconosVolumen()
+  }
+ 
+}
+
+// cambio de iconos para el mute
+function cambioIconosVolumen() {
+  if (video.volume==0) {
+      volume_on.style.display = "none";
+      volume_off.style.display = "inline-block";
+  } else{
+      volume_on.style.display = "inline-block";
+      volume_off.style.display = "none";
   }
 }
+
+
 function repetir() {
   cambioIconosLoop();
   video.loop = !video.loop;
@@ -166,11 +175,7 @@ function tiempo_repro() {
 
   rango_tiempo.step = 100 / video.duration;
 
-  if (video.currentTime == video.duration) {
-    //Cuando acaba cambia el boton play/pause
-    boton_pause.className = "oculto";
-    boton_play.className = "visible";
-  }
+  
 }
 
 //Duracion
