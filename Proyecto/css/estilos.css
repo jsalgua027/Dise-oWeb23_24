@@ -67,10 +67,7 @@ header div#menu_footer{
     display: flex;
 
 }
-/* posicionamiento el svg menu*/
-div#menu_footer svg{
-   
-}
+
 /*div que contiene el svg del login*/
 header div#login_footer{
     border: 1px solid black ;
@@ -79,18 +76,24 @@ header div#login_footer{
     justify-content: end;
   
 }
-div#login_footer svg{
-   
-    }
 
 
 /*MAIN para el frame INICIO*/
+
+ section.inicio article.foto_inicio_tablet{
+
+    display: none;
+ }
+ section.inicio article.parrafo_tablet{
+    display: none;
+ }
 main section.inicio{
     display: flex;
     flex-direction: row;
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 2rem;
    
 }
 /*aricles dentro del section*/
@@ -109,24 +112,38 @@ main section.inicio article.foto_inicio_izq{
     flex: 0 50%;
     display: flex;
     justify-content: center;
+    
+}
+main section.inicio article.foto_inicio_izq picture{
+
+ 
 }
 main section.inicio article.foto_inicio_der{
     flex: 0 50%;
-    display: flex;
+     display: flex;
     justify-content: center;
+}
+main section.inicio article.foto_inicio_der picture{
+ 
+    
 }
 /*imagenes dentro del section*/
 section.inicio img{
-    width: 160px;
-    height: 149px;
+    width: 100%;
+    height: auto;
     border-radius: 30px;
 }
+
+.artiTexto{
+    flex: 0 40%;
+    padding: 1rem;
+}
 main section.inicio article.micropi{
-    flex: 0 45%;
+
     background-color: #F2EDEB;
     border: 1px solid #FB9445;
     border-radius: 20px;
-    margin: 0.5rem;
+
 
 }
 main section.inicio article.microbla{
@@ -134,7 +151,7 @@ main section.inicio article.microbla{
     background-color: #F2EDEB;
     border: 1px solid #FB9445;
     border-radius: 20px;
-    margin: 0.5rem;
+  
 
 }
 
