@@ -10,6 +10,13 @@ $(document).ready(function() {
    
 });
 
+
+$(document).ready(function(){
+  $("header nav#main-menu ul#op-menu>li").on("mouseenter", function(){ $(this).children("a").css({"background-color": "red","font-weight": "bold"})})
+  $("header nav#main-menu ul#op-menu>li").on("mouseleave", function(){ $(this).children("a").css({"background-color": "","font-weight": ""})})
+});
+
+
 /* $(document).ready(function() {
     $("#menu li").hover(
       function() {
