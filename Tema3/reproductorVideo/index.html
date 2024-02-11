@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
-    <link rel="stylesheet" href="estilo.css">
+      <link rel="stylesheet" href="estilo.css">
     <link rel="shortcut icon" href="#">
     <title>Reproductor de vídeo</title>
 </head>
@@ -19,8 +18,8 @@
 
             <video id="video" poster="videos/trailer.png" preload="auto">
                 <source src="videos/videos/trailer.mp4" type="video/mp4" />
-                <source src="videos/videos/trailer.ogv" type="video/ogg; codecs='theora, vorbis'" />
-                <source src="videos/videos/trailer.webm" type="video/webm; codecs='vp8, vorbis'" />
+                <source src="videos/videos/trailer.ogv" type="video/ogg" />   <!--<source src="videos/videos/trailer.ogv" type="video/ogg; codecs='theora, vorbis'" />-->
+                <source src="videos/videos/trailer.webm" type="video/webm" />  <!--  <source src="videos/videos/trailer.webm" type="video/webm; codecs='vp8, vorbis'" />-->
               
             </video>
 
@@ -81,7 +80,7 @@
                 </svg>
             </button>
             <button id="restart" onclick="restart()">
-                <svg transform="rotate(180)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                     <path fill="var(--ci-primary-color, currentColor)"
                         d="M328.845,236.582,134.285,92.463A24,24,0,0,0,96,111.749V399.985a23.979,23.979,0,0,0,38.285,19.286l194.56-144.118h0a24,24,0,0,0,0-38.57ZM128,384.1V127.63L301.119,255.867Z"
                         class="ci-primary" />
@@ -186,6 +185,7 @@
             </button>
 
         </div>
+    </div>
     </div>
     <script src="funcionalidad.js"></script>
 </body>
