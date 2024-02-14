@@ -33,11 +33,17 @@ $(document).ready(function () {
 
  
  
- $("main>article.item p").hover(function(){
-    $("p").animate({background:"green"},3000);
-
-    }); 
-
+  $("nav#menu-principal>label").mouseenter( function(){
+    $("nav#menu-principal>label").animate({
+        'background-color':'red',
+    })
+})
+$("nav#menu-principal>label").mouseleave( function(){
+    $("nav#menu-principal>label").animate({
+        'background-color':'rgba(255, 255, 255, 0.8)',
+    })
+    
+})
 });
 
 
