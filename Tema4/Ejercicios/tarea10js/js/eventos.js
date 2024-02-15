@@ -3,8 +3,8 @@ $(document).ready(function(){
         console.log("entra")
         $("div.texto>p").faceOut();
     });
-    $("main>article>div>section>div>div>svg:nth-child(2)").click(function(e){
-        $("div.texto>p").faceIn();
-    })
+   // $("main>article>div>section>div>div>svg:nth-child(2)").click(function(e){
+   //     $("div.texto>p").faceIn();
+   // })
 
 })
