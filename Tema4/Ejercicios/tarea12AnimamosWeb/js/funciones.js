@@ -75,26 +75,23 @@ $(document).ready(function () {
 
   $("main>article.item>a>picture").mouseenter(function(){
     $(this).find("img").css({'background-color':'rgba(95, 124, 197, 0.8)',
-    'font-size':'2.5rem',
+    
     'padding':'0.5rem',
     'margin':'1.5rem',
     'border-radius':'10px',
-    'transition': 'background 0.5s ',
-    'transition': 'font-size 0.5s',
-   
-   
-      
+    'transition': 'background 1s ',
+    'transition': 'padding 1s',
+       
   })
   })
   
   $("main>article.item>a>picture").mouseleave(function(){
     $(this).find("img").css({'background-color':'rgba(95, 124, 197, 0.8)',
-    'font-size':'',
     'padding':'',
     'margin':'',
     'border-radius':'',
     'transition': 'background 0.5s ',
-    'transition': 'font-size 0.5s',
+    'transition': 'padding 0.5s',
    
    
       
