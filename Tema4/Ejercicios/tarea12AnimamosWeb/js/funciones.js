@@ -104,7 +104,7 @@ $(document).ready(function () {
   /* intento mostrar nuevo elemento flotnate*/
   $("main>article.item").mouseenter(function(){
    
-    $(this).find("#hola").css({
+    $(this).find(".hola").css({
     
       'display':'block',
       'transition': 'display 0.5s'
@@ -117,7 +117,7 @@ $(document).ready(function () {
 
   $("main>article.item").mouseleave(function(){
    
-    $(this).find("#hola").css({
+    $(this).find(".hola").css({
     
       'display':'none'
          
