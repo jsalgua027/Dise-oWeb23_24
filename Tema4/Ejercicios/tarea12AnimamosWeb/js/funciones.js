@@ -82,7 +82,10 @@ $(document).ready(function () {
     'transition': 'background 1s ',
     'transition': 'padding 1s',
        
-  })
+  });
+  
+
+
   })
   
   $("main>article.item>a>picture").mouseleave(function(){
@@ -98,6 +101,29 @@ $(document).ready(function () {
   })
   })
 
+  /* intento mostrar nuevo elemento flotnate*/
+  $("main>article.item").mouseenter(function(){
+   
+    $(this).find("#hola").css({
+    
+      'display':'block',
+      'transition': 'display 0.5s'
+   
+
+         
+    })
+       
+  });
+
+  $("main>article.item").mouseleave(function(){
+   
+    $(this).find("#hola").css({
+    
+      'display':'none'
+         
+    })
+       
+  });
 
 
-});
+})

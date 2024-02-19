@@ -11,6 +11,7 @@ body {
 
 /*HEADER*/
 header {
+
   border: 1px solid black;
   display: flex;
   flex-wrap: wrap;
@@ -156,6 +157,7 @@ main>article.item {
   display: flex;
   flex-direction: column;
   align-items: center;
+ /*position: relative;*/ 
 
 }
 
@@ -183,7 +185,21 @@ main>article.item>a {
   color: black
 }
 
+#hola{
+  display: none;
+}
 
+#hola{
+border-radius: 10px;
+background-color: black;
+color: yellow;
+width: 200px;
+position: absolute;
+top: 20%; /* Puedes ajustar la posición según tus necesidades */
+text-align: center;
+padding: 0 1rem;
+
+}
 
 /*FOOTER*/
 footer {
