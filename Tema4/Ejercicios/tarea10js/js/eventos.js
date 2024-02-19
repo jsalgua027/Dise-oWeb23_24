@@ -3,7 +3,7 @@ $(function(){
     $("body > main > article > div > section > div.texto ").css('display','none');
 
     let estado=false;
-$("main>article>div>section>div").click(function(e){
+$("main>article>div>section>div").on("click",function(e){
   
     if(estado){ 
         e.preventDefault();

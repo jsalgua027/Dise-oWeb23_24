@@ -32,21 +32,21 @@ $(document).ready(function () {
     );
   });
 
-  $("nav#menu-principal>label").mouseenter(function () {
+  $("nav#menu-principal>label").on("mouseenter",function () {
     $("nav#menu-principal>label").animate({
       "background-color": "rgba(95, 124, 197, 0.8)",
       "border-radius": "30%",
       width: "30px",
     });
   });
-  $("nav#menu-principal>label").mouseleave(function () {
+  $("nav#menu-principal>label").on("mouseleave",function () {
     $("nav#menu-principal>label").animate({
       "background-color": "rgba(255, 255, 255, 0.5)",
     });
   });
   /*Ejercicios tarea12*/
   /*Entra el raton */
-  $("ul#menu>li").mouseenter(function () {
+  $("ul#menu>li").on("mouseenter",function () {
     $(this)
       .find("a")
       .css({
@@ -60,7 +60,7 @@ $(document).ready(function () {
       });
     /*sale el raton */
   });
-  $("ul#menu>li").mouseleave(function () {
+  $("ul#menu>li").on("mouseleave",function () {
     $(this)
       .find("a")
       .css({
@@ -73,7 +73,7 @@ $(document).ready(function () {
 
   /*trato las imagenes*/
 
-  $("main>article.item>a>picture").mouseenter(function(){
+  $("main>article.item>a>picture").on("mouseenter",function(){
     $(this).find("img").css({'background-color':'rgba(95, 124, 197, 0.8)',
     
     'padding':'0.5rem',
@@ -88,7 +88,7 @@ $(document).ready(function () {
 
   })
   
-  $("main>article.item>a>picture").mouseleave(function(){
+  $("main>article.item>a>picture").on("mouseleave",function(){
     $(this).find("img").css({'background-color':'rgba(95, 124, 197, 0.8)',
     'padding':'',
     'margin':'',
@@ -102,7 +102,7 @@ $(document).ready(function () {
   })
 
   /* intento mostrar nuevo elemento flotnate*/
-  $("main>article.item").mouseenter(function(){
+  $("main>article.item").on("mouseenter",function(){
    
     $(this).find(".hola").css({
     
