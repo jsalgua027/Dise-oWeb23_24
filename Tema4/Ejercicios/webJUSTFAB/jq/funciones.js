@@ -18,12 +18,40 @@ $(function(){
         $("ul#menu").toggle("slow"); // parte 2
 
     })
+  // parte 3 y parte 4 submenu y icono 
+    $("ul#menu>li").on("mouseenter", function(){
+        $(this).children('ul').stop().toggle('slow')
+        $(this).find('a>span>i').css({"transform": "rotate(180deg)",
+        "transition": "transform 0.6s ease"});  
+    
 
-    $("header>div>nav#menu-principal>#ul>li").on("mouseenter","mouseleave", function(){
-        $(this)    
+    })
+    $("ul#menu>li").on("mouseleave", function(){
+        $(this).children('ul').stop().toggle('slow')  
+        $(this).find('a>span>i').css({"transform": "rotate(0deg)",
+        "transition": "transform 0.6s ease"}); 
     
 
     })
 
+    //parte 5 cabecera
+    var cabecera= $('header')
+    $(Window).scroll(function(){
+        var espacio= $(window).scrollTop();
+
+        if(espacio>100){
+            cabecera.css({'position':'fixed','top':'0', 'width':'100%'})
+
+        }else{
+            cabecera.css({'position':''})
+        }
+
+    });
+
+    // parte 6 fotos
+    
+
 
 })
+
+
