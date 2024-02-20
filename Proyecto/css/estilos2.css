@@ -39,32 +39,30 @@ main > section.inicio > article > p{
 }
 
 
-div{
 
-    border: 1px solid red;
+/*HEADER************************************/
+
+/*menu desplegable para la versión movil*/
+header nav#menu_desple{
+    display: none;
+}
+/*cabecera del header de las versiones tablet y escritorio*/
+header div#ver_tablet_desck{
+    display: none;
+}
+/*menu de las versiones tablet y escritorio*/
+header nav#menu-tablet-escrito{
+    display: none;
 }
 
-svg{
-    border: 1px solid green;
-}
 
-svg > path {
-    border: 1px solid blue;
-}
-
-/*HEADER*/
-
-/*menu desplegable*/
-
-
-
+/*header de las versión movil*/
 header{
    
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     background-color: #F2EDEB;
-    width: 100%;
     justify-content: center;
     align-items: end;
 
@@ -73,7 +71,7 @@ header{
 
 header>picture>img{
    
-    flex: 0 33.3%;
+    flex: 1 30%;
     width: 123px;
     height: 113px;
     max-width: 100%;
@@ -82,7 +80,7 @@ header>picture>img{
 /* div que contiene el svg menu*/
 header div#menu_header{
     border: 1px solid black ;
-    flex: 0 33.3%;
+    flex: 1 30%;
     display: flex;
 
 }
@@ -90,15 +88,74 @@ header div#menu_header{
 /*div que contiene el svg del login*/
 header div#login_header{
     border: 1px solid black ;
-    flex: 0 33.3%;
+    flex: 1 30%;
     display: flex;
     justify-content: end;
   
 }
+/*MAIN****************************************************/
+/*imagenes de tablet y escritorio*/
 
-main{
+main picture.foto_inicio_tablet{
     display: none;
 }
-footer{
+
+main picture.foto_inicio_escritorio6{
     display: none;
+}
+
+main picture.foto_inicio_escritorio7{
+    display: none;
+}
+
+
+
+/*FOOTER****************************************************/
+footer picture#foto-footer{
+    display: none;
+}
+footer div#madeby{
+    display: none;
+}
+
+
+footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #D9BD9C;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border: 1px solid #FB9445;
+   
+}
+/*imagen del footer*/
+footer>picture{
+    flex: 0 20%;
+  }
+
+footer>picture>img{
+   
+    width: 100%;
+   height: auto;
+   border-top-left-radius: 30px
+
+}
+/* nav del footer*/
+nav.nav_footer{
+  
+   flex: 0 70%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+    padding: 0.2rem;
+}
+nav>div.politicas>ul>li{
+    padding: 0.2rem;
+   
+}
+nav>div.redes_sociales{
+    padding: 0.2rem;
+   
 }
