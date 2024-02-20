@@ -50,7 +50,19 @@ $(function(){
 
     // parte 6 fotos
     
+    $("main>article.item>a>picture img").on("mouseenter", function(){
+        $(this).attr("src", $(this).attr("src").replace(".jpg", "-1.jpg"))
+        console.log("entra");
+    
 
+    })
+    $("main>article.item>a>picture img").on("mouseleave", function(){
+        $(this).attr("src", $(this).attr("src").replace("-1.jpg", ".jpg"))
+        console.log("sale");  
+      
+    
+
+    })
 
 })
 
