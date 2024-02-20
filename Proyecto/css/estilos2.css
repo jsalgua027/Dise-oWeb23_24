@@ -1,3 +1,44 @@
+
+*{box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0; 
+    height: 100vh;
+}
+main{
+    flex: 1;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color:#040404;
+    font-size: small;
+    
+}
+/*FUENTES Y COLORES POR CADA FRAME*/
+
+/*Para inicio*/
+main > section.inicio > article > h2{
+    color:#8C0444;
+    font-family: 'Kaushan Script', cursive;
+}
+
+main > section.inicio > article > p{
+    color:#040404;
+    font-family: 'Kaushan Script', cursive;
+}
+
+
 div{
 
     border: 1px solid red;
@@ -9,4 +50,55 @@ svg{
 
 svg > path {
     border: 1px solid blue;
+}
+
+/*HEADER*/
+
+/*menu desplegable*/
+
+
+
+header{
+   
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #F2EDEB;
+    width: 100%;
+    justify-content: center;
+    align-items: end;
+
+}
+/*imagen cabecera*/
+
+header>picture>img{
+   
+    flex: 0 33.3%;
+    width: 123px;
+    height: 113px;
+    max-width: 100%;
+  
+}
+/* div que contiene el svg menu*/
+header div#menu_header{
+    border: 1px solid black ;
+    flex: 0 33.3%;
+    display: flex;
+
+}
+
+/*div que contiene el svg del login*/
+header div#login_header{
+    border: 1px solid black ;
+    flex: 0 33.3%;
+    display: flex;
+    justify-content: end;
+  
+}
+
+main{
+    display: none;
+}
+footer{
+    display: none;
 }

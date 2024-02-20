@@ -40,6 +40,7 @@ main > section.inicio > article > p{
 
 /*HEADER*/
 
+
 header{
    
     display: flex;
@@ -80,10 +81,7 @@ header div#login_footer{
 
 /*MAIN para el frame INICIO*/
 
- section.inicio article.foto_inicio_tablet{
 
-    display: none;
- }
  section.inicio article.parrafo_tablet{
     display: none;
  }

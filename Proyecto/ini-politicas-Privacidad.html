@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" >
-    <link rel="stylesheet" href="css/estilos.css" >
-    <link rel="icon" href="Imagenes-Proyecto/Favicon/rc-_1_.ico" type="image/x-icon" >
-    <title>Contacto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap">
+    <!--<link rel="stylesheet" href="css/estilos.css">-->
+    <link rel="icon" href="Imagenes-Proyecto/Favicon/rc-_1_.ico" type="image/x-icon">
+    <title>Políticas Privacidad</title>
 </head>
 
 <body>
@@ -90,90 +90,59 @@
             
     </header>
     <main>
-        <section id="main_contacto">
-            <article id="hablamos">
-                <h2>¿Hablamos?</h2>
-                <p>
-                    ¿Tienes dudas o quieres concretar cita?Estas a un click de
-                    distancia.
+    <div id="sombreado">
+        <section class="inicio">
+                <picture class="foto_inicio_tablet">
+                    <img src="Imagenes-Proyecto/Fotos-Convertidas/InicioTablet.webp"
+                        alt="Tratamiento de labios" >
+                </picture>
+           
+            <article class="invierte">
+                <h2>Invierte en ti</h2>
+                <p>Potencia tú belleza natural con nuestra
+                    micropigmentación natural
                 </p>
             </article>
-
-            <picture id="foto1_contacto_tablet">
-                <img src="Imagenes-Proyecto/Fotos-Convertidas/foto1_contacto_tablet.webp"
-                    alt="Dibujo artístico de unas cejas tratadas" >
-            </picture>
-
-            <picture id="foto2_contacto_escritorio">
-                <img src="Imagenes-Proyecto/Fotos-Convertidas/foto2_contacto_escritorio.webp"
-                    alt="Dibujo artístico de logotipo Bronw artist" >
-            </picture>
-
-            <picture id="foto_contacto_escritorio">
-                <img src="Imagenes-Proyecto/Fotos-Convertidas/foto_contacto_escritorio.webp"
-                    alt="Dibujo artístico de logotipo Bronw artist" >
-            </picture>
-
-
-            <form action="contacto.html" method="post" id="formulario">
+            
+                <picture class="foto_inicio_izq">
+                    <img src="Imagenes-Proyecto/Fotos-Convertidas/fotoinicio_izquierda.webp"
+                        alt="Tratamiento de labios">
+               
+                </picture>
+                    <picture class="foto_inicio_der">
+                    <img src="Imagenes-Proyecto/Fotos-Convertidas/fotoinicioDerecha.webp" alt="Tratamiento de labios">
+                </picture>
+           
+            <article class="micropi">
+                <h2>Micropigmentación</h2>
                 <p>
-                    <input type="text" id="nombre" name="nombre" placeholder="Nombre" >
+                    Esta técnica consiste en introducir unos pigmentos específicos mediante una aguja en la epidermis.
+                    Es decir, sobre la capa superficial de la piel.
+                    Es un método indoloro que proporciona resultados instantáneos y efectos permanente
                 </p>
-                <p>
-                    <input type="text" id="email" name="email" placeholder="email" >
-                </p>
-                <p>
-                    <input type="text" id="telefono" name="telefono" placeholder="Teléfono(opcional)" >
-                </p>
-                <p>
-                    <input type="text" id="ciudad" name="ciudad" placeholder="Tú ciudad" >
-                </p>
-                <p>
-                    <label for="opcion">¿En que tratamiento estás interesado?</label><br/>
-                    <select id="opcion" name="opcion">
-                        <option value="opcion1">Microblading</option>
-                        <option value="opcion2">Micropigmentación</option>
-                        <option value="opcion3">Otras</option>
-                    </select>
-                </p>
-                <button class="boton_conozcamonos" name="btnContacto">
-                    !CONOZCÁMONOS¡
-                </button>
-            </form>
-
-            <article id="contacto_wasap">
-                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M25.0244 4.16666C13.5535 4.16666 4.21555 13.4966 4.21139 24.9674C4.2093 28.6341 5.16969 32.2137 6.99052 35.3678L4.16663 45.8333L15.0675 43.2576C18.1071 44.916 21.5288 45.7865 25.0122 45.7886H25.0203C36.4891 45.7886 45.823 36.4565 45.8292 24.9878C45.8334 19.4274 43.6712 14.1994 39.742 10.2661C35.8128 6.33485 30.591 4.16874 25.0244 4.16666ZM25.0203 8.33332C29.4703 8.33541 33.6523 10.0704 36.796 13.2121C39.9398 16.3579 41.6667 20.5379 41.6626 24.9837C41.6584 34.1587 34.1954 41.6219 25.0162 41.6219C22.2391 41.6198 19.4883 40.9225 17.0654 39.5996L15.6616 38.8346L14.1113 39.2008L10.0097 40.1693L11.0107 36.4502L11.4624 34.7819L10.5997 33.2845C9.14556 30.7678 8.37597 27.8904 8.37805 24.9674C8.38222 15.7966 15.8474 8.33332 25.0203 8.33332ZM17.6595 15.3646C17.3115 15.3646 16.749 15.4948 16.2719 16.0156C15.7948 16.5344 14.449 17.7908 14.449 20.3491C14.449 22.9074 16.3126 25.3804 16.573 25.7283C16.8314 26.0742 20.1703 31.4901 25.4557 33.5734C29.8474 35.3046 30.7393 34.963 31.6935 34.8755C32.6476 34.7901 34.7717 33.6202 35.205 32.4056C35.6384 31.191 35.6394 30.1462 35.5102 29.9316C35.381 29.715 35.0341 29.5858 34.5133 29.3253C33.9946 29.0649 31.4381 27.8096 30.9611 27.6367C30.484 27.4638 30.135 27.3763 29.7892 27.8971C29.4433 28.418 28.4495 29.5858 28.1453 29.9316C27.8411 30.2795 27.539 30.3263 27.0182 30.0659C26.4974 29.8034 24.8227 29.2529 22.8352 27.4821C21.2894 26.105 20.2463 24.4059 19.9422 23.8851C19.6401 23.3663 19.9137 23.0814 20.1741 22.8231C20.4074 22.5897 20.6909 22.2158 20.9513 21.9116C21.2096 21.6074 21.2992 21.3907 21.4721 21.0449C21.645 20.6991 21.5565 20.3939 21.4274 20.1335C21.2982 19.873 20.2867 17.3052 19.8242 16.276C19.4346 15.4114 19.0231 15.3914 18.6523 15.3768C18.3502 15.3643 18.0053 15.3646 17.6595 15.3646Z"
-                        fill="#040404" />
-                </svg>
-                <h2>WHASAPP</h2>
-                <h3>655771988</h3>
             </article>
-            <article id="contacto_email">
-                <svg width="35" height="36" viewBox="0 0 35 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M31.5 0.758606H3.5C1.56975 0.758606 0 2.72418 0 5.14115V31.4364C0 33.8534 1.56975 35.819 3.5 35.819H31.5C33.4302 35.819 35 33.8534 35 31.4364V5.14115C35 2.72418 33.4302 0.758606 31.5 0.758606ZM31.5 5.14115V6.26089L17.5 19.8972L3.5 6.26308V5.14115H31.5ZM3.5 31.4364V11.8114L16.4255 24.4002C16.7319 24.7016 17.1103 24.8655 17.5 24.8655C17.8897 24.8655 18.2681 24.7016 18.5745 24.4002L31.5 11.8114L31.5035 31.4364H3.5Z"
-                        fill="#040404" />
-                </svg>
-                <h2>POR EMAIL</h2>
-                <h3>rociocalancha1@hotmail.com</h3>
+            <article class="microbla">
+                <h2>Microblading</h2>
+                <p>
+                    Es una técnica en la cual, vamos haciendo trazos con pigmento orgánico
+                    para crear 'pelo a pelo' unas cejas carentes o ausentes de pelo,
+                    o para definir más las existentes.
+                </p>
             </article>
-            <article id="contacto_telefono">
-                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M42.6812 35.7083L34.2125 28.0083C33.8122 27.6445 33.2861 27.4504 32.7454 27.4671C32.2047 27.4839 31.6916 27.71 31.3146 28.0979L26.3291 33.225C25.1291 32.9958 22.7166 32.2437 20.2333 29.7667C17.75 27.2812 16.9979 24.8625 16.775 23.6708L21.8979 18.6833C22.2863 18.3065 22.5128 17.7934 22.5295 17.2525C22.5462 16.7116 22.3518 16.1855 21.9875 15.7854L14.2896 7.31874C13.9251 6.9174 13.4185 6.67396 12.8774 6.64011C12.3363 6.60627 11.8033 6.78469 11.3916 7.13749L6.87081 11.0146C6.51063 11.3761 6.29564 11.8572 6.26664 12.3667C6.23539 12.8875 5.63956 25.225 15.2062 34.7958C23.5521 43.1396 34.0062 43.75 36.8854 43.75C37.3062 43.75 37.5646 43.7375 37.6333 43.7333C38.1427 43.7048 38.6236 43.4889 38.9833 43.1271L42.8583 38.6042C43.2125 38.1938 43.3922 37.6613 43.3592 37.1202C43.3261 36.5791 43.0828 36.0725 42.6812 35.7083Z"
-                        fill="#040404" />
-                </svg>
-                <h2>POR TELÉFONO</h2>
-                <h3>655771988</h3>
+            <article class="parrafo_tablet">
+                <h2>Ponte en contaco con nosotros para precios y promociones</h2>
+                
             </article>
-
-            <picture id="foto2_contacto_tablet">
-                <img src="Imagenes-Proyecto/Fotos-Convertidas/foto2_contacto_tablet.webp"
-                    alt="Dibujo artístico de logotipo Bronw artist">
-            </picture>
         </section>
+        <picture class="foto_inicio_escritorio6">
+            <img src="Imagenes-Proyecto/Fotos-Convertidas/foto6-inicio-escritorio.webp"
+                alt="Tratamiento de cejas" >
+        </picture>
+        <picture class="foto_inicio_escritorio7">
+            <img src="Imagenes-Proyecto/Fotos-Convertidas/foto7-inicio-escritorio.webp"
+                alt="Tratamiento de cejas" >
+        </picture>
+    </div>
     </main>
     <footer>
         <picture class="logo_footer">
@@ -229,6 +198,25 @@
                 <h1>Made by NachDesing 2024©</h1>
             </div>
         </nav>
+        <div class="footer2">
+            <p>
+                1.Información del responsable del tratamiento o de su representante. ...
+                2.Datos del responsable en materia de protección de datos. ...
+                3.Información sobre la finalidad del tratamiento. ...
+                4.Terceros destinatarios de los datos personales. ...
+                5.Transferencias internacionales.
+            </p>
+               
+             <form action="" method="get">
+                <button class="boton_rechazar" name="btnRechazar">
+                    Rechazar
+                </button>
+                <button class="boton_aceptar" name="btnAceptar">
+                    Aceptar
+                </button>
+             </form>    
+                      
+        </div>
     </footer>
 </body>
 
