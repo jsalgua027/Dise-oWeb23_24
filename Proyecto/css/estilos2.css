@@ -25,6 +25,10 @@ a{
     font-size: small;
     
 }
+img {
+    width: 100%;
+    height: auto;
+}
 /*FUENTES Y COLORES POR CADA FRAME*/
 
 /*Para inicio*/
@@ -123,7 +127,7 @@ footer{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;
+    align-items: center;
     background-color: #D9BD9C;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
