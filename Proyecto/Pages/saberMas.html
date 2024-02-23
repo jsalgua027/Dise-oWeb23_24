@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap">
-    <link rel="stylesheet" href="css/estilos.css">
-    <link rel="icon" href="Imagenes-Proyecto/Favicon/rc-_1_.ico" type="image/x-icon">
-    
-    <title>Tratamientos</title>
+    <link rel="stylesheet" href="css/estilos.css" >
+    <link rel="icon" href="Imagenes-Proyecto/Favicon/rc-_1_.ico" type="image/x-icon" >
+    <script src="../jq/jquery-3.7.1.min.js"></script>
+    <script src="../jq/jquery.animate-colors-min.js"></script>
+    <script src="../jq/funtions.js"></script>
+    <title>Saber Más</title>
 </head>
+
 <body>
     <header>
         <nav id="menu_desple">
@@ -89,46 +93,125 @@
             
     </header>
     <main>
-        <section class="tratamientos">
-            <h1>Nuestros Tratamientos</h1>
-            <article class="foto_tratamiento">
-                <h2 class="exterior">Microblading</h2>
-                <h2 class="interior">Microblading Cejas</h2>
+        <h1>Saber más de nuestros tratamientos</h1>
+        <section id="saberMas">
+            <article id="blading_cejas">
+                <h2>Microblading Cejas</h2>
+                <h3>¿En que consite?</h3>
+                <p class="normal">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    . Praesent rutrum neque in mollis vulputate. Suspendisse molestie,
+                    lectus sed euismod mattis, arcu risus volutpat ipsum, eget placerat mi lacus sit amet tortor.
+                    Proin tortor magna, gravida et tristique et, sodales at est.
+                    Aliquam bibendum, eros sit amet volutpat facilisis, nisl ligula cursus sapien, quis varius lacus
+                    diam ac dolor.
+                    Nullam convallis nec quam eget dapibus. Duis dolor dui, consectetur nec velit nec.
+                </p>
+                <h3>Nuestros trabajos</h3>
+                <h4>Técnica pelo a pelo</h4>
                 <picture>
-                    <img src="Imagenes-Proyecto/Fotos-Convertidas/trataminetos/MicroBlandingCejas1.png" alt="Mujer recibiendo tratamiento">
+                    <img src="Imagenes-Proyecto/Fotos-Convertidas/trataminetos/Microblading.webp"
+                        alt="se ven unas cejas de mujer tratadas">
                 </picture>
-                <button class="boton_saberMas" name="btnSaberMas">Saber Más</button>
+            </article>
+            <article id="pigmenta_cejas">
+                <h2>Micropigmentación Cejas</h2>
+                <h3>¿En que consite?</h3>
+                <p class="normal">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    . Praesent rutrum neque in mollis vulputate. Suspendisse molestie,
+                    lectus sed euismod mattis, arcu risus volutpat ipsum, eget placerat mi lacus sit amet tortor.
+                    Proin tortor magna, gravida et tristique et, sodales at est.
+                    Aliquam bibendum, eros sit amet volutpat facilisis, nisl ligula cursus sapien, quis varius lacus
+                    diam ac dolor.
+                    Nullam convallis nec quam eget dapibus. Duis dolor dui, consectetur nec velit nec.
+                </p>
+                <h3>Nuestros trabajos</h3>
+                <h4>Técnica pelo a pelo</h4>
+                <picture id="micro-pelo-pelo">
+                    <img src="Imagenes-Proyecto/Fotos-Convertidas/trataminetos/Micropigmentación-pelo-pelo.webp"
+                        alt="se ven unas cejas de mujer tratadas">
+                </picture>
+                <h4>Shadins(Sombreado efecto maquillaje)</h4>
+                <picture id="shading">
+                    <img src="Imagenes-Proyecto/Fotos-Convertidas/trataminetos/Shading(sombreado).webp"
+                        alt="se ven unas cejas de mujer tratadas">
+                </picture>
+                <h4>Mixta(Shading + pelo a pelo)</h4>
+                <picture id="mixta">
+                    <img src="Imagenes-Proyecto/Fotos-Convertidas/trataminetos/Técnica-mixta(microblading+shadimg).webp"
+                        alt="se ven unas cejas de mujer tratadas">
+                </picture>
+            </article>
+            <article id="pigmenta_ojos">
+                <h2>Micropigmentación Ojos</h2>
+                <h3>¿En que consite?</h3>
+                <p class="normal">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    . Praesent rutrum neque in mollis vulputate. Suspendisse molestie,
+                    lectus sed euismod mattis, arcu risus volutpat ipsum, eget placerat mi lacus sit amet tortor.
+                    Proin tortor magna, gravida et tristique et, sodales at est.
+                    Aliquam bibendum, eros sit amet volutpat facilisis, nisl ligula cursus sapien, quis varius lacus
+                    diam ac dolor.
+                    Nullam convallis nec quam eget dapibus. Duis dolor dui, consectetur nec velit nec.
+                </p>
+                <h3>Nuestros trabajos</h3>
+                <h4>Eyliner Clásico</h4>
+                <picture id="clasico">
+                    <img src="Imagenes-Proyecto/Fotos-Convertidas/trataminetos/Eyliner-clásico.webp"
+                        alt="se ven unas cejas de mujer tratadas">
+                </picture>
+                <h4>Eyline Sombreado</h4>
+                <picture id="sombreado">
+                    <img src="Imagenes-Proyecto/Fotos-Convertidas/trataminetos/tratamiento5.webp"
+                        alt="se ven unas cejas de mujer tratadas">
+                </picture>
 
             </article>
-            <article class="foto_tratamiento">
-                <h2 class="exterior">Micropigmentación</h2>
-                <h2 class="interior">Micropigmentación Cejas</h2>
-                <picture>
-                    <img src="Imagenes-Proyecto/Fotos-Convertidas/trataminetos/MicroPigmentacióncejas1.png" alt="Mujer recibiendo tratamiento">
+            <article id="pigmenta_labios">
+                <h2>Micropigmentación Labios</h2>
+                <h3>¿En que consite?</h3>
+                <p class="normal">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    . Praesent rutrum neque in mollis vulputate. Suspendisse molestie,
+                    lectus sed euismod mattis, arcu risus volutpat ipsum, eget placerat mi lacus sit amet tortor.
+                    Proin tortor magna, gravida et tristique et, sodales at est.
+                    Aliquam bibendum, eros sit amet volutpat facilisis, nisl ligula cursus sapien, quis varius lacus
+                    diam ac dolor.
+                    Nullam convallis nec quam eget dapibus. Duis dolor dui, consectetur nec velit nec.
+                </p>
+                <h3>Nuestros trabajos</h3>
+                <h4>Técnica Acuarela</h4>
+                <picture id="acuarela">
+                    <img src="Imagenes-Proyecto/Fotos-Convertidas/trataminetos/foto4.webp"
+                        alt="se ven unos labios de mujer tratados">
                 </picture>
-                <button class="boton_saberMas" name="btnSaberMas">Saber Más</button>
+
 
             </article>
-
-            <article class="foto_tratamiento">
-                <h2 class="exterior">Micropigmentación</h2>
-                <h2 class="interior">Micropigmentación Ojos</h2>
-                <picture>
-                    <img src="Imagenes-Proyecto/Fotos-Convertidas/trataminetos/MicropigmentaciónOjos1.png" alt="Mujer recibiendo tratamiento">
-                </picture>
-                <button class="boton_saberMas" name="btnSaberMas">Saber Más</button>
-
+            <article id="cuidados">
+                <h2> Cuidados Post-Tratamientos</h2>
+                <p>1.Evita el Agua directa</p>
+                <p>2.No Toques ni Rasques</p>
+                <p>3.Evita Exposición solar</p>
+                <p>4.Evita Maquillaje en la zona<p>
+                <p>5.Sigue las Instrucciones del especialista</p>
             </article>
-            <article class="foto_tratamiento">
-                <h2 class="exterior">Micropigmentación</h2>
-                <h2 class="interior">Micropigmentación Labios</h2>
-                <picture>
-                    <img src="Imagenes-Proyecto/Fotos-Convertidas/trataminetos/Micropigmentaciónlabios1.png" alt="Mujer recibiendo tratamiento">
-                </picture>
-                <button class="boton_saberMas" name="btnSaberMas">Saber Más</button>
-
+            <article id="efectos-secundarios">
+                <h2>Efectos Secundarios</h2>
+                <p>1.Enrojecimineto e Hinchazón</p>
+                <p>2.Picazón</p>
+                <p>3.Descamación</p>
+                <p>4.Color intenso Inicial<p>
             </article>
-
+            <article id="importante">
+                <h2>Importante</h2>
+            <p>
+                Cada persona es única, y la experiencia post-tratamiento puede variar.
+                 Es fundamental seguir las instrucciones personalizadas proporcionadas 
+                 por nuestro especialista para obtener los mejores resultados.
+            </p>
+            </article>
         </section>
     </main>
     <footer>
@@ -187,4 +270,5 @@
         </nav>
     </footer>
 </body>
+
 </html>

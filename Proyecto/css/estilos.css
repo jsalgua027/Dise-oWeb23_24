@@ -1,4 +1,4 @@
-/*Estilos generales*/
+
 *{box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -11,9 +11,7 @@ body{
     padding: 0; 
     height: 100vh;
 }
-main{
-    flex: 1;
-}
+
 ul{
     list-style: none;
     margin: 0;
@@ -25,9 +23,85 @@ a{
     font-size: small;
     
 }
+
+
+
+/*HEADER************************************/
+
+/*menu desplegable para la versión movil*/
+header nav#menu_desple{
+    display: none;
+}
+/*cabecera del header de las versiones tablet y escritorio*/
+header div#ver_tablet_desck{
+    display: none;
+}
+/*menu de las versiones tablet y escritorio*/
+header nav#menu-tablet-escrito{
+    display: none;
+}
+
+
+/*header de las versión movil*/
+header{
+   
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #F2EDEB;
+    justify-content: center;
+    align-items: end;
+
+}
+/*imagen cabecera*/
+
+header>picture>img{
+   
+    flex: 1 30%;
+    width: 123px;
+    height: 113px;
+    max-width: 100%;
+  
+}
+/* div que contiene el svg menu*/
+header div#menu_header{
+    
+    flex: 1 30%;
+    display: flex;
+
+}
+
+/*div que contiene el svg del login*/
+header div#login_header{
+   
+    flex: 1 30%;
+    display: flex;
+    justify-content: end;
+  
+}
+/*MAIN INICIO****************************************************/
+/*imagenes de tablet y escritorio*/
+
+ picture.foto_inicio_tablet{
+    display: none;
+}
+
+ picture.foto_inicio_escritorio6{
+    display: none;
+}
+
+ picture.foto_inicio_escritorio7{
+    display: none;
+}
+/*parrafo de la versión tablet*/
+section.inicio article.parrafo_tablet{
+    display: none;
+}
+
+
 /*FUENTES Y COLORES POR CADA FRAME*/
 
-/*Para inicio*/
+/*Para inicio version tablet*/
 main > section.inicio > article > h2{
     color:#8C0444;
     font-family: 'Kaushan Script', cursive;
@@ -37,133 +111,81 @@ main > section.inicio > article > p{
     color:#040404;
     font-family: 'Kaushan Script', cursive;
 }
-
-/*HEADER*/
-
-
-header{
-   
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    background-color: #F2EDEB;
-    width: 100%;
-    justify-content: center;
-    align-items: end;
-
-}
-/*imagen cabecera*/
-header>picture>img{
-   
-    flex: 0 33.3%;
-    width: 123px;
-    height: 113px;
-    max-width: 100%;
-  
-}
-/* div que contiene el svg menu*/
-header div#menu_footer{
-    border: 1px solid black ;
-    flex: 0 33.3%;
-    display: flex;
-
-}
-
-/*div que contiene el svg del login*/
-header div#login_footer{
-    border: 1px solid black ;
-    flex: 0 33.3%;
-    display: flex;
-    justify-content: end;
-  
-}
-
-
-/*MAIN para el frame INICIO*/
-
-
- section.inicio article.parrafo_tablet{
-    display: none;
- }
-main section.inicio{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 2rem;
-   
-}
-/*aricles dentro del section*/
-main section.inicio article.invierte{
-    flex: 0 80%;
-    width: 283px;
-    height: 192px;
-    background-color: #F2EDEB;
-    border: 1px solid #FB9445;
-    border-radius: 20px;
-    margin: 0.5rem;
-}
-
-main section.inicio article.foto_inicio_izq{
-
-    flex: 0 50%;
-    display: flex;
-    justify-content: center;
-    
-}
-main section.inicio article.foto_inicio_izq picture{
-
- 
-}
-main section.inicio article.foto_inicio_der{
-    flex: 0 50%;
-     display: flex;
-    justify-content: center;
-}
-main section.inicio article.foto_inicio_der picture{
- 
-    
-}
-/*imagenes dentro del section*/
-section.inicio img{
+/*img dentro de la sección*/
+main > section.inicio> div> picture img{
     width: 100%;
     height: auto;
     border-radius: 30px;
 }
 
-.artiTexto{
-    flex: 0 40%;
-    padding: 1rem;
+ main > section.inicio{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
 }
-main section.inicio article.micropi{
 
+section.inicio article.invierte{
+    flex: 1 100%;
     background-color: #F2EDEB;
     border: 1px solid #FB9445;
     border-radius: 20px;
+    text-align: center;
+    margin: 0.5rem;
+}
 
+section.inicio div.foto_inicio_izq{
+    flex: 1 50%;
+    border-radius: 30px;
+    padding: 0.5rem;
+}
+section.inicio div.foto_inicio_der{
+    flex: 1 50%;
+    border-radius: 30px;
+    padding: 0.5rem;
 
 }
-main section.inicio article.microbla{
-    flex: 0 40%;
+
+section.inicio article.micropi{
+    flex: 1 48%;
     background-color: #F2EDEB;
     border: 1px solid #FB9445;
     border-radius: 20px;
-  
-
+    padding: 0.2rem;
+     margin: 0.2rem;
+    
+}
+/**/
+section.inicio article.micropi h2{
+    text-align: center;
+}
+section.inicio article.microbla{
+    flex: 1 48%;
+    background-color: #F2EDEB;
+    border: 1px solid #FB9445;
+    border-radius: 20px;
+    padding: 0.2rem;
+    margin: 0.2rem;
+    
+}
+section.inicio article.microbla h2{
+    text-align: center;
+}
+/*FOOTER****************************************************/
+footer picture#foto-footer{
+    display: none;
+}
+footer div#madeby{
+    display: none;
 }
 
 
-
-
-/*FOOTER*/
 footer{
+    margin-top: 0.5rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
     background-color: #D9BD9C;
-    width: 100%;
-    height: auto;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     border: 1px solid #FB9445;
@@ -171,13 +193,13 @@ footer{
 }
 /*imagen del footer*/
 footer>picture{
-    flex: 0 15%;
+    flex: 0 20%;
   }
 
 footer>picture>img{
    
-    width: 85px;
-   height: 91px;
+    width: 100%;
+   height: auto;
    border-top-left-radius: 30px
 
 }
@@ -187,7 +209,7 @@ nav.nav_footer{
    flex: 0 70%;
    display: flex;
    flex-direction: column;
-    align-items: center;
+   align-items: center;
     padding: 0.2rem;
 }
 nav>div.politicas>ul>li{
