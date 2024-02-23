@@ -50,7 +50,7 @@ header#top > div > nav#menu-principal > span:hover{
 header#top > div > nav#menu-principal > ul#menu{
 	display:block;
 	position: absolute;
-	top:2.87rem;
+	top:2.80rem;
 	width: 18rem;
 	padding-left: 0.5rem;
 	border:1px solid lightgrey;

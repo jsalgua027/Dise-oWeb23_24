@@ -28,10 +28,11 @@ a{
 
 /*HEADER************************************/
 
-/*menu desplegable para la versión movil*/
+/*menu desplegable para la versión movil
 header nav#menu_desple{
-    display: none;
+   display: none;
 }
+*/
 /*cabecera del header de las versiones tablet y escritorio*/
 header div#ver_tablet_desck{
     display: none;
@@ -53,6 +54,40 @@ header{
     align-items: end;
 
 }
+/*configuración del menu desplegable*/
+header nav#menu_desple{
+    display: flex;
+    flex-direction: column;
+	position: absolute;
+	top:7.3rem;
+    left: 0;
+	width: 13rem;
+    border: 1px solid #FB9445;
+	background-color: #D9BD9C;
+    border-radius: 0 10px 10px 0;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+header nav#menu_desple h2{
+    padding: 0.5rem;
+}
+header nav#menu_desple a div{
+    display: flex;
+    padding: 0.5rem;
+}
+header nav#menu_desple a div h3{
+margin: 0.2rem;
+}
+header nav#menu_desple div#logotipo_menu{
+   margin-left:8rem;
+ }
+ header nav#menu_desple div#logotipo_menu img{
+    width: 100%;
+    height: auto;
+  }
+    
+
+
+
 /*imagen cabecera*/
 
 header>picture>img{
