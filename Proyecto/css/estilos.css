@@ -301,7 +301,7 @@ section.inicio article.microbla h2{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     margin-left: 4rem;
     margin-right: 4rem;
     margin-bottom: 0.8rem; 
@@ -314,6 +314,7 @@ section.inicio article.microbla h2{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 1rem;
     margin-left: 4rem;
     margin-right: 4rem;
     margin-bottom: 0.8rem; 
@@ -326,11 +327,91 @@ section.inicio article.microbla h2{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 1rem;
     margin-left: 4rem;
     margin-right: 4rem;
     margin-bottom: 0.8rem; 
     padding: 0.6rem;   
  }
+
+ /*MAIN TRATAMIENTOS******************************/
+  main section#tratamientos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+  }
+  main section#tratamientos h1{
+  font-family: 'Kaushan Script', cursive;
+  font-size:xx-large;
+  padding: 0.2rem;
+  }
+
+  main section#tratamientos article.foto_tratamiento{
+    position: relative;
+    flex: 1 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1.5rem;
+    
+  }
+
+  main section#tratamientos article.foto_tratamiento picture{
+    flex: 1 100%;
+    max-width: 65%;
+   
+  }
+  main section#tratamientos article.foto_tratamiento picture img{
+    width: 100%;
+    height: auto;
+
+  }
+  main section#tratamientos h2.exterior{
+    font-family: 'Kaushan Script', cursive;
+    color:#8C0444;
+    flex: 1 100%;
+    margin: 0.5rem;
+  }
+  main section#tratamientos h3.interior{
+    font-family: 'Kaushan Script',cursive;
+    flex: 1 100%;
+    color:white;
+    position: absolute;
+    top: 11%;
+    padding: 0.2rem;
+    flex: 1 100%;
+    
+        
+    
+  }
+  main section#tratamientos h3.interior_1{
+    font-family: 'Kaushan Script',cursive;
+    color:white;
+    position: absolute;
+    top:1%;
+    padding: 0.2rem;
+    flex: 1 100%;
+    
+        
+    
+  }
+
+  main section#tratamientos button{
+    font-family: 'Kaushan Script',cursive;
+    border: 1px solid #FB9445;
+    background-color: #8C0444;
+    color: white;
+    position: absolute;
+    top:85%;
+    padding: 0.3rem;
+    margin: 0.6rem;
+    border-radius: 25px;
+    width: 10rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+  }
+
 /*FOOTER****************************************************/
 footer picture#foto-footer{
     display: none;
