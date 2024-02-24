@@ -64,8 +64,10 @@ header nav#menu_desple{
 	width: 13rem;
     border: 1px solid #FB9445;
 	background-color: #D9BD9C;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     border-radius: 0 10px 10px 0;
 	font-family: 'Open Sans Condensed', sans-serif;
+    z-index: 1;
 }
 header nav#menu_desple h2{
     padding: 0.5rem;
@@ -412,8 +414,72 @@ section.inicio article.microbla h2{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
   }
 
+/*MAIN SABER MAS***************************************/
+main section#saberMas article#efectos-secundarios{
+    display: none;
+}
+main section#saberMas article#importante{
+    display: none;
+}
+
+
+ main section#saberMas{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+
+ }
+
+ main > section#saberMas > h1{
+    flex: 1 100%;
+    text-align: center;
+    font-family: 'Kaushan Script', cursive;
+    padding: 0.5rem;
+}
+section#saberMas article{
+    flex: 1 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+ }
+/*general de las imagenes*/
+ main section#saberMas article picture img{
+    width: 100%;
+    height: auto;
+ }
+ 
+/*Elementos flex del article*/
+ main > section#saberMas > article > h2{
+    color:#8C0444;
+    font-family: 'Kaushan Script', cursive;
+    padding: 0.5rem;
+}
+main > section#saberMas > article > h3{
+    padding: 0.5rem;
+    font-family: 'Kaushan Script', cursive;
+}
+main > section#saberMas > article > h4{
+    padding: 0.5rem;
+    
+}
+main section#saberMas article picture{
+    flex: 1 100%;
+    max-width: 50%;
+}
+main section#saberMas article#cuidados{
+    flex: 1 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Kaushan Script', cursive;
+   
+}
+
+
+
 /*FOOTER****************************************************/
-footer picture#foto-footer{
+
+ footer picture#foto-footer {
     display: none;
 }
 footer div#madeby{
