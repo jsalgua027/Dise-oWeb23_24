@@ -551,19 +551,69 @@ main section#sobreMi  picture img{
     margin: 0.6rem;
     border-radius: 25px;
     width: 15rem;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7)
     
  }
 
  /* FRAMES POLÍTICAS*******************/
   body div.sombreado {
-   display: block;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, .8);
-    z-index: 100;
+    z-index: 4;
+}
+
+footer div.footer2{
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border: 1px solid #FB9445;
+    background-color: #D9BD9C;
+     width:100%;
+    height:45rem;
+    position: fixed;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+}
+footer div.footer2 p{
+    padding: 1rem;
+}
+footer div.footer2 p a{
+    padding: 1rem;
+    font-size: large;
+}
+footer div.footer2 form{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+footer div.footer2 ul{
+    padding: 0.5rem; 
+}
+footer div.footer2 form button.boton_aceptar{
+    font-family: 'Kaushan Script',cursive;
+    border: 1px solid #FB9445;
+    background-color: #8C0444;
+    color: white;
+    padding: 0.8rem;
+    margin: 0.6rem;
+    border-radius: 25px;
+    width: 15rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+}
+footer div.footer2 form button.boton_rechazar{
+    font-family: 'Kaushan Script',cursive;
+    border: 1px solid #FB9445;
+    background-color: black;
+    color: white;
+    padding: 0.8rem;
+    margin: 0.6rem;
+    border-radius: 25px;
+    width: 15rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
 }
 
 /*FOOTER****************************************************/
