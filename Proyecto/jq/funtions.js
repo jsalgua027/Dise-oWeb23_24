@@ -9,7 +9,18 @@ $(document).ready(function() {
     
     })
 
-    
+    $('svg.iniciar').click(function() {
+        // Redirige a la URL deseada
+        console.log("entra")
+        window.location.href = 'login.html';
+      });
+
+      
+    $('svg.iniciar_Ini').click(function() {
+        // Redirige a la URL deseada
+        console.log("entra")
+        window.location.href = 'Pages/login.html';
+      });
 
    
 
