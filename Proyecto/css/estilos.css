@@ -565,35 +565,30 @@ main section#sobreMi  picture img{
     background-color: rgba(0, 0, 0, .8);
     z-index: 4;
 }
-
-footer div.footer2{
+/* footer cookies*/
+footer div#footer2_cookies{
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     border: 1px solid #FB9445;
     background-color: #D9BD9C;
      width:100%;
-    height:45rem;
+    height:56rem;
     position: fixed;
     z-index: 5;
     display: flex;
     flex-direction: column;
 }
-footer div.footer2 p{
+footer div#footer2_cookies p{
     padding: 1rem;
 }
-footer div.footer2 p a{
-    padding: 1rem;
-    font-size: large;
-}
-footer div.footer2 form{
+
+footer div#footer2_cookies form.boton_politicas{
     padding: 1rem;
     display: flex;
     justify-content: center;
 }
-footer div.footer2 ul{
-    padding: 0.5rem; 
-}
-footer div.footer2 form button.boton_aceptar{
+/*botones para todos los frames de políticas*/
+  form.boton_politicas button.boton_aceptar{
     font-family: 'Kaushan Script',cursive;
     border: 1px solid #FB9445;
     background-color: #8C0444;
@@ -604,7 +599,7 @@ footer div.footer2 form button.boton_aceptar{
     width: 15rem;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
 }
-footer div.footer2 form button.boton_rechazar{
+ form.boton_politicas button.boton_rechazar{
     font-family: 'Kaushan Script',cursive;
     border: 1px solid #FB9445;
     background-color: black;
@@ -614,6 +609,53 @@ footer div.footer2 form button.boton_rechazar{
     border-radius: 25px;
     width: 15rem;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+}
+
+footer div#footer2_privacidad{
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border: 1px solid #FB9445;
+    background-color: #D9BD9C;
+     width:100%;
+    height:59rem;
+    position: fixed;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+}
+footer div#footer2_privacidad form.boton_politicas{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+footer div#footer2_privacidad ul{
+    padding: 0.5rem; 
+}
+/*Terminos y condiciones*/
+footer div#footer2_terminos{
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border: 1px solid #FB9445;
+    background-color: #D9BD9C;
+     width:100%;
+    height:50rem;
+    position: fixed;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+footer div#footer2_terminos p{
+    padding: 1rem;
+}
+footer div#footer2_terminos p a{
+        font-size: large;
+}
+footer div#footer2_terminos form.boton_politicas{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
 }
 
 /*FOOTER****************************************************/
