@@ -1026,6 +1026,49 @@ footer div#footer2_privacidad ul{
 
 
 /*MAIN SOBRE MI  TABLET*********************/
+section#sobreMi{
+    align-items: center;
+}
+section#sobreMi h1{
+    flex: 1 100%;
+
+}
+section#sobreMi article#imagen_ro{
+    flex: 1 60%; 
+}
+section#sobreMi article#imagen_ro h2{
+   font-size: xx-large;
+}
+section#sobreMi article#texto_boton{
+    flex: 1 25%;
+    padding: 2rem;
+}
+main section#sobreMi  picture#foto1_sobreMi_tablet{
+    display: block;
+    flex: 1 10%;
+    margin-right: 2rem;  
+    
+  }
+  main section#sobreMi  picture#foto3_sobreMi_tablet{
+    display: block;  
+    flex: 1 25%;
+    padding: 0.5rem;
+    max-width: 40%;
+  }
+  main section#sobreMi  picture#foto3_sobreMi_tablet img{
+    border-radius: 30px;
+  }
+main section#sobreMi  picture#foto2_sobreMi_tablet{
+  display: block;  
+  flex: 1 40%;
+  max-width: 40%;
+  transform: rotate(90deg);
+  
+}
+main section#sobreMi  picture#foto2_sobreMi_tablet img{
+    border-radius: 30px;
+}
+
 
 
 
