@@ -224,7 +224,9 @@ section.inicio article.microbla h2{
  section#main_contacto picture#foto2_contacto_tablet{
     display: none;
  }
-
+ section#main_contacto div#repro_video{
+    display: none;
+ }
  /*elementos main*/
  main section#main_contacto{
     display: flex;
@@ -283,13 +285,15 @@ section.inicio article.microbla h2{
 
  }
  main section#main_contacto article#hablamos{
-    
     flex: 1 100%;
     padding: 0.2rem;
     margin: 0.2rem;
     margin-top: 0.2rem;
  
     
+ }
+ main section#main_contacto div#elementos_contacto{
+    flex: 1 100%;
  }
  main section#main_contacto article#hablamos h2{
     font-family: 'Kaushan Script', cursive;
@@ -782,7 +786,7 @@ footer{
 }
 /*imagen del footer*/
 footer>picture{
-    flex: 0 20%;
+    flex: 0 25%;
   }
 
 footer>picture>img{
@@ -795,11 +799,14 @@ footer>picture>img{
 /* nav del footer*/
 nav.nav_footer{
   
-   flex: 0 70%;
+   flex: 0 65%;
    display: flex;
    flex-direction: column;
    align-items: center;
     padding: 0.2rem;
+}
+nav>div.politicas{
+    margin-right: 3rem;
 }
 nav>div.politicas>ul>li{
     padding: 0.2rem;
@@ -847,7 +854,7 @@ div.redes_sociales svg{
     }
     /*h1 de la cabecera*/
     header div#ver_tablet_desck h1{
-        padding: 0.5;
+        padding: 0.5rem;
         text-align: center;
     }
     header nav#menu-tablet-escrito{
@@ -870,9 +877,13 @@ div.redes_sociales svg{
  }
 
 /*FOOTER VERSION TABLET*****************/
+footer{
+    border-bottom: none;
+}
 footer>picture{
    order: 2;
   flex: 1 20%;
+ 
   } 
   footer>picture img{
     width: 100%;
@@ -893,7 +904,7 @@ footer>picture{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 0.5rem;
+    
     
   }
   div.politicas ul> li:nth-child(1){
@@ -930,7 +941,7 @@ footer div#madeby{
     flex: 1 100%;
     text-align: center;
     padding: 0.2rem;
-    margin-bottom: 0;
+    margin-bottom: -1px;
 }
 
 /*MAIN INICIO ***********/
@@ -1031,6 +1042,7 @@ section#sobreMi{
 }
 section#sobreMi h1{
     flex: 1 100%;
+    font-weight: bold;
 
 }
 section#sobreMi article#imagen_ro{
@@ -1047,28 +1059,191 @@ main section#sobreMi  picture#foto1_sobreMi_tablet{
     display: block;
     flex: 1 10%;
     margin-right: 2rem;  
+   
     
+  }
+  main section#sobreMi  picture#foto1_sobreMi_tablet img{
+    border-radius: 30px;
+    border: 1px solid #8C0444; ;
   }
   main section#sobreMi  picture#foto3_sobreMi_tablet{
     display: block;  
-    flex: 1 25%;
+    flex: 1 30%;
     padding: 0.5rem;
     max-width: 40%;
   }
   main section#sobreMi  picture#foto3_sobreMi_tablet img{
     border-radius: 30px;
+    border: 1px solid #8C0444; ;
   }
 main section#sobreMi  picture#foto2_sobreMi_tablet{
   display: block;  
-  flex: 1 40%;
-  max-width: 40%;
-  transform: rotate(90deg);
-  
+  flex: 0 40%;
+ transform: rotate(-90deg); 
+   
 }
 main section#sobreMi  picture#foto2_sobreMi_tablet img{
     border-radius: 30px;
+    border: 1px solid #8C0444;
+   
+
+    
 }
 
+
+/*MAIN CONTACTO  VERSIÓN TABLET*/
+
+main section#main_contacto article#hablamos{
+    margin: 1rem;
+    padding: 1rem;
+}
+article#hablamos h2{
+    font-size: xx-large;
+    padding: 3rem;
+}
+article#hablamos p{
+    font-size: xx-large;
+    padding: 2rem;
+}
+main section#main_contacto form{
+    flex:  1 45%;
+    margin: 1rem;
+  
+}
+
+main section#main_contacto div#elementos_contacto{
+    flex:  1 45%;
+    margin: 1rem;
+   
+}
+main section#main_contacto div#repro_video{
+    display: block;
+    flex: 1 100%;
+}
+
+/*repodructor*/
+div#repro_video {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 4rem;
+
+}
+
+video{
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+div#reproductor {
+    display: flex;
+    flex-flow: row wrap;
+    background-color:#8C0444;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: 2px solid #8C0444;
+    flex-basis: 90%;
+
+
+}
+
+/* #8C0444 todos los elementos que gestionan y muestran el tiempo del audio #D9BD9C*/
+div#barra-tiempo {
+    flex: 0 100%;
+    border-bottom: 1px solid#D9BD9C;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    padding: 0.2rem;
+  
+}
+
+div#barra-tiempo>span {
+
+    font-size: xx-large;
+    flex: 0 50%;
+    text-align: center;
+    color:#D9BD9C
+}
+
+#time-range {
+    flex: 0 50%;
+}
+
+#time-range::-webkit-slider-runnable-track {
+    background: linear-gradient(to right,#D9BD9C 0%, #8C0444 100%);
+}
+
+input[type="range"]#time-range::-webkit-slider-thumb {
+    background-color: #FFF;
+    /* Cambia el color del pulgar */
+}
+
+input[type="range"]#time-range::-moz-range-thumb {
+    background-color: yellow;
+    background: linear-gradient(to right,#D9BD9C 0%, #8C0444 100%);
+    /* Cambia el color del pulgar */
+}
+
+/* Todos los elemenos de tipo botón*/
+div#repro_video div#control-pista {
+    display: flex;
+    flex-direction: row;
+    flex: 0 50%;
+  /*   border: 1px solid #D9BD9C; */
+    border-radius: 10px;
+    justify-content: center;
+    padding: 0.2rem;
+}
+
+div#repro_video button#pausa {
+    display: none;
+}
+
+
+div#repro_video button {
+    
+  font-family:Arial;
+  width:45px;
+  height:auto;
+  border-width:1px;
+  color:#8C0444;
+  border-color:#d6bcd6;
+  font-weight:bold;
+  margin-left: 0.5rem;
+  border-top-left-radius:15px;
+  border-top-right-radius:15px;
+  border-bottom-left-radius:15px;
+  border-bottom-right-radius:15px;
+  box-shadow:inset 1px 1px 0px 1px #899599;
+  text-shadow:inset 1px 1px 2px rgba(129, 137, 171, 1);
+  background:linear-gradient(#ededed, rgba(67, 111, 123, 1));
+}
+
+div#repro_video button:hover {
+    background: linear-gradient(#bab1ba, #ededed);
+}
+
+/* elementos botón de volumen*/
+div#repro_video div#control-volumen {
+    display: flex;
+    flex-direction: row;
+    flex: 0 50%;
+    border-radius: 10px;
+    justify-content: center;
+    padding: 0.3rem;
+
+}
+
+div#repro_video #volume-range::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #D9BD9C, #8C0444 100%);
+}
+
+
+/*MAIN */
 
 
 
