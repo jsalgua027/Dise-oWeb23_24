@@ -1243,7 +1243,121 @@ div#repro_video #volume-range::-webkit-slider-runnable-track {
 }
 
 
-/*MAIN */
+/*MAIN  TRATAMIENTOS */
+main section#tratamientos h1{
+    flex: 1 100%;
+    text-align: center;
+    padding: 1rem;
+}
+section#tratamientos h2.exterior{
+    display: none;
+}
+main section#tratamientos article.foto_tratamiento picture{
+    max-width: 30%;
+    
+
+}
+
+main section#tratamientos article:nth-child(2){
+    flex: 0 90%;
+    display: flex;
+    flex-direction:column ;
+    flex-wrap: wrap;
+    padding: 2rem; 
+    
+    
+   
+}
+main section#tratamientos article:nth-child(2) h3{
+    border-bottom:  1px solid #8C0444;
+    color: #8C0444;
+    text-align: center;
+    font-size: xx-large;
+    width: 60%;
+    top:70%;
+    left: 25%
+}
+main section#tratamientos article:nth-child(2) button{
+    left: 35%;
+    width: 30%;
+    
+    
+}
+
+main section#tratamientos article:nth-child(3){
+    flex: 0 90%;
+    display: flex;
+    flex-direction:column ;
+    flex-wrap: wrap;
+    align-items: end;
+    padding: 2rem;    
+    
+   
+}
+main section#tratamientos article:nth-child(3) h3{
+    border-bottom:  1px solid #8C0444;
+    color: #8C0444;
+    text-align: center;
+    font-size: xx-large;
+    width: 60%;
+    top:70%;
+    left: 12%
+}
+main section#tratamientos article:nth-child(3) button{
+    left: 35%;
+    width: 30%;
+    
+}
+
+
+main section#tratamientos article:nth-child(4){
+    flex: 0 90%;
+    display: flex;
+    flex-direction:column ;
+    flex-wrap: wrap;
+    padding: 2rem;    
+    
+   
+}
+main section#tratamientos article:nth-child(4) h3{
+    border-bottom:  1px solid #8C0444;
+    color: #8C0444;
+    text-align: center;
+    font-size: xx-large;
+    width: 60%;
+    top:70%;
+    left: 25%
+}
+main section#tratamientos article:nth-child(4) button{
+    left: 35%;
+    width: 30%;
+    
+
+}
+main section#tratamientos article:nth-child(5){
+    flex: 0 90%;
+    display: flex;
+    flex-direction:column ;
+    flex-wrap: wrap;
+    align-items: end;
+    padding: 2rem;    
+    
+   
+}
+main section#tratamientos article:nth-child(5) h3{
+    border-bottom:  1px solid #8C0444;
+    color: #8C0444;
+    text-align: center;
+    font-size: xx-large;
+    width: 60%;
+    top:70%;
+    left: 12%
+}
+main section#tratamientos article:nth-child(5) button{
+    left: 35%;
+    width: 30%;
+    
+}
 
 
 
