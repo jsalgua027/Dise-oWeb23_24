@@ -49,7 +49,7 @@ h1 {
   z-index: 500;
   position: relative;
   width: 100%;
-  height: 360px;
+  height: 360px;/*aqui la anchura del slider*/
   background: #FFF;
   border: 5px solid #4b5973;
   overflow: hidden;
