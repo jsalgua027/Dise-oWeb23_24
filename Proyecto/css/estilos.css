@@ -432,43 +432,150 @@ flex-direction: row;
 flex-wrap: wrap;
 
  }
-
+/*
+ color:#8C0444;
+    font-family: 'Kaushan Script', cursive;
+*/
  main > section#saberMas > h1{
     flex: 1 100%;
     text-align: center;
     font-family: 'Kaushan Script', cursive;
     padding: 0.5rem;
 }
-section#saberMas article{
-    flex: 1 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
- }
+
 /*general de las imagenes*/
- main section#saberMas article picture img{
+ main section#saberMas article img{
     width: 100%;
     height: auto;
  }
- 
-/*Elementos flex del article*/
- main > section#saberMas > article > h2{
+ /*general del h4 dentro de los articles*/
+ main section#saberMas article div h4{
+    padding: 0.5rem;
+}
+
+/*Article 1*/
+article#blading_cejas{
+    display:flex;
+    flex-direction: column;
+   padding: 1rem;
+   
+}
+article#blading_cejas h2{
     color:#8C0444;
     font-family: 'Kaushan Script', cursive;
-    padding: 0.5rem;
 }
-main > section#saberMas > article > h3{
-    padding: 0.5rem;
+article#blading_cejas div#texto_1{
+    flex: 1 100%;
+    margin: 0.5rem;
+   
+}
+article#blading_cejas div#texto_1 h3{
     font-family: 'Kaushan Script', cursive;
 }
-main > section#saberMas > article > h4{
-    padding: 0.5rem;
-    
-}
-main section#saberMas article picture{
+article#blading_cejas div#imagenes_1{
     flex: 1 100%;
+    margin: 0.5rem;
+}
+article#blading_cejas div#imagenes_1 h3{
+    font-family: 'Kaushan Script', cursive;
+}
+article#blading_cejas div#imagenes_1 img{
     max-width: 50%;
 }
+/*article 2*/
+article#pigmenta_cejas{
+    display:flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+article#pigmenta_cejas h2{
+    color:#8C0444;
+    font-family: 'Kaushan Script', cursive;
+}
+
+article#pigmenta_cejas div#texto_2{
+    flex: 1 100%;
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+article#pigmenta_cejas div#texto_2 h3{
+    font-family: 'Kaushan Script', cursive; 
+}
+article#pigmenta_cejas  div#imagenes_2{
+    flex: 1 100%;
+    margin: 0.5rem;
+}
+article#pigmenta_cejas  div#imagenes_2 h3{
+    font-family: 'Kaushan Script', cursive;
+}
+article#pigmenta_cejas div#imagenes_2 img{
+    max-width: 50%;
+}
+/*Article 3*/
+article#pigmenta_ojos{
+    display:flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+article#pigmenta_ojos h2{
+    color:#8C0444;
+    font-family: 'Kaushan Script', cursive;
+}
+
+article#pigmenta_ojos div#texto_3{
+    flex: 1 100%;
+    padding: 0.5rem;
+    margin: 0.5rem;
+
+}
+article#pigmenta_ojos div#texto_3 h3{
+    font-family: 'Kaushan Script', cursive; 
+}
+article#pigmenta_ojos  div#imagenes_3{
+    flex: 1 100%;
+    margin: 0.5rem;
+}
+article#pigmenta_ojos  div#imagenes_3 h3{
+    font-family: 'Kaushan Script', cursive;
+}
+article#pigmenta_ojos div#imagenes_3 img{
+    max-width: 50%;
+}
+
+/*Article 4*/
+article#pigmenta_labios{
+    display:flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+article#pigmenta_labios h2{
+    color:#8C0444;
+    font-family: 'Kaushan Script', cursive;
+}
+
+article#pigmenta_labios div#texto_4{
+    flex: 1 100%;
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+article#pigmenta_labios div#texto_4 h3{
+    font-family: 'Kaushan Script', cursive; 
+}
+article#pigmenta_labios div#imagenes_4{
+    flex: 1 100%;
+    margin: 0.5rem;
+}
+article#pigmenta_labios  div#imagenes_4 h3{
+    font-family: 'Kaushan Script', cursive;
+}
+article#pigmenta_labios div#imagenes_4 img{
+    max-width: 50%;
+}
+
+
 main section#saberMas article#cuidados{
     flex: 1 100%;
     display: flex;
@@ -476,6 +583,9 @@ main section#saberMas article#cuidados{
     align-items: center;
     font-family: 'Kaushan Script', cursive;
    
+}
+main section#saberMas article#cuidados h2{
+    color: #8C0444;
 }
 /*MAIN  SOBRE MI ***********************************************/
 main section#sobreMi  picture#foto1_sobreMi_tablet{
@@ -823,7 +933,7 @@ div.redes_sociales svg{
     margin: 0.5rem;
 }
 
-/* VERSION TABLET*/
+/*************** VERSION TABLET***************************/
 
 @media (min-width:768px) {
     
@@ -1359,6 +1469,12 @@ main section#tratamientos article:nth-child(5) button{
     
 }
 
+/*MAIN SABER MÁS TABLET*/
+ section#saberMas article#blading_cejas{
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+ }
 
 
 }
