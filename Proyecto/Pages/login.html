@@ -106,7 +106,7 @@
     <main>
         <div id="login">
             <h1>Inicio de sesion</h1>
-            <form action="../Inicio.html" method="post" id="form_login">
+            <form action="../Inicio.html" method="get" id="form_login">
                
                 <p>
                     <input type="text" id="email" name="email" placeholder="email">
@@ -120,17 +120,16 @@
                             </svg>
                             
                     </div>
-                    
                 </p>
                 <p id="mantener">
                     <input type="checkbox" id="mantenerInput" name="mantener" >
                     <label> Mantener la sesión iniciada</label>
                 </p>
 
-                 <button  name="btnInicio" id="inicio">
+                 <button type="submit" name="btnInicio" id="inicio">
                     Inicio sesión
                 </button>
-                <button  name="btnCrear" id="crear">
+                <button formaction=crearCuenta.html name="btnCrear" id="crear">
                     Crear cuenta
                 </button>
             </form>

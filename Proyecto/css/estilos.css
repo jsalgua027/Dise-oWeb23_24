@@ -32,7 +32,8 @@ a{
 header nav#menu_desple{
    display: none;
 }
-*/
+
+
 /*cabecera del header de las versiones tablet y escritorio*/
 header div#ver_tablet_desck{
     display: none;
@@ -1575,8 +1576,141 @@ main section#saberMas article#importante p{
     font-family: 'Kaushan Script', cursive;
 }
 
+/*LOGIN DESPLEGABLE*/
+header div#login_desplegue{
+    display: flex;
+    flex-direction: column;
+	position: absolute;
+	top:9.6rem;
+    left: 38rem;
+	width: 25rem;
+    height: auto;
+    border: 1px solid #FB9445;
+	background-color: #F2EDEB;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 0 10px 10px 0;
+	font-family: 'Open Sans Condensed', sans-serif;
+    z-index: 1;
+    align-items: center;
+}
+
+
+header div#login_desplegue h2{
+    flex: 1 100%;
+    text-align: center;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+
+header div#login_desplegue form{
+    flex: 1 100%;
+  display: flex;
+    flex-direction: column;
+   justify-content: center;
+   align-items: center;
+    margin: 1rem;
+   
+}
+header div#login_desplegue form p{
+  width: 95%;
+  margin-left: 2.3rem;
+
+}
+header div#login_desplegue form div{
+    width: 90%;
+}
+header div#login_desplegue form p input{
+    border: 1px solid #FB9445;
+    padding: 0.4rem;
+    width: 85%;
+   
+    
+      
+ }
+ /*Crear cuemta desplegable*/
+
+ header div#crearCuenta_desple{
+    display: flex;
+    flex-direction: column;
+	position: absolute;
+	top:9.6rem;
+    left: 38rem;
+	width: 25rem;
+    height: auto;
+    border: 1px solid #FB9445;
+	background-color: #F2EDEB;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 0 10px 10px 0;
+	font-family: 'Open Sans Condensed', sans-serif;
+    z-index: 1;
+    align-items: center;
+}
+
+header div#crearCuenta_desple h2{
+padding: 0.5rem;
+
+}
+div#crearCuenta_desple form#form_crear{
+    flex: 1 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+   
+}
+
+div#crearCuenta_desple form#form_crear p {
+    flex: 1 100%;
+    width: 90%; 
+    margin-bottom: 0.5rem;
+    text-align: center;
+    
+ }
+ div#crearCuenta_desple form#form_crear p input{
+    border: 1px solid #FB9445;
+    padding: 0.5rem;
+    margin: 0.2rem;
+    width: 90%;
+      
+ }
+ /*div para poder colocar el svg dentro del input*/
+ form#form_crear > div{
+    position: relative;
+    width: 90%;
+    text-align: center;
+ }
+ form#form_crear > div > input[type=password]{
+    border: 1px solid #FB9445;
+    padding: 0.5rem;
+    margin: 0.2rem;
+    width: 90%;
+    
+ 
+ }
+ form#form_crear > div > svg{
+    position: absolute;
+    right: 1.5rem;
+    top:0.5rem
+ }
+
+ button#crear_desple{
+    border: 1px solid #FB9445;
+    background-color:white;
+    color: black;
+    padding: 0.8rem;
+    margin: 0.6rem;
+    border-radius: 25px;
+    width: 15rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+}
 
 
 }
+
+
+
+
+
 
     
