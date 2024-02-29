@@ -39,9 +39,18 @@ $(document).ready(function() {
         window.location.href = 'Inicio.html';
       });
   
-
-
-   
+  /* si pulso el boton de crear uasuario lo mando a su fame*/
+      function redireccionar() {
+        
+        window.location.href = 'crearCuenta.html';
+    }
+    $(document).ready(function() {
+      // Selecciona el botón por su ID y añade un manejador de eventos al clic
+      $("#crear").on("click", function() {
+          // Llama a la función redireccionar cuando se hace clic en el botón
+          redireccionar();
+      });
+  });
 
 
 

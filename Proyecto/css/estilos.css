@@ -778,11 +778,10 @@ div#login{
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
- 
   padding: 0.5rem;
   margin-top: 3.2rem;
   margin-bottom:4.5rem ;
-  
+  justify-content: center;
 
 }
 div#login h1{
@@ -796,7 +795,6 @@ div#login form#form_login{
     flex-direction: column;
     padding: 1rem;
     align-items: center;
-    margin-bottom: 10rem;
     margin-top: 2rem;;
 
 }
@@ -848,6 +846,7 @@ div#login form#form_login p {
 }
 /*botones del login OJO el inici esta dentro del formulario*/
  button#inicio{
+    flex: 01 100%;
     border: 1px solid #FB9445;
     background-color: #8C0444;
     color: white;
@@ -857,6 +856,7 @@ div#login form#form_login p {
     width: 15rem;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
 }
+
 button#crear{
     border: 1px solid #FB9445;
     background-color:white;
@@ -867,7 +867,92 @@ button#crear{
     width: 15rem;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
 }
+/**CREAR CUENTA**********************/
+div#crear_cuenta{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0.5rem;
+    margin-top: 3.2rem;
+    margin-bottom: 20rem;
+    justify-content: center;
 
+   
+  
+  }
+  div#crear_cuenta h1{
+      flex: 1 100%;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+  }
+  div#crear_cuenta#form_login{
+      flex: 1 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      align-items: center;
+      margin-top: 2rem;;
+  
+  }
+  
+  div#crear_cuenta form#form_crear p {
+      flex: 1 100%;
+      width: 90%; 
+      margin-bottom: 0.5rem;
+      text-align: center;
+      
+   }
+   div#crear_cuenta #form_crear p input{
+      border: 1px solid #FB9445;
+      padding: 0.5rem;
+      margin: 0.2rem;
+      width: 100%;
+        
+   }
+   /*div para poder colocar el svg dentro del input*/
+   #form_crear > div{
+      position: relative;
+      width: 90%;
+      text-align: center;
+   }
+   #form_crear > div > input[type=password]{
+      border: 1px solid #FB9445;
+      padding: 0.5rem;
+      margin: 0.2rem;
+      width: 100%;
+      
+   
+   }
+   #form_crear > div > svg{
+      position: absolute;
+      right: 0.5rem;
+      top:0.5rem
+   }
+   #form_crear p#mantener{
+      display: flex;
+      flex-direction: row;
+    
+   }
+   #form_crear p#mantener input#mantenerInput{
+          flex: 1 10%;
+   }
+   #form_crear p#mantener label{
+      flex: 1 80%;
+      margin-left: -28%;
+  }
+  /*botones del login OJO el inici esta dentro del formulario*/
+  
+  
+  #form_crear button#crear{
+      border: 1px solid #FB9445;
+      background-color:white;
+      color: black;
+      margin: 0.7rem;
+      border-radius: 25px;
+      width: 14rem;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+  }
 /*Formulario crear cuenta*/
  #telefono{
     margin-top: 0.5rem;
