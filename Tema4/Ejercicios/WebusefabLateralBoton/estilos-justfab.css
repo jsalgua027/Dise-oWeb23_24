@@ -266,6 +266,19 @@ main > article.item > p {
     font-family: 'Nunito', sans-serif;
     padding-left: 1rem;
 }
+/* añadido para el botón comprar*/
+main > article.item > a>span{
+    display: none;
+    position: absolute;
+    background-color: #454545;
+    left:1px;
+    top:96%;
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+    color: white;
+    
+}
 
 footer {
     display: flex;
