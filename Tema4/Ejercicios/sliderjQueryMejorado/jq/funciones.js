@@ -45,6 +45,16 @@ $(document).ready(function() {
      
       })
 
+    /****************Función añadida para el slider se detenga*******************/
+             // Agregamos eventos para detener/reanudar el slider cuando el ratón está sobre él
+             pb.elslider.on('mouseenter', function () {
+              clearInterval(SliderInterval);
+          });
+  
+          pb.elslider.on('mouseleave', function () {
+              SliderInit();
+          });
+
     }
     //funcion que inicializa el slider
     var SliderInit= function(){ // esto gestiona la reproducción automatica del slider
