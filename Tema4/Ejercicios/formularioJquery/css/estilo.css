@@ -1,0 +1,37 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+div#login{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+h1{
+    flex: 0 100%;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+form#form_login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    background-color: beige;
+
+}
+form#form_login p{
+
+    margin: 0.8rem;
+
+}
+
+form#form_login p input{
+
+    padding: 0.5rem;
+}
