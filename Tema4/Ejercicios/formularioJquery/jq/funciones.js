@@ -1,13 +1,15 @@
 $(document).ready(function () {
+  $(".error-message").css({"display":"none"})
   // Agregar evento blur a los campos requeridos
   $("#nombre, #email").blur(function () {
     // Verificar si la longitud es 0
     if ($(this).val().trim().length === 0) {
-      // Mostrar mensaje de error justo debajo del campo
+      /* // Mostrar mensaje de error justo debajo del campo
       $(this).next(".error-message").remove(); // Eliminar mensaje de error existente
       $(this).after(
-        '<p class="error-message" style="color: red;">Este campo es obligatorio</p>'
-      );
+        '<p class="error-message">Este campo es obligatorio</p>'
+      ); */
+      $(this).next(".error-message").css({"display":"block"})
     } else {
       // Eliminar mensaje de error si la condición no se cumple
       $(this).next(".error-message").remove();

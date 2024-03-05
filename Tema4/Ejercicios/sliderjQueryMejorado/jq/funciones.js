@@ -39,27 +39,7 @@ $(document).ready(function() {
        //insertamos los controles creados en el HTML
        $('#control-buttons').html(loscontroles);
 
-       // Agregamos eventos click a los botones laterales
-       $('#slider-prev').on('click', function () {
-        var nueva= currentSlider-1;
-        if(nueva<0){ // definimos cuando llega al ultimo panel vuelva al principo con la reproduccion automatica
-          nextSlider=lengthSlider-1;
-         
-        }
-        console.log(nueva+"Izquierda");
-           cambiarPanel(nueva);
-       });
-
-       $('#slider-next').on('click', function () {
-        var nueva=currentSlider + 1;
-        
-           if(nueva>lengthSlider){ // definimos cuando llega al ultimo panel vuelva al principo con la reproduccion automatica
-             nextSlider=0;
-           
-          }
-          console.log(nueva+"Derecha");
-          cambiarPanel(nueva);
-       });
+   
       //insertamos los controles creados en el HTML
       $('#control-buttons').html(loscontroles);
 
@@ -75,15 +55,7 @@ $(document).ready(function() {
      
       })
 
-    /****************Función añadida para el slider se detenga*******************/
-             // Agregamos eventos para detener/reanudar el slider cuando el ratón está sobre él
-             pb.elslider.on('mouseenter', function () {
-              clearInterval(SliderInterval);
-          });
-  
-          pb.elslider.on('mouseleave', function () {
-              SliderInit();
-          });
+   
 
     }
     //funcion que inicializa el slider
@@ -141,14 +113,72 @@ $(document).ready(function() {
       //reactivamos el slider
       SliderInit();
 
+    
     }
 
 
+    pb.stopSlider = function(){
+      clearInterval(SliderInterval)
+    }
+
+    pb.resumeSlider= function(){
+      SliderInit()
+    }
+
+
+     
+        // Agregamos eventos click a los botones laterales
+        $('#slider-prev').on('click', function () {
+          var nueva= currentSlider-1;
+        
+          console.log(nueva+"Izquierda");
+             cambiarPanel(nueva);
+         });
+  
+         $('#slider-next').on('click', function () {
+          var nueva=nextSlider;
+          
+              console.log(nueva+"Derecha");
+            cambiarPanel(nueva);
+         });
+
     return pb; // devolvemos el objeto
+
+   
     
   }());
    // llamamos al constructor
  SliderModule.init({duration:2000});
+
+
+ /*   /****************Función añadida para el slider se detenga*******************  TENGO QUE modificar
+             // Agregamos eventos para detener/reanudar el slider cuando el ratón está sobre él
+             pb.elslider.on('mouseenter', function () {
+              clearInterval(SliderInterval);
+          });
+  
+          pb.elslider.on('mouseleave', function () {
+              SliderInit();
+          });
+           */
+
+          $("#slider > ul>li  > img").on({
+          
+            mouseenter: function(){
+              console.log("entra");
+              SliderModule.stopSlider();
+            }
+
+          })
+          $("#slider > ul>li  > img").on({
+            mouseleave: function(){
+              SliderModule.resumeSlider()
+            }
+
+          })
+
+
+
 
 });
 
