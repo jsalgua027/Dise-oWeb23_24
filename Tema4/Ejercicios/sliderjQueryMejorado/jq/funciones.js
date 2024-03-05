@@ -34,16 +34,31 @@ $(document).ready(function() {
       }
 
       /***********AQUI AÑADO LA LÓGICA DE LOS BOTONES LATERALES ***********************/
+
+      
        //insertamos los controles creados en el HTML
        $('#control-buttons').html(loscontroles);
 
        // Agregamos eventos click a los botones laterales
        $('#slider-prev').on('click', function () {
-           cambiarPanel(currentSlider - 1);
+        var nueva= currentSlider-1;
+        if(nueva<0){ // definimos cuando llega al ultimo panel vuelva al principo con la reproduccion automatica
+          nextSlider=lengthSlider-1;
+         
+        }
+        console.log(nueva+"Izquierda");
+           cambiarPanel(nueva);
        });
 
        $('#slider-next').on('click', function () {
-           cambiarPanel(currentSlider + 1);
+        var nueva=currentSlider + 1;
+        
+           if(nueva>lengthSlider){ // definimos cuando llega al ultimo panel vuelva al principo con la reproduccion automatica
+             nextSlider=0;
+           
+          }
+          console.log(nueva+"Derecha");
+          cambiarPanel(nueva);
        });
       //insertamos los controles creados en el HTML
       $('#control-buttons').html(loscontroles);
@@ -94,7 +109,7 @@ $(document).ready(function() {
       paneles.eq(currentSlider).fadeOut('slow');
       paneles.eq(nextSlider).fadeIn('slow')
       //actualizamos las variables
-      console.log(nextSlider)
+     // console.log(nextSlider)
       currentSlider=nextSlider;
       nextSlider+=1;
     }
