@@ -184,6 +184,32 @@ h1 {
   font-size: 300;
 }
 
+/*botones laterales*/
+#slider-prev, #slider-next {
+  position: absolute;
+  top: 25%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 15px;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+  
+}
+
+#slider-prev {
+  left: 100px;
+ 
+}
+
+#slider-next {
+  right: 100px;
+}
+
+
 
 /** ---------------------------------------
  * Responsive 

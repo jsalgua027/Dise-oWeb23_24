@@ -32,9 +32,24 @@ $(document).ready(function() {
        }
         
       }
+
+      /***********AQUI AÑADO LA LÓGICA DE LOS BOTONES LATERALES ***********************/
+       //insertamos los controles creados en el HTML
+       $('#control-buttons').html(loscontroles);
+
+       // Agregamos eventos click a los botones laterales
+       $('#slider-prev').on('click', function () {
+           cambiarPanel(currentSlider - 1);
+       });
+
+       $('#slider-next').on('click', function () {
+           cambiarPanel(currentSlider + 1);
+       });
       //insertamos los controles creados en el HTML
       $('#control-buttons').html(loscontroles);
 
+
+     
 
       $('#control-buttons li').click(function(){
         //al hacer clic vemos en consola el indice de la bolita
