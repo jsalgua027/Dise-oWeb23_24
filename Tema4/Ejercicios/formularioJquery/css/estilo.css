@@ -27,21 +27,26 @@ form#form_login{
 }
 form#form_login p{
     margin: 0.8rem;
+    display: flex;
+    flex-direction: column;
 
 }
 
 form#form_login p input{
     padding: 0.5rem;
+    
+}
+form#form_login p span.error-message{
+ 
+    margin-top: 0.1rem;
+    color:red;
+   
 }
 
-.error-message{
-color:red;
-margin-bottom: -0.5rem;
-margin-top: -0.5rem;
-
-}
 /*fecha*/
+º
 #ui-datepicker-div{
+    display: none;
     width: 180px;
     margin-top: 0.8rem;
     margin-right: 0.5rem;

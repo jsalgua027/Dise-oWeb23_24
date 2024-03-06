@@ -1,21 +1,27 @@
 $(document).ready(function () {
 
-  $(".error-message").css({"display":"none"})
-  // Agregar evento blur a los campos requeridos
-  $("#nombre, #email").blur(function () {
-    // Verificar si la longitud es 0
-    if ($(this).val().trim().length === 0) {
-       // Mostrar mensaje de error justo debajo del campo
-      $(this).next(".error-message").remove(); // Eliminar mensaje de error existente
-      $(this).after(
-        '<p class="error-message">Este campo es obligatorio</p>'
-      ); 
-     
-    } else {
-      // Eliminar mensaje de error si la condición no se cumple
-      $(this).next(".error-message").remove();
-    }
-  });
+ // Ocultar mensajes de error al principio
+ $(".error-message").css({"visibility": "hidden"});
+
+ // Agregar evento blur a los campos requeridos
+ $("#nombre, #email").blur(function () {
+   // Verificar si la longitud es 0
+   var errorMessage = $(this).siblings(".error-message");
+
+   if ($(this).val().trim().length === 0) {
+     // Mostrar mensaje de error en el span correspondiente
+     console.log("Campo vacío. Mostrando mensaje de error.");
+     errorMessage.css({"visibility": "visible"});
+   } else {
+     // Ocultar mensaje de error si la condición no se cumple
+     console.log("Campo no vacío. Ocultando mensaje de error.");
+     errorMessage.css({"visibility": "hidden"});
+   }
+ });
+
+
+
+
   $("#miTexto").on("input", function () {
     // Obtener la cantidad de caracteres escritos
     var caracteresEscritos = $(this).val().length;
