@@ -39,17 +39,23 @@ $(document).ready(function() {
         }
 
     })
-    //F
+    //F  no funciona
     $(window).scroll(function () {
         // Obtener la posición del scroll horizontal
-        var scrollLeft = $(document).scrollLeft();
-        
-        // Realizar cambios basados en la posición del scroll lateral
-        // Aquí puedes agregar tu lógica específica
-        console.log("Scroll Lateral:", scrollLeft);
-        $("ul#menu-toggle").stop().slideToggle(400)
-        $("#hamburger > span:nth-child(2)").stop(true).animate({ width: "40%" });
-        $("#hamburger").stop(true).animate({ backgroundColor: "#e3e3e3" }, 400);
+        $(window).on("resize", function () {
+            console.log("resize")
+           
+            /*
+             $("ul#menu-toggle").stop().slideToggle(400)
+            $("#hamburger > span:nth-child(2)").stop(true).animate({ width: "40%" });
+            $("#hamburger").stop(true).animate({ backgroundColor: "#e3e3e3" }, 400);
+            */
+           
+            
+           
+          });
+       
+      
     });
 
 
@@ -65,5 +71,22 @@ $(document).ready(function() {
    
 // B
 
+$("div#chat").css("display", "block");
+$("div#chat").animate( {"opacity": "1"},500);
+// C y D
+   $("div#chat").on('click', function(){
+        if($('#window-chat').is(':hidden')){
+            $("header#header-chat2").css('display','block');
+            $('#window-chat').stop().slideDown('slow')
+        }else{
+            $('#window-chat').stop().slideUp('slow');
+            $("header#header-chat2").css('display','none');
 
+
+        }   
+
+    })
+    $("header#header-chat2 >span").stop().on('click',function(){
+        $('#window-chat').slideUp('slow');
+    })
 });
