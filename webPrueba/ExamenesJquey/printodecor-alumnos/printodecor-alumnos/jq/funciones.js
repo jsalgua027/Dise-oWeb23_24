@@ -26,7 +26,7 @@ $(document).ready(function() {
        
 
     });
-
+  //E
     $("#menu-toggle > li:nth-child(3) > a").on('click',function(){
         console.log("Entra")
         var submenu = $("#menu-toggle > li:nth-child(3) > ul");
@@ -42,8 +42,17 @@ $(document).ready(function() {
         }
 
     })
+    //F
+  // ejercicio 2
+  //A
+ //  la barra social
+ var barraSocial = $("nav#barra-social");
 
- 
+ // Muestra la barra social con un efecto de cambio de opacidad
+ barraSocial.css("display", "block"); // Cambia el display a block
+ barraSocial.animate({ opacity: 1 }, 1000); // 1000 es la duración de la animación en milisegundos
+   
+// B
 
 
 });
