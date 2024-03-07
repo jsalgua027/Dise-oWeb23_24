@@ -112,8 +112,10 @@ header#home-header > nav#main-menu > ul#menu-toggle > li > span:hover{
 }
 header#home-header > nav#main-menu > ul#menu-toggle > li > ul{
 	flex:100%;
-	flex-direction: column;
+	/*display: flex;*/
+	/*flex-flow: column;*/
 	left:-50vw;
+	
 	position: relative;
 	display: none;
 	background-color: #2bd3c6;

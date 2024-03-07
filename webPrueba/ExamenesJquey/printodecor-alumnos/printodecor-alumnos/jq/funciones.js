@@ -2,15 +2,7 @@
 $(document).ready(function() {
     var mostrar=true;
         $("#hamburger").on('click', function() {
-            /*if(mostrar){
-                console.log("entra");
-                $("ul#menu-toggle").stop(true).fadeIn()
-                mostrar=false;
-            }else{
-                $("ul#menu-toggle").stop(true).fadeOut()
-                mostrar=true;
-            }*/
-            /***ejercicio 1 */
+          
 
         $("ul#menu-toggle").stop().slideToggle(400) // efecto cortinilla  A
             //B  y //C
@@ -27,22 +19,41 @@ $(document).ready(function() {
 
     });
   //E
-    $("#menu-toggle > li:nth-child(3) > a").on('click',function(){
+    $("#menu-toggle > li:nth-child(3)").on('click',function(){
         console.log("Entra")
         var submenu = $("#menu-toggle > li:nth-child(3) > ul");
     
         if (submenu.is(":visible")) {
-            // Si el menú está visible, lo ocultamos
-            submenu.stop(true).animate({ width: "50px" }, 400, function() {
-                $(this).hide(); // Oculta el menú después de la animación
+            submenu.css({
+                'left':'-50vw',
+                'display':'none'
             });
+            $('#menu-toggle > li:nth-child(3) > span').html('-')
         } else {
             // Si el menú está oculto, lo mostramos
-            submenu.show().stop(true).animate({ width: "150px" }, 400);
+            submenu.css({
+                'left':'0',
+                'display':'flex'
+            })
+            $('#menu-toggle > li:nth-child(3) > span').html('+')
         }
 
     })
     //F
+    $(window).scroll(function () {
+        // Obtener la posición del scroll horizontal
+        var scrollLeft = $(document).scrollLeft();
+        
+        // Realizar cambios basados en la posición del scroll lateral
+        // Aquí puedes agregar tu lógica específica
+        console.log("Scroll Lateral:", scrollLeft);
+        $("ul#menu-toggle").stop().slideToggle(400)
+        $("#hamburger > span:nth-child(2)").stop(true).animate({ width: "40%" });
+        $("#hamburger").stop(true).animate({ backgroundColor: "#e3e3e3" }, 400);
+    });
+
+
+
   // ejercicio 2
   //A
  //  la barra social
