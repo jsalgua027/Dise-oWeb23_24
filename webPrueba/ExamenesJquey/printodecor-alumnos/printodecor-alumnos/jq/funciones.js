@@ -78,15 +78,64 @@ $("div#chat").animate( {"opacity": "1"},500);
         if($('#window-chat').is(':hidden')){
             $("header#header-chat2").css('display','block');
             $('#window-chat').stop().slideDown('slow')
-        }else{
-            $('#window-chat').stop().slideUp('slow');
-            $("header#header-chat2").css('display','none');
-
-
-        }   
-
+        }
     })
     $("header#header-chat2 >span").stop().on('click',function(){
         $('#window-chat').slideUp('slow');
     })
+
+
+    //ejercicio 6 formula
+
+     // Agregar evento blur a los campos requeridos
+  $("#nombre, #email2,#tlfno").blur(function () {
+ 
+
+    // Verificar si la longitud es 0
+    if ($(this).val().trim().length === 0) {
+        console.log("caracteres 0")
+      // Mostrar mensaje de error justo debajo del campo
+      $(this).next(".error-chat").css({"visibility": "visible"}); // Eliminar mensaje de error existente
+      
+    } else {
+      // Eliminar mensaje de error si la condición no se cumple
+      $(this).next(".error-chat").css({"visibility": "hidden"}); 
+    }
+  });
+  $("#mensaje").on("input", function () {
+    // Obtener la cantidad de caracteres escritos
+    var caracteresEscritos = $(this).val().length;
+    // Calcular los caracteres restantes
+    var caracteresRestantes = 100 - caracteresEscritos;
+
+    // Actualizar el mensaje de caracteres restantes
+    // necesitamos un span donde hacer el contador
+    $("#info-caracteres").text(
+      "Dispone de " + caracteresRestantes + " caracteres"
+    );
+
+    /*
+    otre forma
+    $("textarea").keyup(function (e) {
+        $(this).siblings("p").html("Has escrito " + e.target.value.length + " letras de 100");
+    });
+    */
+  });
+
+    // ejercicio 3
+
+    $("article.producto").on('mouseenter',function(){
+        $(this).find("a").css({"display":"flex"})
+        
+    })
+    $("article.producto").on('mouseleave',function(){
+        console.log("article")
+        $(this).find("a").css({"display":"none"})
+
+
+    })
+
+
+
 });
+

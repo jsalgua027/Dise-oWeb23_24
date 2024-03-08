@@ -386,7 +386,8 @@ div#chat > div#window-chat > span{
 	font-size: 0.8rem;
 	font-weight: bold;
 	font-style: italic;
-	visibility: hidden;
+	visibility:hidden;
+	
 }
 div#chat > div#window-chat > span#info-caracteres{
 	visibility: visible;
