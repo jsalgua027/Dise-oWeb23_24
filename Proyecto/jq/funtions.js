@@ -4,15 +4,44 @@ $(document).ready(function () {
   $("div#crearCuenta_desple").css({ display: "none" });
 
   $("div#menu_header svg").on("click", function () {
-    $("nav#menu_desple").toggle("slow"); // parte 2
+    $("nav#menu_desple").stop(true, false).toggle("slow"); // parte 2
   });
   /*despliegue login*/
   $("nav#menu-tablet-escrito svg").on("click", function () {
-    $("div#login_desplegue").slideToggle("slow"); // parte 2
+    if ($("div#crearCuenta_desple").css("display") != "none") {
+      $("div#crearCuenta_desple").stop(true, false).slideUp("slow");
+    } else {
+      $("div#login_desplegue").stop(true, false).slideToggle("slow"); // parte 2
+    }
+  });
+  $("ul#menu li").on({
+    mouseenter: function () {
+        $(this).css({
+            "background-color": "#8C0444",
+        }),
+        $(this).find("a").css({
+          "color": "#FFF"
+        })
+        $(this).find("a svg path").attr({
+          "fill": "#FFF"
+        })
+    },
+    mouseleave: function () {
+        $(this).css({
+            "background-color": "#d9bd9c"
+        }),
+        $(this).find("a").css({
+          "color": "#000"
+        })
+        $(this).find("a svg path").attr({
+          "fill": "#000"
+        })
+    }
   });
   /*despliegue crear cuenta*/
   $("#login_desplegue button#crear_desple").on("click", function () {
-    $("div#crearCuenta_desple").slideToggle("slow"); // parte 2
+    $("div#login_desplegue").stop(true, false).slideToggle("slow"); // parte 2
+    $("div#crearCuenta_desple").stop(true, false).slideToggle("slow"); // parte 2
   });
 
   $("svg.iniciar").click(function () {
