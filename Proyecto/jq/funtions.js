@@ -2,7 +2,7 @@ $(document).ready(function () {
   $("nav#menu_desple").css({ display: "none" });
   $("div#login_desplegue").css({ display: "none" });
   $("div#crearCuenta_desple").css({ display: "none" });
-
+  $("span.error-registro").css({"visibility": "hidden"}); 
   $("div#menu_header svg").on("click", function () {
     $("nav#menu_desple").stop(true, false).toggle("slow"); // parte 2
   });
@@ -20,34 +20,106 @@ $(document).ready(function () {
     }
   });
   $("ul#menu li").on({
-    mouseenter: function () {
-        $(this).css({
-            "background-color": "#8C0444",
-        }),
-        $(this).find("a").css({
-          "color": "#FFF"
-        })
-        $(this).find("a svg path").attr({
-          "fill": "#FFF"
-        })
+    mouseenter: function() {
+      $(this).stop().animate(
+        { backgroundColor: "#8C0444" },
+        "fast",
+        function() {
+          $(this).find("a").stop().animate(
+            { color: "#FFF" },
+            "fast"
+          );
+          $(this).find("a svg path").stop().css(
+            { fill: "#FFF" },
+            "fast"
+          );
+        }
+      );
     },
-    mouseleave: function () {
-        $(this).css({
-            "background-color": "#d9bd9c"
-        }),
-        $(this).find("a").css({
-          "color": "#000"
-        })
-        $(this).find("a svg path").attr({
-          "fill": "#000"
-        })
+    mouseleave: function() {
+      $(this).stop().animate(
+        { backgroundColor: "#d9bd9c" },
+        "fast",
+        function() {
+          $(this).find("a").stop().animate(
+            { color: "#000" },
+            "fast"
+          );
+          $(this).find("a svg path").stop().css(
+            { fill: "#000" },
+            "fast"
+          );
+        }
+      );
     }
   });
+  /***animación menú desplehable****/
+  $("nav#menu_desple > a > div").on({
+    mouseenter: function() {
+      // Código a ejecutar cuando el ratón entra al elemento
+      $(this).stop().animate(
+        { backgroundColor: "#8C0444", color: "white" },
+        "fast"
+      );
+    },
+    mouseleave: function() {
+      // Código a ejecutar cuando el ratón sale del elemento
+      $(this).stop().animate(
+        { backgroundColor: "#d9bd9c", color: "black" },
+        "fast"
+      );
+    }
+  });
+  /* animacion redes sociales*/
+
+  $(".redes_sociales svg").on({
+    mouseenter: function() {
+      // Cambiar el color a blanco al entrar con animate
+      $(this).find("path").stop().css({ fill: "#FFF" }, "fast");
+    },
+    mouseleave: function() {
+      // Cambiar el color al original al salir con animate
+      $(this).find("path").stop().css({ fill: "#040404" }, "fast");
+    }
+  });
+  /*Animación políticas*/
+
+  $(".nav_footer a").on({
+    mouseenter: function() {
+      // Cambiar el color a blanco al entrar con animate
+      $(this).stop().animate({ color: "#FFF" }, "fast");
+    },
+    mouseleave: function() {
+      // Cambiar el color al original al salir con animate
+      $(this).stop().animate({ color: "#000" }, "fast");
+    }
+  });
+  
+  /*errores de campo vacion formulario*/
+  $(" #nombre,#email_1,#ciudad").blur(function () {
+ 
+    // Verificar si la longitud es 0
+    if ($(this).val().trim().length === 0) {
+        console.log("caracteres 0")
+      // Mostrar mensaje de error justo debajo del campo
+      $(this).next(".error-registro").css({"visibility": "visible"}); // Eliminar mensaje de error existente
+      
+    } else {
+      // Eliminar mensaje de error si la condición no se cumple
+      $(this).next(".error-registro").css({"visibility": "hidden"}); 
+    }
+  });
+
+
+
   /*despliegue crear cuenta*/
   $("#login_desplegue button#crear_desple").on("click", function () {
     $("div#login_desplegue").stop(true, false).slideToggle("slow"); // parte 2
     $("div#crearCuenta_desple").stop(true, false).slideToggle("slow"); // parte 2
   });
+
+  
+  /*redireccionamiento*/
 
   $("svg.iniciar").click(function () {
     // Redirige a la URL deseada

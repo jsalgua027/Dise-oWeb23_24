@@ -38,7 +38,10 @@ a {
 
 }
 
-
+span.error-registro{
+	visibility:hidden ;
+	color: red;
+}
 
 /*HEADER************************************/
 
@@ -314,6 +317,7 @@ section#main_contacto picture#foto2_contacto_tablet {
 section#main_contacto div#repro_video {
     display: none;
 }
+
 
 /*elementos main*/
 main section#main_contacto {
