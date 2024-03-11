@@ -985,7 +985,7 @@ footer div#footer2_cookies {
     border: 1px solid #FB9445;
     background-color: #D9BD9C;
     width: 100%;
-    height: 57rem;
+    height: 30rem;
     position: fixed;
     z-index: 5;
     display: -webkit-box;
@@ -1044,7 +1044,7 @@ footer div#footer2_privacidad {
     border: 1px solid #FB9445;
     background-color: #D9BD9C;
     width: 100%;
-    height: 59rem;
+    height: 40rem;
     position: fixed;
     z-index: 5;
     display: -webkit-box;
@@ -1077,7 +1077,7 @@ footer div#footer2_terminos {
     border: 1px solid #FB9445;
     background-color: #D9BD9C;
     width: 100%;
-    height: 51rem;
+    height: 25rem;
     position: fixed;
     z-index: 5;
     display: -webkit-box;
@@ -1797,7 +1797,7 @@ div.redes_sociales svg {
 
     /*Terminos y condiciones*/
     footer div#footer2_terminos {
-        height: 44rem;
+        height: 40rem;
 
 
     }
@@ -1823,9 +1823,21 @@ div.redes_sociales svg {
     /*Políticas y privacidad*/
 
     footer div#footer2_privacidad {
-        height: 52rem;
+        height: 80rem;
+        position: fixed;
 
     }
+    footer div#footer2_cookies {
+        height: 70rem;
+        position: fixed;
+
+    }
+    footer div#footer2_terminos {
+        height: 70rem;
+        position: fixed;
+
+    }
+    
 
     footer div#footer2_privacidad ul {
         padding: 0.5rem;
@@ -2762,5 +2774,24 @@ picture.logo_footer {
             -ms-flex-align: normal;
                 align-items: normal;
     }
+
+    footer div#footer2_privacidad {
+        height: 80rem;
+        position: fixed;
+
+    }
+    footer div#footer2_cookies {
+        height: 80rem;
+        position: fixed;
+
+    }
+    footer div#footer2_terminos {
+        height: 80rem;
+        position: fixed;
+
+    }
+
+
+
 
 }
