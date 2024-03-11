@@ -6,6 +6,11 @@ $(document).ready(function () {
   $("div#menu_header svg").on("click", function () {
     $("nav#menu_desple").stop(true, false).toggle("slow"); // parte 2
   });
+
+  $(window).resize(function() {
+    // Cierra el elemento con el ID #meu_toglle
+    $("#menu_desple").stop(true, false).hide(150)
+  });
   /*despliegue login*/
   $("nav#menu-tablet-escrito svg").on("click", function () {
     if ($("div#crearCuenta_desple").css("display") != "none") {
