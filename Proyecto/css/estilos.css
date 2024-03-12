@@ -43,6 +43,9 @@ span.error-registro{
 	color: red;
 }
 
+
+
+
 /*HEADER************************************/
 
 /*menu desplegable para la versión movil
@@ -294,6 +297,78 @@ section.inicio article.microbla {
 section.inicio article.microbla h2 {
     text-align: center;
 }
+
+/*Slider*/
+
+
+
+.rslides {
+    flex: 1 100%;
+    max-width: 400px;
+    height: 382px;
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+    margin: 2rem auto;
+
+    }
+  
+  .rslides li {
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+    display: none;
+    width: 100%;
+    left: 0;
+    top: 0;
+    }
+  
+  .rslides li:first-child {
+    position: relative;
+    display: block;
+    float: left;
+    }
+  
+  .rslides img {
+    display: block;
+    height: 100%;
+    float: left;
+    width: 100%;
+    border: 0;
+    object-fit: cover;
+    object-position: center;
+    }
+
+    .rslides_nav.rslides1_nav.prev{
+        position: fixed;
+        width: 80px;
+        background-color: #8C0444;
+        top:90%;
+        left: 35%;
+        border-radius: 20px;
+        border: 1px solid  #FB9445;
+        color: white;
+        text-align: center;
+        padding: 0.3rem;
+       
+        
+    }
+    .rslides_nav.rslides1_nav.next{
+        position: fixed;
+        width: 50px;
+        background-color: #8C0444;
+        top:90%;
+        left: 54%;
+        border-radius: 20px;
+        border: 1px solid  #FB9445;
+        color: white;
+        width: 80px;
+        text-align: center;
+        padding: 0.3rem;
+        
+    }
+
 
 
 /*MAIN CONTACTO**************/
@@ -1489,6 +1564,10 @@ div.redes_sociales svg {
 /*************** VERSION TABLET***************************/
 
 @media (min-width:768px) {
+
+    .rslides{display: none;}
+    .rslides_nav.rslides1_nav.prev{display: none;}
+    .rslides_nav.rslides1_nav.next{display: none;}
 
     main {
         display: -webkit-box;
