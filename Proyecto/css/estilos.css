@@ -1655,7 +1655,7 @@ div.redes_sociales svg {
         display: flex;
         -webkit-box-pack: center;
             -ms-flex-pack: center;
-                justify-content: center;
+               
         -ms-flex-pack: distribute;
             justify-content: space-around;
         height: 30px;
@@ -2833,6 +2833,12 @@ picture.logo_footer {
         max-width: 1024px;
         background-color: #F2EDEB;
     }
+
+    nav#menu-tablet-escrito ul#menu{
+
+        justify-content:space-evenly
+    }
+
 
     header div#ver_tablet_desck {
         -webkit-box-orient: horizontal;
